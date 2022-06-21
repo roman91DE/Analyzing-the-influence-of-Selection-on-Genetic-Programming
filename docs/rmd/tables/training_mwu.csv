@@ -1,0 +1,2 @@
+phase,fitness_function,statistic,p-val,lt_alpha
+training,mse,138.0,0.0391344195585305,True

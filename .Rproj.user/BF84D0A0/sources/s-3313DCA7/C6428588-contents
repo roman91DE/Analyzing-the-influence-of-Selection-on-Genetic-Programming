@@ -1,0 +1,8 @@
+Parameter,Value
+Population Size,500
+Number of Generations,100
+Mutation Rate,20%
+Crossover Rate,80%
+Tournament Size,3
+Epsilon selection,automatic
+Elite Size,0

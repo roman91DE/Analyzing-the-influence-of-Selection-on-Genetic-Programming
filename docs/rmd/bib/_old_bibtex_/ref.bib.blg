@@ -1,0 +1,33 @@
+[0] Config.pm:307> INFO - This is Biber 2.17 running in TOOL mode
+[0] Config.pm:310> INFO - Logfile is 'ref.bib.blg'
+[32] biber:340> INFO - === Tue May  3, 2022, 15:12:00
+[47] Biber.pm:4570> INFO - Looking for bibtex file 'ref.bib'
+[48] bibtex.pm:1713> INFO - LaTeX decoding ...
+[54] bibtex.pm:1518> INFO - Found BibTeX data source 'ref.bib'
+[87] Biber.pm:1663> INFO - Datamodel validation starting
+[87] Biber.pm:1712> INFO - Datamodel validation complete
+[92] UCollate.pm:68> INFO - Overriding locale 'en_US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[92] UCollate.pm:68> INFO - Overriding locale 'en_US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[92] Biber.pm:4203> INFO - Sorting list 'tool/global//global/global' of type 'entry' with template 'tool' and locale 'en_US'
+[92] Biber.pm:4209> INFO - No sort tailoring available for locale 'en_US'
+[94] bibtex.pm:439> INFO - Writing 'ref_bibertool.bib' with encoding 'UTF-8'
+[94] bibtex.pm:479> INFO - Output to ref_bibertool.bib
+[94] Biber.pm:130> WARN - Datamodel: Entry '10.1145/2908812.2908898' (ref.bib): Field 'address' invalid in data model - ignoring
+[94] Biber.pm:130> WARN - Datamodel: Entry '10.1145/2908812.2908898' (ref.bib): Field 'numpages' invalid in data model - ignoring
+[94] Biber.pm:130> WARN - Datamodel: Entry '10.1145/3321707.3321828' (ref.bib): Field 'address' invalid in data model - ignoring
+[94] Biber.pm:130> WARN - Datamodel: Entry '10.1145/3321707.3321828' (ref.bib): Field 'numpages' invalid in data model - ignoring
+[94] Biber.pm:130> WARN - Entry 'Saini:2021ta' (ref.bib): Invalid format '2021/12/01' of date field 'date' - ignoring
+[94] Biber.pm:130> WARN - Datamodel: Entry 'Saini:2021ta' (ref.bib): Field 'date-added' invalid in data model - ignoring
+[94] Biber.pm:130> WARN - Datamodel: Entry 'Saini:2021ta' (ref.bib): Field 'date-modified' invalid in data model - ignoring
+[94] Biber.pm:130> WARN - Datamodel: Entry 'Saini:2021ta' (ref.bib): Field 'id' invalid in data model - ignoring
+[95] Biber.pm:130> WARN - ISBN '1573-7632' in entry 'Saini:2021ta' is invalid - run biber with '--validate_datamodel' for details.
+[95] Biber.pm:130> WARN - Datamodel: Entry 'Saini:2021ta' (ref.bib): Field 'bdsk-url-1' invalid in data model - ignoring
+[95] Biber.pm:130> WARN - Datamodel: Entry 'poli08:fieldguide' (ref.bib): Field 'code_url' invalid in data model - ignoring
+[95] Biber.pm:130> WARN - Datamodel: Entry 'poli08:fieldguide' (ref.bib): Field 'isbn13' invalid in data model - ignoring
+[95] Biber.pm:130> WARN - Datamodel: Entry 'poli08:fieldguide' (ref.bib): Field 'notes' invalid in data model - ignoring
+[95] Biber.pm:130> WARN - Datamodel: Entry 'poli08:fieldguide' (ref.bib): Field 'size' invalid in data model - ignoring
+[95] Biber.pm:130> WARN - Datamodel: Entry 'poli08:fieldguide' (ref.bib): Field 'video_url' invalid in data model - ignoring
+[95] Biber.pm:130> WARN - Datamodel: Entry 'poli08:fieldguide' (ref.bib): Field 'bdsk-url-1' invalid in data model - ignoring
+[95] Biber.pm:130> WARN - Datamodel: Entry 'Saini:2021ta' (ref.bib): Invalid field 'isbn' for entrytype 'article'
+[95] Biber.pm:130> WARN - Datamodel: Entry 'Saini:2021ta' (ref.bib): Invalid ISBN in value of field 'isbn'
+[95] Biber.pm:132> INFO - WARNINGS: 18

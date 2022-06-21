@@ -1,0 +1,92 @@
+---
+title: |
+  <center>Analyzing the influence of Selection Operator Choice on Genetic Programming's Generalization ability in Symbolic Regression: </center>
+  <center> 
+    <small>
+    A comparison of $\epsilon$-Lexicase Selection and Tournament Selection
+     </small> 
+  </center>
+  <center>--------------------------------------------------------</center>
+  <center>Student: Roman Höhn</center>
+  <center>Student ID: 2712497</center>
+  <center>Supervisor: David Wittenberg</center>
+  <center>--------------------------------------------------------</center>
+  <center>03.996.3299 Seminar Information Systems</center>
+  <center>Chair of Business Administration and Computer Science</center>
+  <center>Johannes Gutenberg University Mainz</center>
+  <center>Summerterm 2022</center>
+  |
+date: "Date of Submission: `r Sys.Date()`"
+output:
+  pdf_document:
+    number_sections: true
+fontsize: 12pt
+toc: yes
+toc_depth: 4
+bibliography: bib/ref.bib
+csl: bib/harvard1.csl
+include-before: '`\newpage{}`{=latex}'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+\newpage
+
+
+# Exposé
+
+## Introduction
+
+Genetic programming (GP), a subfield of evolutionary computation (EC), is a metaheuristic that is used to automatically evolve computer programs by simulating the process of darwinian evolution.
+The basic principle of EC is to gradually evolve candidate solutions by repeatedly selecting parent solutions from a randomized population based on a fitness metric. Selected solutions are then used to generate offspring by applying one or more genetic operators. By repeating this process over many generations, EC acts as a guided search for high fitness solutions throughout the decision space.
+
+In GP, candidate solution are computer programs that consist of terminals and functions which are commonly represented as nodes and leaves inside a tree structure.
+
+A unique feature of GP among other evolutionary optimization procedures is the possibility to evolve solutions of variable length, this feature makes GP especially well suited for solving problems in the domain of symbolic regression where little to no a priori knowledge about the optimal form and structure of the target function is available [@10.1007/978-3-540-24621-3_22, p.795]. The goal of symbolic regression is to find a mathematical model for an observed set of datapoints [@10.1007/978-3-540-24621-3_22, p.794]. Symbolic Regression has been one of the first GP applications and to this day is an actively studied and highly relevant area of research [@poli08:fieldguide, p.114].
+
+The overall performance of a GP system can depend strongly on the choice of its underlying operators, one crucial component in this is the parent selection operator. The aim of this research is to study the effect of GP systems ability to generalize based on the usage of the two parent selection operators tournament selection and $\epsilon$-Lexicase selection.
+
+Tournament Selection is a commonly used selection operator in EC and is the most used operator in GP systems [@10.1007/978-3-642-16493-4_19, p.181]. A parent solution is selected by randomly sampling $k$ individuals from the current population into a tournament pool and then the solution with the highest fitness value from the tournament pool is selected [@10.1007/978-3-642-16493-4_19, p.182]. In real world applications with numerous test cases, the same principle is usually applied to an aggregate fitness value among all test cases.
+
+Lexicase selection on the other side has been suggested as an alternative to tournament selection that is not based on aggregating fitness scores. It samples $n$ test cases in random order and then eliminates solutions from the selection pool on a per test case basis if they are not performing on an elite level ^[a more in depth description of the algorithm is given in Chapter 2][@6920034, p.1]. Since regular Lexicase selection has been shown to perform suboptimal on continous-valued optimization problems, a modified variation called $\epsilon$-Lexicase selection has been suggested for symbolic regression applications by La Cava et. al (2016). $\epsilon$-Lexicase selection has shown itself to outperform both standard lexicase selection as well as tournament selection in overall performance while showing only negligible computational overhead [@epsilon_lexicase_main, p.747].
+
+An important quality of all supervised machine learning applications, including GP, is the ability to produce models that can generalize learned patterns from the test cases it was trained on to new, previously unseen cases.
+If a model is extensivley optimized on initial training data, overfitting to the specific training data sample can lead to a decrease in the model's ability to generalize it's learned knowledge. 
+Besides the level of noise inside the training data, another supposed key contributers for overfitting in GP systems is the overall complexity/size of candidate solutions that are bred. Larger programs have a higher tendency to specialize on difficult or unusual test cases which lead to a lower ability to generalize on other cases [@10.1007/978-3-540-24621-3_22, p.268].
+
+
+## Current State of Research
+
+Lexicase selection has been developed specifically for the purpose of solving problems with GP that require the output program to perform optimal on a wide range of different test cases [@6920034, p.1].
+
+More recent research suggests $\epsilon$-Lexicase selection as an alternative selection operator that can improves overall performance of GP system for continous-valued problems in comparison to the traditionally used selection methods tournament selection and standard lexicase selection [@epsilon_lexicase_main, p. 741]. In comparison to other selection operators, populations that are evolved using variations of the lexicase selection operator show a very high degree of genetic diversity which might be a key contributer to the improved performance [@6920034, p.1] [@epsilon_lexicase_main, p.745].
+
+The performance increase of $\epsilon$-Lexicase selection for symbolic regression problems has been demonstrated and reported for many benchmark problems which led to widespread adaption of it in symbolic regression applications [@epsilon_lexicase_main, p.744-745].
+
+To the best of my knowledge no published research exists that adresses the question if the usage of $\epsilon$-Lexicase selection has an influence on the output model's generalization ability if compared to traditional tournament selection. Answering this question is the primary motivation of this research project.
+
+
+
+## Methodology
+
+To study the effect of selection operator choice on generalization in GP for symbolic regression I selected a well studied dataset about energy efficiency in buildings that is part of the UC Irvine Machine Learning Repository [@Dua:2019], it contains eight individual building attributes that map to two different outcomes, heating and cooling load, for N=768 cases [@fe8fa39e88a040bbacba5a465c48043f]. 
+
+
+Because of the limited scope of this research, I will focus on the two selection operators tournament and $\epsilon$-lexicase selection with the aim to study their effects on overall generalization ability of the resulting model. Using two otherwise identical GP systems^[The specific parameters for both GP system will be detailed in chapter 2], one deploying tournament selection and the other $\epsilon$-lexicase selection, the task is to find a mathematical model that best fits the observed data points from the energy heating dataset as measured by the mean absolute error (MAE).
+
+To measure each output model's generalization ability the dataset will be randomly split into a training and testing dataset.
+Each model will be evolved using only the training dataset and afterwards the MAE will be measured for the previously unseen testing dataset. Each model's MAE on the unseen dataset will be interpreted as the primary measurement for the ability of a model to generalize [@Gonalves2016AnEO, p.43]. To answer my research questions I will perform a test of statistical significance on the difference of the resulting testing error using a Mann-Whitney U test with Bonferroni correction as suggested by Gonçalves (2016, p.42).
+
+The experiment will be done using the python programming language in conjunction with DEAP, a framework for distributed evolutionary algorithms that implements various tools and algorithms for genetic programming [@DEAP_JMLR2012].
+
+
+\newpage
+
+# References
+
+
+
+

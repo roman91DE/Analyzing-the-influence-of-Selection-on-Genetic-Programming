@@ -1,0 +1,337 @@
+%% This BibTeX bibliography file was created using BibDesk.
+%% https://bibdesk.sourceforge.io/
+
+%% Created for roman at 2022-05-03 15:23:43 +0200 
+
+
+%% Saved with string encoding Unicode (UTF-8) 
+
+
+
+@article{Saini:2021ta,
+	abstract = {In genetic programming, parent selection methods are employed to select promising candidate individuals from the current generation that can be used as parents for the next generation. These algorithms can affect, sometimes indirectly, whether or not individuals containing certain programming constructs, such as loops, are selected and propagated in the population. This in turn can affect the chances that the population will produce a solution to the problem. In this paper, we present the results of the experiments using three different parent selection methods on four benchmark program synthesis problems. We analyze the relationships between the selection methods, the numbers of individuals in the population that make use of loops, and success rates. The results show that the support for the selection of specialists is associated both with the use of loops in evolving populations and with higher success rates.},
+	author = {Saini, Anil Kumar and Spector, Lee},
+	date = {2021/12/01},
+	date-added = {2022-04-30 18:53:20 +0200},
+	date-modified = {2022-04-30 18:53:20 +0200},
+	doi = {10.1007/s10710-021-09417-5},
+	id = {Saini2021},
+	isbn = {1573-7632},
+	journal = {Genetic Programming and Evolvable Machines},
+	number = {4},
+	pages = {495--509},
+	title = {Relationships between parent selection methods, looping constructs, and success rate in genetic programming},
+	url = {https://doi.org/10.1007/s10710-021-09417-5},
+	volume = {22},
+	year = {2021},
+	bdsk-url-1 = {https://doi.org/10.1007/s10710-021-09417-5}}
+
+@book{poli08:fieldguide,
+	abstract = {(Practical Field Guide)},
+	author = {Riccardo Poli and William B. Langdon and Nicholas Freitag McPhee},
+	code_url = {http://www.cs.ucl.ac.uk/staff/W.Langdon/ftp/gp-code/},
+	date-modified = {2022-05-03 15:23:04 +0200},
+	isbn13 = {978-1-4092-0073-4},
+	keywords = {genetic algorithms, genetic programming, cartesian genetic programming, automatic programming, machine learning, artificial intelligence, evolutionary computation, GPU},
+	note = {(With contributions by J. R. Koza)},
+	notes = {http://www.gp-field-guide.org.uk/ Video of writing the book http://youtu.be/ftjci2XJbFA Added March 2020 http://www.cs.ucl.ac.uk/staff/W.Langdon/ftp/gp-code/tiny_gp},
+	publisher = {Published via \texttt{http://lulu.com} and freely available at \texttt{http://www.gp-field-guide.org.uk}},
+	size = {250 pages},
+	title = {A field guide to genetic programming},
+	url = {https://digitalcommons.morris.umn.edu/cgi/viewcontent.cgi?article=1001&context=cs_facpubs},
+	video_url = {http://youtu.be/ftjci2XJbFA},
+	year = {2008},
+	bdsk-url-1 = {https://digitalcommons.morris.umn.edu/cgi/viewcontent.cgi?article=1001&context=cs_facpubs}}
+
+@inproceedings{epsilon_lexicase_main,
+	abstract = {Lexicase selection is a parent selection method that considers test cases separately, rather than in aggregate, when performing parent selection. It performs well in discrete error spaces but not on the continuous-valued problems that compose most system identification tasks. In this paper, we develop a new form of lexicase selection for symbolic regression, named ε-lexicase selection, that redefines the pass condition for individuals on each test case in a more effective way. We run a series of experiments on real-world and synthetic problems with several treatments of ε and quantify how ε affects parent selection and model performance. ε-lexicase selection is shown to be effective for regression, producing better fit models compared to other techniques such as tournament selection and age-fitness Pareto optimization. We demonstrate that ε can be adapted automatically for individual test cases based on the population performance distribution. Our experiments show that ε-lexicase selection with automatic ε produces the most accurate models across tested problems with negligible computational overhead. We show that behavioral diversity is exceptionally high in lexicase selection treatments, and that ε-lexicase selection makes use of more fitness cases when selecting parents than lexicase selection, which helps explain the performance improvement.},
+	address = {New York, NY, USA},
+	author = {La Cava, William and Spector, Lee and Danai, Kourosh},
+	booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference 2016},
+	doi = {10.1145/2908812.2908898},
+	isbn = {9781450342063},
+	keywords = {parent selection, regression, system identification, genetic programming},
+	location = {Denver, Colorado, USA},
+	numpages = {8},
+	pages = {741--748},
+	publisher = {Association for Computing Machinery},
+	series = {GECCO '16},
+	title = {Epsilon-Lexicase Selection for Regression},
+	url = {https://doi.org/10.1145/2908812.2908898},
+	year = {2016},
+	bdsk-url-1 = {https://doi.org/10.1145/2908812.2908898}}
+
+@inproceedings{10.1145/3321707.3321828,
+	abstract = {The lexicase parent selection method selects parents by considering performance on individual data points in random order instead of using a fitness function based on an aggregated data accuracy. While the method has demonstrated promise in genetic programming and more recently in genetic algorithms, its applications in other forms of evolutionary machine learning have not been explored. In this paper, we investigate the use of lexicase parent selection in Learning Classifier Systems (LCS) and study its effect on classification problems in a supervised setting. We further introduce a new variant of lexicase selection, called batch-lexicase selection, which allows for the tuning of selection pressure. We compare the two lexicase selection methods with tournament and fitness proportionate selection methods on binary classification problems. We show that batch-lexicase selection results in the creation of more generic rules which is favorable for generalization on future data. We further show that batch-lexicase selection results in better generalization in situations of partial or missing data.},
+	address = {New York, NY, USA},
+	author = {Aenugu, Sneha and Spector, Lee},
+	booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference},
+	doi = {10.1145/3321707.3321828},
+	isbn = {9781450361118},
+	keywords = {lexicase selection, parent selection, learning classifier systems},
+	location = {Prague, Czech Republic},
+	numpages = {9},
+	pages = {356--364},
+	publisher = {Association for Computing Machinery},
+	series = {GECCO '19},
+	title = {Lexicase Selection in Learning Classifier Systems},
+	url = {https://doi.org/10.1145/3321707.3321828},
+	year = {2019},
+	bdsk-url-1 = {https://doi.org/10.1145/3321707.3321828}}
+
+@article{6920034,
+	abstract = {Abstract---We describe a broad class of problems, called ``uncompromising problems,'' characterized by the requirement that solutions must perform optimally on each of many test cases. Many of the problems that have long motivated genetic program- ming research, including the automation of many traditional pro- gramming tasks, are uncompromising. We describe and analyze the recently proposed ``lexicase'' parent selection algorition and show that it can facilitate the solution of uncompromising prob- lems by genetic programming. Unlike most traditional parent selection techniques, lexicase selection does not base selection on a fitness value that is aggregated over all test cases; rather, it con- siders test cases one at a time in random order. We present results comparing lexicase selection to more traditional parent selection methods, including standard tournament selection and implicit fitness sharing, on four uncompromising problems: finding terms in finite algebras, designing digital multipliers, counting words in files, and performing symbolic regression of the factorial function. We provide evidence that lexicase selection maintains higher levels of population diversity than other selection methods, which may partially explain its utility as a parent selection algorithm in the context of uncompromising problems.
+Index Terms---parent selection, lexicase selection, tournament selection, genetic programming, PushGP.},
+	author = {Helmuth, Thomas and Spector, Lee and Matheson, James},
+	date-modified = {2022-05-03 15:21:46 +0200},
+	doi = {10.1109/TEVC.2014.2362729},
+	journal = {IEEE Transactions on Evolutionary Computation},
+	number = {5},
+	pages = {630-643},
+	title = {Solving Uncompromising Problems With Lexicase Selection},
+	volume = {19},
+	year = {2015},
+	bdsk-url-1 = {https://doi.org/10.1109/TEVC.2014.2362729}}
+
+@article{CASTELLI201567,
+title = {Prediction of energy performance of residential buildings: A genetic programming approach},
+journal = {Energy and Buildings},
+volume = {102},
+pages = {67-74},
+year = {2015},
+issn = {0378-7788},
+doi = {https://doi.org/10.1016/j.enbuild.2015.05.013},
+url = {https://www.sciencedirect.com/science/article/pii/S0378778815003849},
+author = {Mauro Castelli and Leonardo Trujillo and Leonardo Vanneschi and Aleš Popovič},
+keywords = {Energy consumption, Heating load, Cooling load, Genetic programming, Machine learning},
+abstract = {Energy consumption has long been emphasized as an important policy issue in today's economies. In particular, the energy efficiency of residential buildings is considered a top priority of a country's energy policy. The paper proposes a genetic programming-based framework for estimating the energy performance of residential buildings. The objective is to build a model able to predict the heating load and the cooling load of residential buildings. An accurate prediction of these parameters facilitates a better control of energy consumption and, moreover, it helps choosing the energy supplier that better fits the energy needs, which is considered an important issue in the deregulated energy market. The proposed framework blends a recently developed version of genetic programming with a local search method and linear scaling. The resulting system enables us to build a model that produces an accurate estimation of both considered parameters. Extensive simulations on 768 diverse residential buildings confirm the suitability of the proposed method in predicting heating load and cooling load. In particular, the proposed method is more accurate than the existing state-of-the-art techniques.}
+}
+@article{TSANAS2012560,
+title = {Accurate quantitative estimation of energy performance of residential buildings using statistical machine learning tools},
+journal = {Energy and Buildings},
+volume = {49},
+pages = {560-567},
+year = {2012},
+issn = {0378-7788},
+doi = {https://doi.org/10.1016/j.enbuild.2012.03.003},
+url = {https://www.sciencedirect.com/science/article/pii/S037877881200151X},
+author = {Athanasios Tsanas and Angeliki Xifara},
+keywords = {Building energy evaluation, Heating load, Cooling load, Non-parametric statistics, Statistical machine learning},
+abstract = {We develop a statistical machine learning framework to study the effect of eight input variables (relative compactness, surface area, wall area, roof area, overall height, orientation, glazing area, glazing area distribution) on two output variables, namely heating load (HL) and cooling load (CL), of residential buildings. We systematically investigate the association strength of each input variable with each of the output variables using a variety of classical and non-parametric statistical analysis tools, in order to identify the most strongly related input variables. Then, we compare a classical linear regression approach against a powerful state of the art nonlinear non-parametric method, random forests, to estimate HL and CL. Extensive simulations on 768 diverse residential buildings show that we can predict HL and CL with low mean absolute error deviations from the ground truth which is established using Ecotect (0.51 and 1.42, respectively). The results of this study support the feasibility of using machine learning tools to estimate building parameters as a convenient and accurate approach, as long as the requested query bears resemblance to the data actually used to train the mathematical model in the first place.}
+}
+@inproceedings{10.1145/3321707.3321875,
+author = {Helmuth, Thomas and Pantridge, Edward and Spector, Lee},
+title = {Lexicase Selection of Specialists},
+year = {2019},
+isbn = {9781450361118},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3321707.3321875},
+doi = {10.1145/3321707.3321875},
+abstract = {Lexicase parent selection filters the population by considering one random training case at a time, eliminating any individuals with errors for the current case that are worse than the best error in the selection pool, until a single individual remains. This process often stops before considering all training cases, meaning that it will ignore the error values on any cases that were not yet considered. Lexicase selection can therefore select specialist individuals that have poor errors on some training cases, if they have great errors on others and those errors come near the start of the random list of cases used for the parent selection event in question. We hypothesize here that selecting these specialists, which may have poor total error, plays an important role in lexicase selection's observed performance advantages over error-aggregating parent selection methods such as tournament selection, which select specialists much less frequently. We conduct experiments examining this hypothesis, and find that lexicase selection's performance and diversity maintenance degrade when we deprive it of the ability of selecting specialists. These findings help explain the improved performance of lexicase selection compared to tournament selection, and suggest that specialists help drive evolution under lexicase selection toward global solutions.},
+booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference},
+pages = {1030–1038},
+numpages = {9},
+keywords = {specialization, genetic programming, lexicase selection},
+location = {Prague, Czech Republic},
+series = {GECCO '19}
+}
+@inproceedings{10.1145/3449726.3461408,
+author = {Helmuth, Thomas and La Cava, William},
+title = {Lexicase Selection},
+year = {2021},
+isbn = {9781450383516},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3449726.3461408},
+doi = {10.1145/3449726.3461408},
+booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference Companion},
+pages = {839–855},
+numpages = {17},
+location = {Lille, France},
+series = {GECCO '21}
+}
+@inproceedings{Gonalves2016AnEO,
+  title={An Exploration of Generalization and Overfitting in Genetic Programming: Standard and Geometric Semantic Approaches},
+  author={Ivo Gonçalves},
+  year={2016}
+}
+@article{wang_wagner_rondinelli_2019, title={Symbolic regression in materials science}, volume={9}, DOI={10.1557/mrc.2019.85}, number={3}, journal={MRS Communications}, publisher={Cambridge University Press}, author={Wang, Yiqun and Wagner, Nicholas and Rondinelli, James M.}, year={2019}, pages={793–805}}
+@InProceedings{10.1007/978-3-540-24621-3_22,
+author="Paris, Gr{\'e}gory
+and Robilliard, Denis
+and Fonlupt, Cyril",
+editor="Liardet, Pierre
+and Collet, Pierre
+and Fonlupt, Cyril
+and Lutton, Evelyne
+and Schoenauer, Marc",
+title="Exploring Overfitting in Genetic Programming",
+booktitle="Artificial Evolution",
+year="2004",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="267--277",
+abstract="The problem of overfitting (focusing closely on examples at the loss of generalization power) is encountered in all supervised machine learning schemes. This study is dedicated to explore some aspects of overfitting in the particular case of genetic programming. After recalling the causes usually invoked to explain overfitting such as hypothesis complexity or noisy learning examples, we test and compare the resistance to overfitting on three variants of genetic programming algorithms (basic GP, sizefair crossover GP and GP with boosting) on two benchmarks, a symbolic regression and a classification problem. We propose guidelines based on these results to help reduce overfitting with genetic programming.",
+isbn="978-3-540-24621-3"
+}
+@INPROCEEDINGS{889734,
+  author={Augusto, D.A. and Barbosa, H.J.C.},
+  booktitle={Proceedings. Vol.1. Sixth Brazilian Symposium on Neural Networks}, 
+  title={Symbolic regression via genetic programming}, 
+  year={2000},
+  volume={},
+  number={},
+  pages={173-178},
+  doi={10.1109/SBRN.2000.889734}}
+  
+@InProceedings{10.1007/978-3-642-16493-4_19,
+author="Fang, Yongsheng
+and Li, Jun",
+editor="Cai, Zhihua
+and Hu, Chengyu
+and Kang, Zhuo
+and Liu, Yong",
+title="A Review of Tournament Selection in Genetic Programming",
+booktitle="Advances in Computation and Intelligence",
+year="2010",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="181--192",
+abstract="This paper provides a detailed review of tournament selection in genetic programming. It starts from introducing tournament selection and genetic programming, followed by a brief explanation of the popularity of the tournament selection in genetic programming. It then reviews issues and drawbacks in tournament selection, followed by analysis of and solutions to these issues and drawbacks. It finally points out some interesting directions for future work.",
+isbn="978-3-642-16493-4"
+}
+@misc{Dua:2019 ,
+author = "Dua, Dheeru and Graff, Casey",
+year = "2017",
+title = "{UCI} Machine Learning Repository",
+url = "http://archive.ics.uci.edu/ml",
+institution = "University of California, Irvine, School of Information and Computer Sciences" }
+
+@article{fe8fa39e88a040bbacba5a465c48043f,
+title = "Accurate quantitative estimation of energy performance of residential buildings using statistical machine learning tools",
+abstract = "We develop a statistical machine learning framework to study the effect of eight input variables (relative compactness, surface area, wall area, roof area, overall height, orientation, glazing area, glazing area distribution) on two output variables, namely heating load (HL) and cooling load (CL), of residential buildings. We systematically investigate the association strength of each input variable with each of the output variables using a variety of classical and non-parametric statistical analysis tools, in order to identify the most strongly related input variables. Then, we compare a classical linear regression approach against a powerful state of the art nonlinear non-parametric method, random forests, to estimate HL and CL Extensive simulations on 768 diverse residential buildings show that we can predict HL and CL with low mean absolute error deviations from the ground truth which is established using Ecotect (0.51 and 1.42, respectively). The results of this study support the feasibility of using machine learning tools to estimate building parameters as a convenient and accurate approach, as long as the requested query bears resemblance to the data actually used to train the mathematical model in the first place. (C) 2012 Elsevier B.V. All rights reserved.",
+keywords = "Building energy evaluation, Heating load, Cooling load, Non-parametric statistics, Statistical machine learning, CONSUMPTION, SIMULATION, STANDARD, CHINA",
+author = "Athanasios Tsanas and Angeliki Xifara",
+year = "2012",
+month = jun,
+doi = "10.1016/j.enbuild.2012.03.003",
+language = "English",
+volume = "49",
+pages = "560--567",
+journal = "Energy and buildings",
+issn = "0378-7788",
+publisher = "Elsevier BV",
+}
+@article{DEAP_JMLR2012,
+    author    = " F\'elix-Antoine Fortin and Fran\c{c}ois-Michel {De Rainville} and Marc-Andr\'e Gardner and Marc Parizeau and Christian Gagn\'e ",
+    title     = { {DEAP}: Evolutionary Algorithms Made Easy },
+    pages     = { 2171--2175 },
+    volume    = { 13 },
+    month     = { jul },
+    year      = { 2012 },
+    journal   = { Journal of Machine Learning Research }
+}
+@article{10.1162/evco_a_00224,
+    author = {La Cava, William and Helmuth, Thomas and Spector, Lee and Moore, Jason H.},
+    title = "{A Probabilistic and Multi-Objective Analysis of Lexicase Selection and ε-Lexicase Selection}",
+    journal = {Evolutionary Computation},
+    volume = {27},
+    number = {3},
+    pages = {377-402},
+    year = {2019},
+    month = {09},
+    abstract = "{Lexicase selection is a parent selection method that considers training cases individually, rather than in aggregate, when performing parent selection. Whereas previous work has demonstrated the ability of lexicase selection to solve difficult problems in program synthesis and symbolic regression, the central goal of this article is to develop the theoretical underpinnings that explain its performance. To this end, we derive an analytical formula that gives the expected probabilities of selection under lexicase selection, given a population and its behavior. In addition, we expand upon the relation of lexicase selection to many-objective optimization methods to describe the behavior of lexicase selection, which is to select individuals on the boundaries of Pareto fronts in high-dimensional space. We show analytically why lexicase selection performs more poorly for certain sizes of population and training cases, and show why it has been shown to perform more poorly in continuous error spaces. To address this last concern, we propose new variants of ε-lexicase selection, a method that modifies the pass condition in lexicase selection to allow near-elite individuals to pass cases, thereby improving selection performance with continuous errors. We show that ε-lexicase outperforms several diversity–maintenance strategies on a number of real-world and synthetic regression problems.}",
+    issn = {1063-6560},
+    doi = {10.1162/evco_a_00224},
+    url = {https://doi.org/10.1162/evco\_a\_00224},
+    eprint = {https://direct.mit.edu/evco/article-pdf/27/3/377/1858632/evco\_a\_00224.pdf},
+}
+
+@article{fsets_generalisation,
+author = {Nicolau, Miguel and Agapitos, Alexandros},
+year = {2021},
+month = {03},
+pages = {},
+title = {Choosing function sets with better generalisation performance for symbolic regression models},
+volume = {22},
+journal = {Genetic Programming and Evolvable Machines},
+doi = {10.1007/s10710-020-09391-4}
+}
+
+@Inbook{Koza2005,
+author="Koza, John R.
+and Poli, Riccardo",
+editor="Burke, Edmund K.
+and Kendall, Graham",
+title="Genetic Programming",
+bookTitle="Search Methodologies: Introductory Tutorials in Optimization and Decision Support Techniques",
+year="2005",
+publisher="Springer US",
+address="Boston, MA",
+pages="127--164",
+abstract="The goal of getting computers to automatically solve problems is central to artificial intelligence, machine learning, and the broad area encompassed by what Turing called ``machine intelligence„ (Turing, 1948, 1950). In his talk entitled AI: Where It Has Been and Where It Is Going, machine learning pioneer Arthur Samuel stated the main goal of the fields of machine learning and artificial intelligence: [T]he aim [is]... to get machines to exhibit behavior, which if done by humans, would be assumed to involve the use of intelligence. (Samuel, 1983) Genetic programming is a systematic method for getting computers to automatically solve a problem starting from a high-level statement of what needs to be done. Genetic programming is a domain-independent method that genetically breeds a population of computer programs to solve a problem. Specifically, genetic programming iteratively transforms a population of computer programs into a new generation of programs by applying analogs of naturally occurring genetic operations. This process is illustrated in Figure 5.1.",
+isbn="978-0-387-28356-2",
+doi="10.1007/0-387-28356-0_5",
+url="https://doi.org/10.1007/0-387-28356-0_5"
+}
+
+
+@Book{koza_main,
+author = "John R. Koza",
+title = "Genetic Programming: On the Programming of Computers by Means of Natural Selection",
+year = "1992",
+publisher = "MIT Press",
+address = "Cambridge, MA, USA",
+keywords = "genetic algorithms, genetic programming, text book",
+ISBN = "0-262-11170-5",
+URL = "http://mitpress.mit.edu/books/genetic-programming",
+video_url = "https://youtu.be/tTMpKrKkYXo",
+video_url = "http://www.human-competitive.org/sites/default/files/video/genetic_programming_the_movie_part_1.mp4",
+video_url = "http://gpbib.cs.ucl.ac.uk/koza_videos/genetic_programming_the_movie_part_1.mp4",
+abstract = "Overview
+Genetic programming may be more powerful than neural networks and other machine learning techniques, able to solve problems in a wider range of disciplines. In this ground-breaking book, John Koza shows how this remarkable paradigm works and provides substantial empirical evidence that solutions to a great variety of problems from many different fields can be found by genetically breeding populations of computer programs. Genetic Programming contains a great many worked examples and includes a sample computer code that will allow readers to run their own programs.
+
+In getting computers to solve problems without being explicitly programmed, Koza stresses two points: that seemingly different problems from a variety of fields can be reformulated as problems of program induction, and that the recently developed genetic programming paradigm provides a way to search the space of possible computer programs for a highly fit individual computer program to solve the problems of program induction. Good programs are found by evolving them in a computer against a fitness measure instead of by sitting down and writing them.
+
+John R. Koza is Consulting Associate Professor in the Computer Science Department at Stanford University.
+
+Endorsements
+
+The research reported in this book is a tour de force. For the first time, since the idea was bandied about in the 1940s and early 1950s, we have a non-trivial, nontailored set of examples of automatic programming. -- John Holland",
+
+notes = "page 755 Park-Miller pseudo randomizer (PRNG) in Lisp.
+Koza videos \cite{koza:video} \cite{koza:video2} \cite{koza:video3} \cite{koza:video4} \cite{koza:2009:gpt}",
+
+}
+@article{open_issues_gp,
+author = {O’Neill, Michael and Vanneschi, Leonardo and Gustafson, Steven and Banzhaf, Wolfgang},
+year = {2010},
+month = {09},
+pages = {339-363},
+title = {Open issues in Genetic Programming},
+volume = {11},
+journal = {Genetic Programming and Evolvable Machines},
+doi = {10.1007/s10710-010-9113-2}
+}
+@article{DAgostino1971AnOT,
+  title={An omnibus test of normality for moderate and large size samples},
+  author={Ralph B. D'Agostino},
+  journal={Biometrika},
+  year={1971},
+  volume={58},
+  pages={341-348}
+}
+@inproceedings{DAgostino1973TestsFD,
+  title={Tests for Departure from Normality},
+  author={Ralph B. D'Agostino and Egon S. Pearson},
+  year={1973}
+}
+@article{lexicase_first_desciption,
+author = {Spector, Lee},
+year = {2012},
+month = {07},
+pages = {},
+title = {Assessment of problem modality by differential performance of lexicase selection in genetic programming: A preliminary report},
+doi = {10.1145/2330784.2330846}
+}
