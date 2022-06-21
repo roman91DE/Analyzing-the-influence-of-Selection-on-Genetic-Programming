@@ -1,4 +1,0 @@
-Operator,Implementation,Static Height Limit
-Initilization,Ramped Half/Half,2
-Crossover,One Point Crossover,17
-Mutation,Uniform Mutation,17

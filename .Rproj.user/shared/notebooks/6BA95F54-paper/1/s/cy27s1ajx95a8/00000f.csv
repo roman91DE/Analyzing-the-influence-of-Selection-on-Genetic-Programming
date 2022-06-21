@@ -1,4 +1,0 @@
-"0","reticulate::repl_python()"
-"2","Error in py_initialize(config$python, config$libpython, config$pythonhome,  : 
-  /Users/rmn/opt/anaconda3/envs/gp_research/lib/libpython3.10.dylib - dlopen(/Users/rmn/opt/anaconda3/envs/gp_research/lib/libpython3.10.dylib, 0x000A): tried: '/Users/rmn/opt/anaconda3/envs/gp_research/lib/libpython3.10.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e'))
-"
