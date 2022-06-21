@@ -14,5 +14,7 @@ for IND in {1..$N_RUN}
         python ./main.py $IND
     done
 
+# execute the notebook that creates tables and plots
+ipython ./statistics.ipynb   
 
  
