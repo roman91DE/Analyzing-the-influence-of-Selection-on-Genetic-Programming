@@ -22,6 +22,7 @@ title: |
 date: "Date of Submission: `r Sys.Date()`"
 output:
   pdf_document:
+    keep_tex: true
     extra_dependencies: ["float"]
     fig_caption: yes
     number_sections: true
