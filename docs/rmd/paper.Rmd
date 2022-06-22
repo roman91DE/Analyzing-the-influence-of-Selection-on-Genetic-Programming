@@ -351,15 +351,7 @@ knitr::kable(
        
 ```
 
-Table 9 displays the resulting P-values from computing the MWU test in a matrix format. The results demonstrate a highly significant difference int 
-
-
-
-> $H0_{1}$: The distribution underlying the samples of training/testing errors produced by torunament selection is the same as the distribution underlying samples of training/testing errors produced by $\epsilon$-lexicase selection
-
-
-> $H0_{2}$: The distribution underlying the samples of training errors produced by $\epsilon$-Lexicase/torunament selection is the same as the distribution underlying samples of testing errors produced by $\epsilon$-Lexicase/tournament selection
-
+Table 9 displays the resulting p-values from computing the MWU test in a matrix format.
 
 ```{r, echo=FALSE, warning=FALSE}
 
@@ -377,14 +369,21 @@ knitr::kable(
        
 ```
 
-The mean overall performance of tournament selection appears to be superior to that of $\epsilon$-Lexicase selection which could be considered contradictory evidence to the 
-... interpretation...
+The results show two major findings:
 
-To further examine the generalization behaviour based on both selection operators I plotted the mean fitness scores for both algorithms in figure 2. 
+1. The differences in mean fitness between tournament selection and $\epsilon$-Lexicase selection are highly statistical significant even if considering an $\alpha$ of 0.01. For the given symbolic regression task tournament selection achieves a better mean performance on both the training as well as the testing dataset than $\epsilon$-Lexicase selection. These findings contradict the hypothesis $H0_{1}$ descibed in subsection 3.1 and are contrary to some of the research that was summarized in subsections 2.1 and 2.3.[@epsilon_lexicase_main] [@https://doi.org/10.48550/arxiv.1709.05394].
+
+
+2. The differences in mean fitness between $min\_training\_error$ and $testing\_error$ are not statistically significant for both selection algorithms. If comparing the mean training error to the mean testing error, the p-values only computes to 0.309 for tournament selection and to 0.257 for $\epsilon$-Lexicase selection. These findings fail to reject $H0_{2}$, based on the obtained results we can not find evidence that both algorithms demonstrate a significantly different performance between the training data and the previously unseen testing data.
+
+
+To further examine the generalization behaviour of both selection operators I plotted the mean fitness scores for both algorithms over the total number of 100 generations in figure 2. Figure 2 shows that both algorithms show little visual evidence of overfitting which would result in a growing gap between between $min\_training\_error$ and $testing\_error$ in the final stages of the evolutionary optimization. For $\epsilon$-Lexicase selection a small gap can be observed starting at around the 90.th generation, while the minimum training error slowly converges a small increase in the testing error can be observed. Based on the limited amount of collected data, it is questionable if this small sign of overfitting can be interpreted as a weak indicator for an inferior generalization behaviour of $\epsilon$-Lexicase in comparison to tournament selection.
+
+Figure 2 also shows a visual representation of the described overall performance benefit of using tournament selection instead of $\epsilon$-Lexicase selection for the choosen symbolic regression task. It can be observed that at all stages of the evolution tournament selection based GP achieves a lower mean error for both datasets.
 
 ![Mean Errors](./plots/mean_error_combined.png)
 
-... interpretation...
+
 
 In a final step I analyzed the growth behaviour for both GP systems. Figure 3 visualizes the average size of individuals inside the population as well as the average size of the best performing individual for each generation of the evolution.
 
