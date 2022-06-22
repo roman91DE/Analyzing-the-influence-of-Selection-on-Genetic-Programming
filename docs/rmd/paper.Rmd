@@ -25,13 +25,14 @@ output:
     number_sections: true
     includes:
       in_header: settings.tex
+# indent: true
 fontsize: 12pt
 # toc: yes
 # toc_depth: 4
 bibliography: bib/bib/ref.bib
 csl: bib/csl/harvard1.csl
 # include-before: '`\newpage{} `{=latex}'
-include-before: '`\thispagestyle{empty} `{=latex}'
+include-before: '`\thispagestyle{empty} \newpage{}`{=latex}'
 ---
 
 
@@ -41,6 +42,7 @@ library(magrittr)
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(fig.pos = "!H")
 ```
+
 
 
 \tableofcontents
@@ -92,7 +94,7 @@ In a following article Lexicase selection has been proposed specifically for the
 Both articles argue that many of the problem domains that GP is commonly used for are prevalent for problems that are modal/ uncompromising in nature. In comparison to other selection operators, populations that are evolved using variations of the lexicase selection operator show a very high degree of genetic diversity which might be a key contributor to the improved performance [@6920034, p.1] [@epsilon_lexicase_main, p.745]. In theory, Lexicase based selection should be more prone to select solutions that are specialist (solutions that achieve high fitness on a smaller subset of unusual training cases) than solutions that are generalist (solutions that achieve high average fitness among all training cases).
 
 
-The first description^[@lexicase_first_desciption, p.4] of the lexicase parent selection algorithm by @lexicase_first_desciption is quoted verbatim below for reference:
+The first description of the lexicase parent selection algorithm is quoted verbatim below for reference [@lexicase_first_desciption, p.4]:
 
 ```
 Lexicase - Parent-Selection:
@@ -187,7 +189,7 @@ The next question of interest is, to examine if statistical significant differen
 
 To gather further insight into the differences between both GP systems, an additional test will be performed on the question if differences in the total size of the resulting programs exist:
 
-> $H0_{3}$: Size differences exist between the distribution underlying the samples produced by $\epsilon$-Lexicase and the distribution underlying samples of tournament selection
+> $H0_{3}$: No differences in program size exist between the distribution underlying the samples produced by $\epsilon$-Lexicase and the distribution underlying samples of tournament selection
 
 All hypothesis will be tested using a level of significance of $\alpha=0.05$.
 
@@ -383,14 +385,12 @@ Figure 2 also shows a visual representation of the described overall performance
 
 ![Mean Errors](./plots/mean_error_combined.png)
 
+In a final step I analyze the growth behavior for both GP systems to determine if differences in program size can be observed based on selection operators. Figure 3 visualizes the average size of individuals inside the population as well as the average size of the best performing individual for each generation and both GP systems. 
+![Mean Size](./plots/size_subplotted.png)
 
-In a final step I analyzed the growth behavior for both GP systems. Figure 3 visualizes the average size of individuals inside the population as well as the average size of the best performing individual for each generation of the evolution.
+Both subplots display a very similar behavior that is common for GP, we observe a strong trend for solutions to grow in size with each additional generation that is concluded. Another observation  that can be made is that the best solutions of each generation almost always have a larger size than the population average. On first impression, the differences between both selection operators appears to be insignificant. Again, I conducted a MWU test to test for statistical differences in the underlying distribution of sizes measured during the experiment. 
 
-![Mean Size](./plots/size_combined.png)
-... interpretation...
-
-Again, a MWU test is conducted to test for statistical differences in the underlying distribution of the sizes measured during the experiment. The results are summarized in table 10.
-
+The resulting p-values of the MWU test are summarized in table 10.
 
 ```{r, echo=FALSE, warning=FALSE}
 fig.pos="H"
@@ -407,7 +407,7 @@ knitr::kable(
        
 ```
 
-
+None of the differences in mean size are statistically significant. Again, based on the results obtained in my experiment, the evidence produced fails to reject the null hypothesis $H0_{3}$ that seletion has no significant effect on differences in program size. 
 
 
 # Conclusion
@@ -421,7 +421,7 @@ I faced two major difficulties in the preparation and evaluation of this researc
   
 The combination of both issues might have resulted in a significant reduction in overall robustness of the results represented in sections 5 and 6. The performance of all evolutionary algorithms, including GP, can be highly dependent on a large number of parameters and implementation details. Although the series of experiments conducted in this project are comparably simple in nature, the results achieved might still be highly influenced by the GP configuration detailed in subsection 4.2. 
 
-To gain further insight into the differences in generalization behavior and to adress the research question with a higher level of certainty, the experiment I conducted should be repeated for many different GP configurations. Some exemplary parameters that could drastically influence the results of this experiment include the population size, the total number of generations, the inclusion of elitism or the computation of $\epsilon$ in lexicase selection. Other factors whose influence on generalization behavior could be important include different methods to compute an individuals fitness (e.g. mean absolute error or root mean squared error) and testing out different variations of the genetic operators for mutation and crossover. 
+To gain further insight into the differences in generalization behavior and to adress the research question with a higher level of certainty, the experiment I conducted should be repeated for different GP configurations. Some exemplary parameters that could drastically influence the results of this experiment include the population size, the total number of generations, the inclusion of elitism or the computation of $\epsilon$ in lexicase selection. Other factors whose influence on generalization behavior could be important include different methods to compute an individuals fitness (e.g. mean absolute error or root mean squared error), testing different variations of the genetic operators for mutation and crossover and experimenting with different variations of the training:testing split size.
 
 Another obvious weakness of my project is that the experiment is only based on a single symbolic regression application, the prediction of the heating load of buildings based on a relatively small data set. To gain further trust in the obtained results, the experiment should be repeated for other symbolic regression tasks and data sets. At the current state it remains unknown if the generalization behavior of both selection operators might be highly problem specific and dependent on the data set used for training and testing.
 
@@ -442,4 +442,8 @@ All limitations and shortcomings described above are also connected to the secon
 
 ![Statutory Declaration](./misc/erklärung.pdf)\
 
+
+```{zsh github, include=FALSE}
+git add * && git commit --m "rendered doc" && git push
+```
 
