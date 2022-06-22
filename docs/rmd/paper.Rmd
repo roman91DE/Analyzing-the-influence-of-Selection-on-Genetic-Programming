@@ -386,7 +386,17 @@ Figure 2 also shows a visual representation of the described overall performance
 ![Mean Errors](./plots/mean_error_combined.png)
 
 In a final step I analyze the growth behavior for both GP systems to determine if differences in program size can be observed based on selection operators. Figure 3 visualizes the average size of individuals inside the population as well as the average size of the best performing individual for each generation and both GP systems. 
+\begin{figure}
+\centering
+\includegraphics{./plots/size_subplotted.png}
+\caption{Mean Size}
+\end{figure}
+
+<!-- 
+doesn't work...
 ![Mean Size](./plots/size_subplotted.png)
+--->
+
 
 Both subplots display a very similar behavior that is common for GP, we observe a strong trend for solutions to grow in size with each additional generation that is concluded. Another observation  that can be made is that the best solutions of each generation almost always have a larger size than the population average. On first impression, the differences between both selection operators appears to be insignificant. Again, I conducted a MWU test to test for statistical differences in the underlying distribution of sizes measured during the experiment. 
 
