@@ -2,9 +2,7 @@
 title: |
   <center>Analyzing the influence of Selection on Genetic Programming's Generalization ability in Symbolic Regression: </center>
   <center>
-    <small>
     A comparison of $\epsilon$-Lexicase Selection and Tournament Selection
-     </small> 
   </center>
   <center>--------------------------------------------------------</center>
   <center>Student: Roman Höhn</center>
@@ -13,8 +11,7 @@ title: |
   <center>Student ID: 2712497</center>
   <center>Supervisor: David Wittenberg</center>
   <center>--------------------------------------------------------</center>
-  <center>Research Project: Seminar Information Systems (03.996.3299)</center>
-  <center>Research Area: Computational Intelligence</center>
+  <center>Research Project for Seminar Information Systems (03.996.3299)</center>
   <center>Chair of Business Administration and Computer Science</center>
   <center>Johannes Gutenberg University Mainz</center>
   <center>Summerterm 2022</center>
@@ -29,11 +26,11 @@ output:
     includes:
       in_header: settings.tex
 fontsize: 12pt
-#toc: yes
+# toc: yes
 # toc_depth: 4
 bibliography: bib/bib/ref.bib
 csl: bib/csl/harvard1.csl
-#include-before: '`\newpage{} `{=latex}'
+# include-before: '`\newpage{} `{=latex}'
 include-before: '`\thispagestyle{empty} `{=latex}'
 ---
 
@@ -95,7 +92,7 @@ In a following article Lexicase selection has been proposed specifically for the
 Both articles argued that many of the problem domains that GP is commonly used for are prevalent for problems that are modal/ uncompromising in nature. In comparison to other selection operators, populations that are evolved using variations of the lexicase selection operator show a very high degree of genetic diversity which might be a key contributer to the improved performance [@6920034, p.1] [@epsilon_lexicase_main, p.745]. In theory, Lexicase based selection should be more prone to select solutions that are specialist (high fitness on a small subset of training cases) than solutions that are generalist (high average fitness among all training cases).
 
 
-The basic algorithm for lexicase parent selection as described by @lexicase_first_desciption is given below:
+The first description^[@lexicase_first_desciption, p.4] of the lexicase parent selection algorithm by @lexicase_first_desciption is quoted below for reference:
 
 ```
 Lexicase - Parent-Selection:
@@ -290,10 +287,7 @@ The crossover operator implemented by DEAP randomly selects a crossover point in
 
 # Results
 
-## Descriptive Statistics
-
-Tables 6 and 7 summarize the results for all fitness scores collected over 50 total runs of the experiment^[All floating point numbers in text have been rounded to 3 decimal places].
-
+Tables 6 and 7 summarize the results for all fitness scores collected over 50 total runs of the experiment^[All floating point numbers in tables have been rounded to 3 decimal places if not stated otherwise].
 
 
 ```{r, echo=FALSE, warning=FALSE}
@@ -313,7 +307,6 @@ knitr::kable(
 ```
 
 
-
 ```{r, echo=FALSE, warning=FALSE}
 
 fig.pos="H"
@@ -330,32 +323,16 @@ knitr::kable(
              
 ```
 
+Some interesting observation from tables 6 and 7 can be made by comparing the mean of the variables $min\_training\_error$ and $testing\_error$. Variable $min\_training\_error$ represents the fitness, measured by the MSE, of the best performing solution that has been found during a single run of the experiment while the variable $testing\_error$ represents the fitness of the same solution if evaluated for the unknown fitness cases inside the testing dataset. Tournament selection based GP achieves a mean $min\_training\_error$ of $16.483$ and a mean $testing\_error$ of $16.905$ while the GP system using $\epsilon$-Lexicase selection can only achieve a mean $min\_training\_error$ of $22.013$ and a mean $testing\_error$ of $22.456$. These results indicate an overall performance benefit for torunament selection based GP in the experiment. It should also be mentioned that the best performing model over all 50 runs, measured by the minimum of variables $min\_training\_error$ and $testing\_error$, has been achieved by tournament selection with an MSE of 7.066 for the training data and	7.847 for the testing data.
 
-<!-- Statistical Analysis 
+If we compare the differences of $min\_training\_error$ and $testing\_error$ on the basis of each algorithm, we can observe that both tournament and $\epsilon$-lexicase achieve a slightly lower error on the training data than on the testing data. If we compute the total difference between the means of $min\_training\_error$ and $testing\_error$ for both algorithms tournament selection amounts to 0.422 and $\epsilon$-Lexicase selection to 0.443. Regarding our primary research question, the differences in generalization, the initial observations do not seem to indicate a significant difference in the the relative gap between the solutions performance on testing data and training data.
 
-For both experiments the best of the run models that are evolved using $\epsilon$-Lexicase Selection on average perform better as measured by their mean error score. This behaviour is consistent during both training and testing phases of the experiment  
+Figure 1 visualizes the distribution of $min\_training\_error$ and $testing\_error$ for both selection operators over the total 50 runs using a boxplot and summerizes the initial observations from tables 6 and 7 described above.
 
-$\epsilon$-Lexicase based GP achieves an average minimum fitness of 3.166/1.576 (MSE/MAE) during model training and a score of 2.949/1.678 during the testing phase on previously unseen data. Suprisingly the models that are trained using MSE as a metric for fitness evaluation, on average, perform even better on unseen cases as they do on the initial training data.
-
-In comparison, the models that are trained using tournament selection perform with an average minimum fitness of 10.9887/2.32173 (MSE/MAE) during model training and 11.146/2.196 during the testing phase. Again we observe an improved performance in testing error, this time models that are evolved using MAE for fitness perform better on testing data than on their initial training data.
-
-The initial results seem support the two alternative hypothesis of this research project:
-
-- $HA_{testing}$: T $\epsilon$-Lexicase Selection produces models that differ in their generalization behaviour if compared to models that are evolved using torunament selection
-  
-- $H0_{training}$: $\epsilon$-Lexicase Selection produces models that differ in their performance during model training if compared to models that are evolved using torunament selection
-
---->
-
-## Inferential Statistics 
-
-Figure 1 visualizes the distribution of fitness scores achieved by both GP systems after finishing 100 full generations for all 50 runs of the experiment. 
 
 ![Distribution of Errors](./plots/mean_error_boxplot_all.png)
 
-... interpretation...
-
-The four samples from figure 1 have been tested for normal distribution by computing the D’Agostino and Pearson test [@DAgostino1971AnOT] [@DAgostino1973TestsFD] to determine if they satisfy the requirements of the students t-test. The results are summarized in table 8. Since not all samples test positive for a normal distribution a Mann-Whitney U (MWU) ranksum test will be performed to test for statistical significance. 
+The four samples from figure 1 have been tested for normal distribution by computing the D’Agostino and Pearson test [@DAgostino1971AnOT] [@DAgostino1973TestsFD] to determine if they satisfy the requirements of the students t-test. The results are summarized in table 8. Since not all samples test positive for a normal distribution a Mann-Whitney U (MWU) ranksum test will be performed to test for statistical significance between the four variables $tournament\_min\_training\_error$, $tournament\_testing\_error$, $e-lexicase\_min\_training\_error$ and $e-lexicase\_testing\_error$. 
 
 
 ```{r, echo=FALSE, warning=FALSE}
@@ -374,14 +351,21 @@ knitr::kable(
        
 ```
 
-The results of the MWU test are summarized in table 9.
+Table 9 displays the resulting P-values from computing the MWU test in a matrix format. The results demonstrate a highly significant difference int 
+
+
+
+> $H0_{1}$: The distribution underlying the samples of training/testing errors produced by torunament selection is the same as the distribution underlying samples of training/testing errors produced by $\epsilon$-lexicase selection
+
+
+> $H0_{2}$: The distribution underlying the samples of training errors produced by $\epsilon$-Lexicase/torunament selection is the same as the distribution underlying samples of testing errors produced by $\epsilon$-Lexicase/tournament selection
 
 
 ```{r, echo=FALSE, warning=FALSE}
 
 fig.pos="H"
 
-df <- read.csv("./tables/csv/mwu_matrix_size.csv")
+df <- read.csv("./tables/csv/mwu_matrix_error.csv")
 
 knitr::kable(
   df,
@@ -393,6 +377,7 @@ knitr::kable(
        
 ```
 
+The mean overall performance of tournament selection appears to be superior to that of $\epsilon$-Lexicase selection which could be considered contradictory evidence to the 
 ... interpretation...
 
 To further examine the generalization behaviour based on both selection operators I plotted the mean fitness scores for both algorithms in figure 2. 

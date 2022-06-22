@@ -1,5 +1,5 @@
 sample,statistic,p-value,alpha,normal_distributed
-Tournament - Training Errors,36.146158097642264,1.4156682698650698e-08,0.05,False
-E-Lexicase - Training Errors,1.5752583485637548,0.4549220586923548,0.05,True
-Tournament - Testing Errors,32.50325251582114,8.750006874635094e-08,0.05,False
-E-Lexicase - Testing Errors,59.135132021691895,1.4420132076469131e-13,0.05,False
+tournament_min_training_error,36.146158097642264,1.4156682698650698e-08,0.05,False
+e-lexicase_min_testing_error,1.5752583485637548,0.4549220586923548,0.05,True
+tournament_testing_error,32.50325251582114,8.750006874635094e-08,0.05,False
+e-lexicase_testing_error,59.135132021691895,1.4420132076469131e-13,0.05,False

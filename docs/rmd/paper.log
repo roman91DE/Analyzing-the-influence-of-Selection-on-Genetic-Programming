@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  21 JUN 2022 19:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  22 JUN 2022 21:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -495,36 +495,36 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 ) (./paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 142.
-LaTeX Font Info:    ... okay on input line 142.
-LaTeX Info: Redefining \microtypecontext on input line 142.
-Package microtype Info: Applying patch `item' on input line 142.
-Package microtype Info: Applying patch `toc' on input line 142.
-Package microtype Info: Applying patch `eqnum' on input line 142.
-Package microtype Info: Applying patch `footnote' on input line 142.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Info: Redefining \microtypecontext on input line 140.
+Package microtype Info: Applying patch `item' on input line 140.
+Package microtype Info: Applying patch `toc' on input line 140.
+Package microtype Info: Applying patch `eqnum' on input line 140.
+Package microtype Info: Applying patch `footnote' on input line 140.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 142.
+LaTeX Info: Redefining \showhyphens on input line 140.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -586,7 +586,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 142.
+Package hyperref Info: Link coloring OFF on input line 140.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -598,43 +598,43 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count320
 )
-LaTeX Info: Redefining \ref on input line 142.
-LaTeX Info: Redefining \pageref on input line 142.
-LaTeX Info: Redefining \nameref on input line 142.
+LaTeX Info: Redefining \ref on input line 140.
+LaTeX Info: Redefining \pageref on input line 140.
+LaTeX Info: Redefining \nameref on input line 140.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-44.
+42.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-44.
+42.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-144.
+142.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-144.
+142.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 144.
+(Font)              <20.74> on input line 142.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 144.
+(Font)              <14.4> on input line 142.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 144.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 144
+(Font)              <12> on input line 142.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 142
 .
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 144
+LaTeX Font Info:    Trying to load font information for U+msb on input line 142
 .
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -642,9 +642,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 144.
+(Font)              <10> on input line 142.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 144.
+(Font)              <7> on input line 142.
 (./paper.toc [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
@@ -658,26 +658,26 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 [2] [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 226.
+(Font)              <5> on input line 224.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-59.
+58.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [4]
-Overfull \hbox (5.72021pt too wide) in paragraph at lines 335--335
+) [4] [5]
+Overfull \hbox (5.72021pt too wide) in paragraph at lines 334--334
 []  \T1/lmtt/m/n/12 (a) Compute the mean fitness for each individual inside the
  tournament pool[] 
  []
 
-[5]
-Overfull \hbox (18.07022pt too wide) in paragraph at lines 335--335
+
+Overfull \hbox (18.07022pt too wide) in paragraph at lines 334--334
 []  \T1/lmtt/m/n/12 (b) Select individual from the tournament pool with the hig
 hest mean fitness.[] 
  []
 
 [6] [7] [8]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
-80.
+79.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [9
@@ -685,52 +685,49 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.3.1}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.620 
+l.619 
       ]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10]
-<./plots/mean_error_boxplot_all.png, id=126, 1156.32pt x 722.7pt>
+[10] [11]
+<./plots/mean_error_boxplot_all.png, id=133, 1156.32pt x 722.7pt>
 File: ./plots/mean_error_boxplot_all.png Graphic file (type png)
 <use ./plots/mean_error_boxplot_all.png>
 Package pdftex.def Info: ./plots/mean_error_boxplot_all.png  used on input line
- 778.
-(pdftex.def)             Requested size: 469.75385pt x 293.59615pt.
-[11]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<./plots/mean_error_combined.png, id=140, 1156.32pt x 722.7pt>
-File: ./plots/mean_error_combined.png Graphic file (type png)
-<use ./plots/mean_error_combined.png>
-Package pdftex.def Info: ./plots/mean_error_combined.png  used on input line 83
-6.
+ 803.
 (pdftex.def)             Requested size: 469.75385pt x 293.59615pt.
 [12 <./plots/mean_error_boxplot_all.png>]
-<./plots/size_combined.png, id=148, 1156.32pt x 722.7pt>
+<./plots/mean_error_combined.png, id=142, 1156.32pt x 722.7pt>
+File: ./plots/mean_error_combined.png Graphic file (type png)
+<use ./plots/mean_error_combined.png>
+Package pdftex.def Info: ./plots/mean_error_combined.png  used on input line 86
+3.
+(pdftex.def)             Requested size: 469.75385pt x 293.59615pt.
+[13]
+<./plots/size_combined.png, id=150, 1156.32pt x 722.7pt>
 File: ./plots/size_combined.png Graphic file (type png)
 <use ./plots/size_combined.png>
-Package pdftex.def Info: ./plots/size_combined.png  used on input line 847.
+Package pdftex.def Info: ./plots/size_combined.png  used on input line 874.
 (pdftex.def)             Requested size: 469.75385pt x 293.59615pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 847--849
+Underfull \hbox (badness 10000) in paragraph at lines 874--876
 [][]
  []
 
-[13 <./plots/mean_error_combined.png>] [14 <./plots/size_combined.png>] [15]
-Overfull \hbox (0.76833pt too wide) in paragraph at lines 1014--1019
+[14 <./plots/mean_error_combined.png>] [15 <./plots/size_combined.png>] [16]
+Overfull \hbox (0.76833pt too wide) in paragraph at lines 1041--1046
 []\T1/lmr/m/n/12 (-20) Paris, G., Robilliard, D. and Fonlupt, C. (2004) ``Explo
 ring overfitting in genetic programming,''
  []
 
-[16] [17] [18] (./paper.aux) ) 
+[17] [18] [19] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 15677 strings out of 478268
- 248472 string characters out of 5846348
- 592549 words of memory out of 5000000
- 33318 multiletter control sequences out of 15000+600000
- 545116 words of font info for 172 fonts, out of 8000000 for 9000
+ 15680 strings out of 478268
+ 248460 string characters out of 5846348
+ 594403 words of memory out of 5000000
+ 33316 multiletter control sequences out of 15000+600000
+ 548349 words of font info for 176 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,10n,77p,1002b,491s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvi
@@ -749,10 +746,10 @@ fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
 public/lm/lmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lm
 ri12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><
 /usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on paper.pdf (18 pages, 409382 bytes).
+Output written on paper.pdf (19 pages, 414853 bytes).
 PDF statistics:
- 366 PDF objects out of 1000 (max. 8388607)
- 309 compressed objects within 4 object streams
- 100 named destinations out of 1000 (max. 500000)
- 41128 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 361 PDF objects out of 1000 (max. 8388607)
+ 303 compressed objects within 4 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 43160 words of extra memory for PDF output out of 51595 (max. 10000000)
 
