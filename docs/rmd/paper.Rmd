@@ -443,7 +443,4 @@ All limitations and shortcomings described above are also connected to the secon
 ![Statutory Declaration](./misc/erklärung.pdf)\
 
 
-```{zsh github, include=FALSE}
-git add * && git commit --m "rendered doc" && git push
-```
 
