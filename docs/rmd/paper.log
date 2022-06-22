@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  22 JUN 2022 22:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  22 JUN 2022 23:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -720,35 +720,50 @@ Overfull \hbox (0.76833pt too wide) in paragraph at lines 1078--1083
 ring overfitting in genetic programming,''
  []
 
-[17] [18] [19] (./paper.aux) ) 
+[17]
+<./misc/erklärung.pdf, id=211, 597.432pt x 844.83629pt>
+File: ./misc/erklärung.pdf Graphic file (type pdf)
+<use ./misc/erklärung.pdf>
+Package pdftex.def Info: ./misc/erklärung.pdf  used on input line 1120.
+(pdftex.def)             Requested size: 459.96025pt x 650.43571pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1120--1121
+
+ []
+
+[18]
+Overfull \vbox (42.74904pt too high) has occurred while \output is active []
+
+[19 <./misc/erklärung.pdf, page is rotated 270 degrees>] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 15686 strings out of 478268
- 248512 string characters out of 5846348
+ 15694 strings out of 478268
+ 248714 string characters out of 5846348
  594403 words of memory out of 5000000
- 33316 multiletter control sequences out of 15000+600000
+ 33322 multiletter control sequences out of 15000+600000
  548523 words of font info for 178 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,10n,77p,1002b,491s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvi
-ps/lm/lm-ts1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-math
-ex.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/u
-sr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/t
-exlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/te
-xmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2022/texmf-dist/fonts
-/type1/public/lm/lmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
-lic/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmm
-i12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/te
-xlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/
-texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2022/texmf-dist/
-fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
-public/lm/lmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lm
-ri12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on paper.pdf (19 pages, 415462 bytes).
+{/usr/
+local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive
+/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2022/texm
+f-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/fon
+ts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvi
+ps/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.en
+c}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2022/tex
+mf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2022/texmf-dist/fon
+ts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pu
+blic/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr
+17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr
+/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texli
+ve/2022/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2022/te
+xmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/f
+onts/type1/public/lm/lmtt12.pfb>
+Output written on paper.pdf (19 pages, 697548 bytes).
 PDF statistics:
- 363 PDF objects out of 1000 (max. 8388607)
- 305 compressed objects within 4 object streams
+ 367 PDF objects out of 1000 (max. 8388607)
+ 307 compressed objects within 4 object streams
  100 named destinations out of 1000 (max. 500000)
- 43160 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 43165 words of extra memory for PDF output out of 51595 (max. 10000000)
 
