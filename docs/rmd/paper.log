@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  23 JUN 2022 17:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  23 JUN 2022 18:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -704,7 +704,7 @@ l.612   \(
 File: ./plots/mean_error_boxplot_all.png Graphic file (type png)
 <use ./plots/mean_error_boxplot_all.png>
 Package pdftex.def Info: ./plots/mean_error_boxplot_all.png  used on input line
- 815.
+ 814.
 (pdftex.def)             Requested size: 469.75385pt x 293.59615pt.
 [13]
 
@@ -715,17 +715,17 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: ./plots/mean_error_combined.png Graphic file (type png)
 <use ./plots/mean_error_combined.png>
 Package pdftex.def Info: ./plots/mean_error_combined.png  used on input line 91
-4.
+3.
 (pdftex.def)             Requested size: 469.75385pt x 293.59615pt.
 [15]
 <./plots/size_subplotted.png, id=179, 1156.32pt x 722.7pt>
 File: ./plots/size_subplotted.png Graphic file (type png)
 <use ./plots/size_subplotted.png>
-Package pdftex.def Info: ./plots/size_subplotted.png  used on input line 926.
+Package pdftex.def Info: ./plots/size_subplotted.png  used on input line 925.
 (pdftex.def)             Requested size: 469.75385pt x 293.59615pt.
 [16 <./plots/mean_error_combined.png>] [17 <./plots/size_subplotted.png>] [18] 
 [19]
-Overfull \hbox (0.76833pt too wide) in paragraph at lines 1149--1154
+Overfull \hbox (0.76833pt too wide) in paragraph at lines 1146--1151
 []\T1/lmr/m/n/12 (-20) Paris, G., Robilliard, D. and Fonlupt, C. (2004) ``Explo
 ring overfitting in genetic programming,''
  []
@@ -734,10 +734,10 @@ ring overfitting in genetic programming,''
 <./private/erklaerung.pdf, id=241, 597.432pt x 844.83629pt>
 File: ./private/erklaerung.pdf Graphic file (type pdf)
 <use ./private/erklaerung.pdf>
-Package pdftex.def Info: ./private/erklaerung.pdf  used on input line 1191.
+Package pdftex.def Info: ./private/erklaerung.pdf  used on input line 1188.
 (pdftex.def)             Requested size: 459.96025pt x 650.43571pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+Underfull \hbox (badness 10000) in paragraph at lines 1188--1189
 
  []
 
@@ -746,11 +746,11 @@ Overfull \vbox (42.74904pt too high) has occurred while \output is active []
 
 [22 <./private/erklaerung.pdf, page is rotated 270 degrees>] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 15707 strings out of 478268
- 248855 string characters out of 5846348
+ 15701 strings out of 478268
+ 248797 string characters out of 5846348
  594418 words of memory out of 5000000
  33327 multiletter control sequences out of 15000+600000
- 548335 words of font info for 176 fonts, out of 8000000 for 9000
+ 548070 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,10n,77p,1002b,489s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/u
@@ -770,7 +770,7 @@ usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2022
 /texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dis
 t/fonts/type1/public/lm/lmtt12.pfb>
-Output written on paper.pdf (22 pages, 701712 bytes).
+Output written on paper.pdf (22 pages, 701563 bytes).
 PDF statistics:
  397 PDF objects out of 1000 (max. 8388607)
  334 compressed objects within 4 object streams

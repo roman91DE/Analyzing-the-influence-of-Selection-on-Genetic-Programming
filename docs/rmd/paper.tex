@@ -358,7 +358,7 @@ additional research regarding the topic.
 
 Kushchu (2002) criticizes that almost all applications published in the
 initial GP literature by Koza (1992) are not using separate training and
-testing data sets which might result in over fitting and a poor overall
+testing data sets which might result in overfitting and a poor overall
 generalization ability of the programs that are produced. The author
 calls for a more widespread adoption of methods like generational
 sampling of new training cases or the overall separation into training
@@ -380,7 +380,7 @@ comparable fitness during the training phase (O'Neill \emph{et al.},
 2010, p. 349). However MDLP should be considered with caution,
 experiments by Silva and Vanneschi (2009) on the prediction of bio
 availability for drugs demonstrate that GP based techniques can either
-bloat without over fitting or over fit without bloating (Silva and
+bloat without overfitting or over fit without bloating (Silva and
 Vanneschi, 2009, p. 8).
 
 \hypertarget{symbolic-regression}{%
@@ -524,7 +524,7 @@ All hypothesis will be tested using a level of significance of
 To further examine the difference in generalization behavior, the mean
 testing and training errors over each generation will be visualized for
 both algorithms. The specific aim of this visualization is to explore
-the mechanism of over fitting and to examine if differences between both
+the mechanism of overfitting and to examine if differences between both
 methods can be detected.
 
 All GP experiments will be implemented by using the python programming
@@ -775,11 +775,11 @@ max & 100.0 & 500.000 & 5.788911e+14 & 9.137151e+16 & 74.622 & 2.894465e+17 & 77
 \end{tabular}}
 \end{table}
 
-Some interesting observation from tables 6 and 7 can be made by
+A few interesting observations from tables 6 and 7 can be made by
 comparing the mean of the variables \(min\_training\_error\) and
 \(testing\_error\). Variable \(min\_training\_error\) represents the
 fitness, measured by the MSE, of the best performing solution that has
-been found during a single run of the experiment while the variable
+been found during a single run of the experiment. The variable
 \(testing\_error\) represents the fitness of the same solution if
 evaluated for the unknown fitness cases inside the testing data set.
 Tournament selection based GP achieves a mean \(min\_training\_error\)
@@ -787,7 +787,7 @@ of \(16.483\) and a mean \(testing\_error\) of \(16.905\) while the GP
 system using \(\epsilon\)-lexicase selection can only achieve a mean
 \(min\_training\_error\) of \(22.013\) and a mean \(testing\_error\) of
 \(22.456\). These results indicate an overall performance benefit for
-tournament selection based GP in the experiment. It should also be
+the tournament selection based GP in the experiment. It should also be
 mentioned that the best performing model over all 50 runs, measured by
 the minimum of variables \(min\_training\_error\) and
 \(testing\_error\), has been achieved by tournament selection with an
@@ -795,15 +795,14 @@ MSE of 7.066 for the training data and 7.847 for the testing data.
 
 If we compare the differences of \(min\_training\_error\) and
 \(testing\_error\) on the basis of each algorithm, we can observe that
-both tournament and \(\epsilon\)-lexicase achieve a slightly lower error
-on the training data than on the testing data. If we compute the total
-difference between the means of \(min\_training\_error\) and
+both tournament and \(\epsilon\)-lexicase achieve a slightly lower
+fitness on the training data than on the testing data. We compute the
+total difference between the means of \(min\_training\_error\) and
 \(testing\_error\) for both algorithms tournament selection amounts to
-0.422 and \(\epsilon\)-lexicase selection to 0.443. Regarding our
-primary research question, the differences in generalization, the
-initial observations do not seem to indicate a significant difference in
-the the relative gap between the solutions performance on testing data
-and training data.
+0.422 and \(\epsilon\)-lexicase selection to 0.443. The initial
+observations do not seem to indicate a significant difference in the the
+relative gap between the solutions' performance on testing data and
+training data.
 
 Figure 1 visualizes the distribution of \(min\_training\_error\) and
 \(testing\_error\) for both selection operators over the total 50 runs
@@ -879,9 +878,9 @@ The results show two major findings:
   2.3.(La Cava, Spector and Danai, 2016) (La Cava \emph{et al.}, 2017).
 \item
   The differences in mean fitness between \(min\_training\_error\) and
-  \(testing\_error\) are not statistically significant for both
-  selection algorithms. If comparing the mean training error to the mean
-  testing error, the p-values only computes to 0.309 for tournament
+  \(testing\_error\) are not statistically significant for neither
+  selection algorithms. When comparing the mean training error to the
+  mean testing error, the p-values only compute to 0.309 for tournament
   selection and to 0.257 for \(\epsilon\)-lexicase selection. These
   findings fail to reject \(H0_{2}\), based on the obtained results we
   can not find evidence that both algorithms demonstrate a significantly
@@ -892,16 +891,16 @@ The results show two major findings:
 To further examine the generalization behavior of both selection
 operators I plotted the mean fitness scores for both algorithms over the
 total number of 100 generations in figure 2. Figure 2 shows that both
-algorithms show little visual evidence of over fitting which would
-result in a growing gap between between \(min\_training\_error\) and
+algorithms show little visual evidence of overfitting which would result
+in a growing gap between between \(min\_training\_error\) and
 \(testing\_error\) in the final stages of the evolutionary optimization.
 For \(\epsilon\)-lexicase selection a small gap can be observed starting
-at around the 90.th generation, while the minimum training error slowly
-converges a small increase in the testing error can be observed. Based
-on the limited amount of collected data, it is questionable if this
-small sign of over fitting can be interpreted as a weak indicator for an
-inferior generalization behavior of \(\epsilon\)-lexicase in comparison
-to tournament selection.
+approximately at the 90th generation, while the minimum training error
+slowly converges a small increase in the testing error. Based on the
+limited amount of collected data, it is questionable if this small sign
+of overfitting can be interpreted as a weak indicator for an inferior
+generalization behavior of \(\epsilon\)-lexicase in comparison to
+tournament selection.
 
 Figure 2 also shows a visual representation of the described overall
 performance benefit of using tournament selection instead of
@@ -927,15 +926,14 @@ individual for each generation and both GP systems.
 \caption{Mean Size}
 \end{figure}
 
-Both subplots display a very similar behavior that is common for GP, we
+Both subplots display a very similar behavior that is common for GP. We
 observe a strong trend for solutions to grow in size with each
 additional generation that is concluded. Another observation that can be
 made is that the best solutions of each generation almost always have a
 larger size than the population average. On first impression, the
-differences between both selection operators appears to be
-insignificant. Again, I conducted a MWU test to test for statistical
-differences in the underlying distribution of sizes measured during the
-experiment.
+differences between both selection operators appear to be insignificant.
+Again, I conducted a MWU test to examine statistical differences in the
+underlying distribution of sizes measured during the experiment.
 
 The resulting p-values of the MWU test are summarized in table 10.
 
@@ -960,7 +958,7 @@ None of the differences in mean size are statistically significant.
 Again, based on the results obtained in my experiment, the evidence
 produced fails to reject the null hypothesis \(H0_{3}\) that selection
 has no significant effect on differences in program size. It should be
-noted that the configuration of both GP algorithm did include two
+noted that the configuration of both GP algorithms did include two
 mechanisms that place limitations on the growth behavior of the
 individual solutions to avoid excessive bloating (see sub section
 3.2.4).
@@ -968,42 +966,41 @@ individual solutions to avoid excessive bloating (see sub section
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
 
-The objective of this research project has been to answer the question
-if the choice between two commonly used parent selection operators,
-tournament selection and \(\epsilon\)-lexicase selection, significantly
-influences the generalization behavior of GP for symbolic regression
-tasks.
+The objective of this research project is to answer the question if the
+choice between two commonly used parent selection operators, tournament
+selection and \(\epsilon\)-lexicase selection, significantly influences
+the generalization behavior of GP for symbolic regression tasks.
 
-The results obtained from my experiment did not demonstrate any
-statistically significant differences in generalization, both GP systems
+The results obtained from my experiment do not demonstrate any
+statistically significant differences in generalization. Both GP systems
 achieve a slightly lower mean error if evaluated for the training data
 sets than if evaluated for the unseen fitness cases of the testing data
-set. The mean differences between testing and training errors did not
-show statistical significance differences for both algorithms
+set. The mean differences between testing and training errors do not
+show statistically significant differences for neither algorithms
 (summarized in table 9).
 
 To further explore differences in generalization behavior the mean for
 both algorithms training and testing error over all generations for all
-50 independent runs was visualized and analyzed (see figure 2). A very
-small and probably insignificant gap did show for \(\epsilon\)-lexicase
-selection in the final phase of the evolutionary search, in the grand
-scheme of things this approach also did not yield any clear evidence of
+50 independent runs is visualized and analyzed (see figure 2). A very
+small and probably insignificant gap does show for \(\epsilon\)-lexicase
+selection in the final phase of the evolutionary search.
+Comprehensively, this approach also does not yield any clear evidence of
 differences in generalization.
 
 A final attempt to explore possible differences between both GP systems
-has been to explore differences in growth behavior as an indicator for
-generalization. This idea was based on the wide spread hypothesis that
-increases in overall program size might be an indication of over fitting
-to the training data, the concept has been discussed in sub section 2.2.
-Again, based on my results I could not find statistically significant
-differences in the growth behavior between both selection operators.
+is to explore differences in growth behavior as an indicator for
+generalization. This idea is based on the wide spread hypothesis that
+increases in overall program size might be an indication of overfitting
+to the training data. This concept has been discussed in sub section
+2.2. The results do not show statistically significant differences in
+the growth behavior between both selection operators.
 
-An interesting finding of my analysis is, that the overall performance
-of tournament selection has shown to be significantly better than that
+An interesting finding of this analysis is, that the overall performance
+of tournament selection shows to be notably higher than the performance
 of \(\epsilon\)-lexicase selection for the selected symbolic regression
-problem. This finding was rather unexpected based on the research of La
-Cava, Spector and Danai (2016) and La Cava \emph{et al.} (2017) that
-primarily inspired this research project in the first place.
+problem. This finding is rather unexpected based on the research of La
+Cava, Spector and Danai (2016) and La Cava \emph{et al.} (2017) that is
+the primary source of inspiration for this research project.
 
 \hypertarget{limitations-and-open-questions}{%
 \section{Limitations and open
