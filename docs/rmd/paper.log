@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  23 JUN 2022 09:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  23 JUN 2022 09:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -492,7 +492,8 @@ Package: xurl 2022/01/09 v 0.10 modify URL breaks
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count313
 \l__pdf_internal_box=\box72
-) (./paper.aux)
+)
+No file paper.aux.
 \openout1 = `paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 140.
@@ -647,17 +648,16 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 142.
 [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./pape
-r.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 3.
-)
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 \tf@toc=\write3
 \openout3 = `paper.toc'.
 
-[2] [3]
+[2]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 168.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 168.
+[3]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 224.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
@@ -722,20 +722,20 @@ l.619
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [10] [11]
-<./plots/mean_error_boxplot_all.png, id=133, 1156.32pt x 722.7pt>
+<./plots/mean_error_boxplot_all.png, id=112, 1156.32pt x 722.7pt>
 File: ./plots/mean_error_boxplot_all.png Graphic file (type png)
 <use ./plots/mean_error_boxplot_all.png>
 Package pdftex.def Info: ./plots/mean_error_boxplot_all.png  used on input line
  803.
 (pdftex.def)             Requested size: 469.75385pt x 293.59615pt.
 [12 <./plots/mean_error_boxplot_all.png>] [13]
-<./plots/mean_error_combined.png, id=151, 1156.32pt x 722.7pt>
+<./plots/mean_error_combined.png, id=129, 1156.32pt x 722.7pt>
 File: ./plots/mean_error_combined.png Graphic file (type png)
 <use ./plots/mean_error_combined.png>
 Package pdftex.def Info: ./plots/mean_error_combined.png  used on input line 90
 2.
 (pdftex.def)             Requested size: 469.75385pt x 293.59615pt.
-<./plots/size_subplotted.png, id=152, 1156.32pt x 722.7pt>
+<./plots/size_subplotted.png, id=130, 1156.32pt x 722.7pt>
 File: ./plots/size_subplotted.png Graphic file (type png)
 <use ./plots/size_subplotted.png>
 Package pdftex.def Info: ./plots/size_subplotted.png  used on input line 914.
@@ -747,53 +747,26 @@ ring overfitting in genetic programming,''
  []
 
 [17]
-<./misc/erklärung.pdf, id=212, 597.432pt x 844.83629pt>
-File: ./misc/erklärung.pdf Graphic file (type pdf)
-<use ./misc/erklärung.pdf>
-Package pdftex.def Info: ./misc/erklärung.pdf  used on input line 1140.
-(pdftex.def)             Requested size: 459.96025pt x 650.43571pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1140--1141
+LaTeX Warning: File `./misc/erklärung.pdf' not found on input line 1140.
 
- []
 
-[18]
-Overfull \vbox (42.74904pt too high) has occurred while \output is active []
+! Package pdftex.def Error: File `./misc/erklärung.pdf' not found: using draft
+ setting.
 
-[19 <./misc/erklärung.pdf, page is rotated 270 degrees>] (./paper.aux) ) 
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1140 \includegraphics{./misc/erklärung.pdf}
+                                              \\ 
 Here is how much of TeX's memory you used:
- 15695 strings out of 478268
- 248818 string characters out of 5846348
- 593411 words of memory out of 5000000
- 33322 multiletter control sequences out of 15000+600000
+ 15693 strings out of 478268
+ 249104 string characters out of 5846348
+ 592007 words of memory out of 5000000
+ 33319 multiletter control sequences out of 15000+600000
  548551 words of font info for 178 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,10n,77p,1002b,491s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{https:ux2fux2fgithub.comux2froman91DEux2fintelligen
-t_information_systems_research_project} has been referenced but does not exist,
- replaced by a fixed one
-
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/t
-exlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/202
-2/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-di
-st/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/e
-nc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm
--ec.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/
-texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/20
-22/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2022/texmf-di
-st/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
-pe1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/
-lm/lmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb
-></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-
-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on paper.pdf (19 pages, 696289 bytes).
-PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 308 compressed objects within 4 object streams
- 101 named destinations out of 1000 (max. 500000)
- 43165 words of extra memory for PDF output out of 51595 (max. 10000000)
-
+!  ==> Fatal error occurred, no output PDF file produced!
