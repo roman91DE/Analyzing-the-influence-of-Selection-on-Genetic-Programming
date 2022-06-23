@@ -12,7 +12,7 @@ title: |
   <center>Supervisor: David Wittenberg</center>
   <center>--------------------------------------------------------</center>
   <center>Research Project for Seminar Information Systems (03.996.3299)</center>
-  <center>Chair of Business Administration and Computer Science</center>
+  <center>FB 03: Chair of Business Administration and Computer Science</center>
   <center>Johannes Gutenberg University Mainz</center>
   <center>Summerterm 2022</center>
   |
@@ -195,7 +195,7 @@ All hypothesis will be tested using a level of significance of $\alpha=0.05$.
 
 To further examine the difference in generalization behavior, the mean testing and training errors over each generation will be visualized for both algorithms. The specific aim of this visualization is to explore the mechanism of over fitting and to examine if differences between both methods can be detected.
 
-All GP experiments will be implemented by using the python programming language in conjunction with DEAP, a framework for distributed evolutionary algorithms that implements various tools and algorithms for genetic programming [@DEAP_JMLR2012].
+All GP experiments will be implemented by using the python programming language in conjunction with DEAP, a framework for distributed evolutionary algorithms that implements various tools and algorithms for genetic programming [@DEAP_JMLR2012]. A github repository that contains the full source code, tables, plots and other materials represented in this thesis can be accessed at [https://github.com/roman91DE/intelligent_information_systems_research_project](#https://github.com/roman91DE/intelligent_information_systems_research_project).
 
 ## Gentetic Programming Configuration
 
@@ -392,10 +392,7 @@ In a final step I analyze the growth behavior for both GP systems to determine i
 \caption{Mean Size}
 \end{figure}
 
-<!-- 
-doesn't work...
-![Mean Size](./plots/size_subplotted.png)
---->
+<!-- ![Mean Size](./plots/size_subplotted.png)--->
 
 
 Both subplots display a very similar behavior that is common for GP, we observe a strong trend for solutions to grow in size with each additional generation that is concluded. Another observation  that can be made is that the best solutions of each generation almost always have a larger size than the population average. On first impression, the differences between both selection operators appears to be insignificant. Again, I conducted a MWU test to test for statistical differences in the underlying distribution of sizes measured during the experiment. 
@@ -421,6 +418,9 @@ None of the differences in mean size are statistically significant. Again, based
 
 
 # Conclusion
+
+...
+
 
 # Limitations and open questions
 

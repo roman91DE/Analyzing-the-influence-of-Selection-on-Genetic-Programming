@@ -5,7 +5,6 @@
 N_RUN=50
 
 # activate the conda environment that is specified in src/gp_research.yml
-conda init zsh
 conda activate gp_research
 
 # run the basic experiment for N_RUN times
