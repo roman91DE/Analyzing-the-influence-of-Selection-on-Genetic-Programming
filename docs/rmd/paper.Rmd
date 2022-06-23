@@ -2,7 +2,7 @@
 title: |
   <center>Analyzing the influence of Selection on Genetic Programming's Generalization ability in Symbolic Regression: </center>
   <center>
-    A comparison of $\epsilon$-Lexicase Selection and Tournament Selection
+    A comparison of $\epsilon$-lexicase Selection and Tournament Selection
   </center>
   <center>--------------------------------------------------------</center>
   <center>Student: Roman Höhn</center>
@@ -47,7 +47,14 @@ knitr::opts_chunk$set(fig.pos = "!H")
 
 \tableofcontents
 \thispagestyle{empty}
-\newpage
+\newpage  
+
+\listoftables
+\listoffigures
+\thispagestyle{empty}
+\newpage  
+
+
 
 # Introduction
 
@@ -71,7 +78,7 @@ The overall performance of GP can depend strongly on the choice of its underlyin
 Tournament Selection is a commonly used selection operator in EC and is the most used operator in GP systems [@10.1007/978-3-642-16493-4_19, p.181]. A parent solution is selected by randomly sampling $k$ individuals from the current population into a tournament pool and then the solution with the highest fitness score from the tournament pool is selected [@10.1007/978-3-642-16493-4_19, p.182]. 
 Lexicase selection has been suggested as an alternative to tournament selection that is not based on aggregating fitness scores. It samples $n$ test cases in random order and then eliminates solutions from the selection pool on a per test case basis if they are not performing on an elite level [@6920034, p.1].
 
-Since regular Lexicase selection has been shown to perform sub optimal on continuous-valued optimization problems, a modified variation called $\epsilon$-Lexicase selection has been suggested for symbolic regression by La Cava et. al (2016). Here, $\epsilon$-Lexicase selection has shown itself to outperform both in overall performance while showing only negligible computational overhead [@epsilon_lexicase_main, p.747].
+Since regular Lexicase selection has been shown to perform sub optimal on continuous-valued optimization problems, a modified variation called $\epsilon$-lexicase selection has been suggested for symbolic regression by La Cava et. al (2016). Here, $\epsilon$-lexicase selection has shown itself to outperform both in overall performance while showing only negligible computational overhead [@epsilon_lexicase_main, p.747].
 
 <!-- Symbolic Regression --->
 The goal of symbolic regression is to find a mathematical model for an observed set of data points [@10.1007/978-3-540-24621-3_22, p.794]. Symbolic Regression has been one of the first GP applications and to this day is an actively studied and highly relevant area of research [@poli08:fieldguide, p.114]. In most symbolic regression problems, little to no prior knowledge about the optimal form and structure of the target function is available. The ability of GP to optimize for model structure as well as for parameters has lead to it being one of the most prevalent methods used in the domain of symbolic regression [@10.1007/978-3-540-24621-3_22, p.795].
@@ -80,7 +87,7 @@ The goal of symbolic regression is to find a mathematical model for an observed 
 An important quality of all supervised machine learning applications, including GP, is the ability to not only optimize performance for the test cases a model is trained on but to also perform well on previously unseen cases, this is referred to as generalization. In most real world applications of symbolic regression only a small subset of labeled data is available for training. The aim is to produce a model that not only accurately predicts the provided training data but can also predict previously unseen cases with high precision [@Gonalves2016AnEO, p.6]. A model that is extensively optimized on the provided training data, can become over fitted to this data sample which may lead to a decrease in generalization.
 
 <!-- Research Question --->
-This research project tries to answer the question if the usage of $\epsilon$-Lexicase selection influences the generalization behavior of programs that are evolved using GP for symbolic regression if compared to programs that are evolved using traditional tournament selection.
+This research project tries to answer the question if the usage of $\epsilon$-lexicase selection influences the generalization behavior of programs that are evolved using GP for symbolic regression if compared to programs that are evolved using traditional tournament selection.
 
 
 # An Overview of the current state of research
@@ -112,10 +119,10 @@ Lexicase - Parent-Selection:
   (c) Otherwise remove the first case from cases and go to Loop.
 ```
 
-More recent research by @epsilon_lexicase_main suggests $\epsilon$-Lexicase selection as a modified selection operator that can improve overall GP performance if applied to continuous-valued symbolic regression tasks in comparison to tournament and standard lexicase selection.  @epsilon_lexicase_main argues that the original concept behind lexicase selection as formulated by @lexicase_first_desciption does not fit the requirements of real-world symbolic regression tasks. The authors identifies the pass condition of regular lexicase selection as the main problem if applied to symbolic regression: Individual solutions can only be selected if they perform on an elite level but with continuous-valued, and often noisy, data it is very unlikely for two individuals to achieve an exactly equal error for a given test case. This stringent pass condition can result in filtering out too many individuals during the selection process [@epsilon_lexicase_main, p.742]. $\epsilon$-Lexicase adresses this problem by introducing an $\epsilon$ parameter that specifies a range around the elite error, individuals that perform inside this range pass the current selection iteration. @https://doi.org/10.48550/arxiv.1709.05394 describes $\epsilon$-Lexicase selection as a more "relaxed version of lexicase selection".
-Different methods to configure the $\epsilon$ Parameter have been explored, for the limited scope of this project I will focus on the most promising implementation of $\epsilon$-Lexicase selection that is automatically adjusted on the basis of the median absolute deviation of errors inside the selection pool [@epsilon_lexicase_main, p.742] [@https://doi.org/10.48550/arxiv.1709.05394, p.6].
+More recent research by @epsilon_lexicase_main suggests $\epsilon$-lexicase selection as a modified selection operator that can improve overall GP performance if applied to continuous-valued symbolic regression tasks in comparison to tournament and standard lexicase selection.  @epsilon_lexicase_main argues that the original concept behind lexicase selection as formulated by @lexicase_first_desciption does not fit the requirements of real-world symbolic regression tasks. The authors identifies the pass condition of regular lexicase selection as the main problem if applied to symbolic regression: Individual solutions can only be selected if they perform on an elite level but with continuous-valued, and often noisy, data it is very unlikely for two individuals to achieve an exactly equal error for a given test case. This stringent pass condition can result in filtering out too many individuals during the selection process [@epsilon_lexicase_main, p.742]. $\epsilon$-lexicase adresses this problem by introducing an $\epsilon$ parameter that specifies a range around the elite error, individuals that perform inside this range pass the current selection iteration. @https://doi.org/10.48550/arxiv.1709.05394 describes $\epsilon$-lexicase selection as a more "relaxed version of lexicase selection".
+Different methods to configure the $\epsilon$ Parameter have been explored, for the limited scope of this project I will focus on the most promising implementation of $\epsilon$-lexicase selection that is automatically adjusted on the basis of the median absolute deviation of errors inside the selection pool [@epsilon_lexicase_main, p.742] [@https://doi.org/10.48550/arxiv.1709.05394, p.6].
 
-The performance increase of $\epsilon$-Lexicase selection for symbolic regression problems has been demonstrated and reported for many benchmark problems which led to widespread adaption of it in symbolic regression applications [@epsilon_lexicase_main, p.744-745].
+The performance increase of $\epsilon$-lexicase selection for symbolic regression problems has been demonstrated and reported for many benchmark problems which led to widespread adaption of it in symbolic regression applications [@epsilon_lexicase_main, p.744-745].
 
 In comparison, a traditional GP selection method like tournament selection most commonly computes the fitness of a program as the mean of its error for each individual fitness case. One downside to this approach is that the total amount of information is reduced from a wide range of individual errors to a single metric. @6920034 suspects that this loss in overall information provided to GP might reduce overall performance especially if applied to the class of uncompromising problems that require the solution to perform well on a wide range of diverse cases. Since tournament selection selects individuals based on their average fitness across all test cases, the resulting solutions should be expected to be more biased towards being generalists instead of specialists.
 
@@ -179,17 +186,17 @@ To measure the generalization ability of each model the data set will be randoml
 <!-- Statistical Analysis --->
 Since GP is a stochastic optimization algorithm, the basic experiment will be run for a total of 50 times to ensure a fair and meaningful comparison based on a large number of runs for both algorithms. For each run of the experiment the data set will be randomly split in half as described, both models are then trained and tested using the exact same set of fitness cases.
 
-The statistical analysis of the collected data will first focus on examining the question if, on average, the usage of $\epsilon$-Lexicase selection will result in models that perform significantly different than models that are evolved using tournament selection both.
+The statistical analysis of the collected data will first focus on examining the question if, on average, the usage of $\epsilon$-lexicase selection will result in models that perform significantly different than models that are evolved using tournament selection both.
 
 > $H0_{1}$: The distribution underlying the samples of training/testing errors produced by torunament selection is the same as the distribution underlying samples of training/testing errors produced by $\epsilon$-lexicase selection
 
 The next question of interest is, to examine if statistical significant differences between the mean errors of training and testing data exist for both selection operators:
 
-> $H0_{2}$: The distribution underlying the samples of training errors produced by $\epsilon$-Lexicase/torunament selection is the same as the distribution underlying samples of testing errors produced by $\epsilon$-Lexicase/tournament selection
+> $H0_{2}$: The distribution underlying the samples of training errors produced by $\epsilon$-lexicase/torunament selection is the same as the distribution underlying samples of testing errors produced by $\epsilon$-lexicase/tournament selection
 
 To gather further insight into the differences between both GP systems, an additional test will be performed on the question if differences in the total size of the resulting programs exist:
 
-> $H0_{3}$: No differences in program size exist between the distribution underlying the samples produced by $\epsilon$-Lexicase and the distribution underlying samples of tournament selection
+> $H0_{3}$: No differences in program size exist between the distribution underlying the samples produced by $\epsilon$-lexicase and the distribution underlying samples of tournament selection
 
 All hypothesis will be tested using a level of significance of $\alpha=0.05$.
 
@@ -325,9 +332,9 @@ knitr::kable(
              
 ```
 
-Some interesting observation from tables 6 and 7 can be made by comparing the mean of the variables $min\_training\_error$ and $testing\_error$. Variable $min\_training\_error$ represents the fitness, measured by the MSE, of the best performing solution that has been found during a single run of the experiment while the variable $testing\_error$ represents the fitness of the same solution if evaluated for the unknown fitness cases inside the testing data set. Tournament selection based GP achieves a mean $min\_training\_error$ of $16.483$ and a mean $testing\_error$ of $16.905$ while the GP system using $\epsilon$-Lexicase selection can only achieve a mean $min\_training\_error$ of $22.013$ and a mean $testing\_error$ of $22.456$. These results indicate an overall performance benefit for tournament selection based GP in the experiment. It should also be mentioned that the best performing model over all 50 runs, measured by the minimum of variables $min\_training\_error$ and $testing\_error$, has been achieved by tournament selection with an MSE of 7.066 for the training data and	7.847 for the testing data.
+Some interesting observation from tables 6 and 7 can be made by comparing the mean of the variables $min\_training\_error$ and $testing\_error$. Variable $min\_training\_error$ represents the fitness, measured by the MSE, of the best performing solution that has been found during a single run of the experiment while the variable $testing\_error$ represents the fitness of the same solution if evaluated for the unknown fitness cases inside the testing data set. Tournament selection based GP achieves a mean $min\_training\_error$ of $16.483$ and a mean $testing\_error$ of $16.905$ while the GP system using $\epsilon$-lexicase selection can only achieve a mean $min\_training\_error$ of $22.013$ and a mean $testing\_error$ of $22.456$. These results indicate an overall performance benefit for tournament selection based GP in the experiment. It should also be mentioned that the best performing model over all 50 runs, measured by the minimum of variables $min\_training\_error$ and $testing\_error$, has been achieved by tournament selection with an MSE of 7.066 for the training data and	7.847 for the testing data.
 
-If we compare the differences of $min\_training\_error$ and $testing\_error$ on the basis of each algorithm, we can observe that both tournament and $\epsilon$-lexicase achieve a slightly lower error on the training data than on the testing data. If we compute the total difference between the means of $min\_training\_error$ and $testing\_error$ for both algorithms tournament selection amounts to 0.422 and $\epsilon$-Lexicase selection to 0.443. Regarding our primary research question, the differences in generalization, the initial observations do not seem to indicate a significant difference in the the relative gap between the solutions performance on testing data and training data.
+If we compare the differences of $min\_training\_error$ and $testing\_error$ on the basis of each algorithm, we can observe that both tournament and $\epsilon$-lexicase achieve a slightly lower error on the training data than on the testing data. If we compute the total difference between the means of $min\_training\_error$ and $testing\_error$ for both algorithms tournament selection amounts to 0.422 and $\epsilon$-lexicase selection to 0.443. Regarding our primary research question, the differences in generalization, the initial observations do not seem to indicate a significant difference in the the relative gap between the solutions performance on testing data and training data.
 
 Figure 1 visualizes the distribution of $min\_training\_error$ and $testing\_error$ for both selection operators over the total 50 runs using a box plot and summarizes the initial observations from tables 6 and 7 described above.
 
@@ -373,15 +380,15 @@ knitr::kable(
 
 The results show two major findings:
 
-1. The differences in mean fitness between tournament selection and $\epsilon$-Lexicase selection are highly statistical significant even if considering an $\alpha$ of 0.01. For the given symbolic regression task tournament selection achieves a better mean performance on both the training as well as the testing data set than $\epsilon$-Lexicase selection. These findings contradict the hypothesis $H0_{1}$ described in subsection 3.1 and are contrary to some of the research that was summarized in subsections 2.1 and 2.3.[@epsilon_lexicase_main] [@https://doi.org/10.48550/arxiv.1709.05394].
+1. The differences in mean fitness between tournament selection and $\epsilon$-lexicase selection are highly statistical significant even if considering an $\alpha$ of 0.01. For the given symbolic regression task tournament selection achieves a better mean performance on both the training as well as the testing data set than $\epsilon$-lexicase selection. These findings contradict the hypothesis $H0_{1}$ described in subsection 3.1 and are contrary to some of the research that was summarized in subsections 2.1 and 2.3.[@epsilon_lexicase_main] [@https://doi.org/10.48550/arxiv.1709.05394].
 
 
-2. The differences in mean fitness between $min\_training\_error$ and $testing\_error$ are not statistically significant for both selection algorithms. If comparing the mean training error to the mean testing error, the p-values only computes to 0.309 for tournament selection and to 0.257 for $\epsilon$-Lexicase selection. These findings fail to reject $H0_{2}$, based on the obtained results we can not find evidence that both algorithms demonstrate a significantly different performance between the training data and the previously unseen testing data.
+2. The differences in mean fitness between $min\_training\_error$ and $testing\_error$ are not statistically significant for both selection algorithms. If comparing the mean training error to the mean testing error, the p-values only computes to 0.309 for tournament selection and to 0.257 for $\epsilon$-lexicase selection. These findings fail to reject $H0_{2}$, based on the obtained results we can not find evidence that both algorithms demonstrate a significantly different performance between the training data and the previously unseen testing data.
 
 
-To further examine the generalization behavior of both selection operators I plotted the mean fitness scores for both algorithms over the total number of 100 generations in figure 2. Figure 2 shows that both algorithms show little visual evidence of over fitting which would result in a growing gap between between $min\_training\_error$ and $testing\_error$ in the final stages of the evolutionary optimization. For $\epsilon$-Lexicase selection a small gap can be observed starting at around the 90.th generation, while the minimum training error slowly converges a small increase in the testing error can be observed. Based on the limited amount of collected data, it is questionable if this small sign of over fitting can be interpreted as a weak indicator for an inferior generalization behavior of $\epsilon$-Lexicase in comparison to tournament selection.
+To further examine the generalization behavior of both selection operators I plotted the mean fitness scores for both algorithms over the total number of 100 generations in figure 2. Figure 2 shows that both algorithms show little visual evidence of over fitting which would result in a growing gap between between $min\_training\_error$ and $testing\_error$ in the final stages of the evolutionary optimization. For $\epsilon$-lexicase selection a small gap can be observed starting at around the 90.th generation, while the minimum training error slowly converges a small increase in the testing error can be observed. Based on the limited amount of collected data, it is questionable if this small sign of over fitting can be interpreted as a weak indicator for an inferior generalization behavior of $\epsilon$-lexicase in comparison to tournament selection.
 
-Figure 2 also shows a visual representation of the described overall performance benefit of using tournament selection instead of $\epsilon$-Lexicase selection for the chosen symbolic regression task. It can be observed that at all stages of the evolution tournament selection based GP achieves a lower mean error for both data sets.
+Figure 2 also shows a visual representation of the described overall performance benefit of using tournament selection instead of $\epsilon$-lexicase selection for the chosen symbolic regression task. It can be observed that at all stages of the evolution tournament selection based GP achieves a lower mean error for both data sets.
 
 ![Mean Errors](./plots/mean_error_combined.png)
 
@@ -414,12 +421,20 @@ knitr::kable(
        
 ```
 
-None of the differences in mean size are statistically significant. Again, based on the results obtained in my experiment, the evidence produced fails to reject the null hypothesis $H0_{3}$ that seletion has no significant effect on differences in program size. 
+None of the differences in mean size are statistically significant. Again, based on the results obtained in my experiment, the evidence produced fails to reject the null hypothesis $H0_{3}$ that selection has no significant effect on differences in program size. It should be noted that the configuration of both GP algorithm did include two mechanisms that place limitations on the growth behavior of the individual solutions to avoid excessive bloating (see sub section 3.2.4).
 
 
 # Conclusion
 
-...
+The objective of this research project has been to answer the question if the choice between two commonly used parent selection operators, tournament selection and $\epsilon$-lexicase selection, significantly influences the generalization behavior of GP for symbolic regression tasks. 
+
+The results obtained from my experiment did not demonstrate any statistically significant differences in generalization, both GP systems achieve a slightly lower mean error if evaluated for the training data sets than if evaluated for the unseen fitness cases of the testing data set. The mean differences between testing and training errors did not show statistical significance differences for both algorithms (summarized in table 9).
+
+To further explore differences in generalization behavior the mean for both algorithms training and testing error over all generations for all 50 independent runs was visualized and analyzed (see figure 2). A very small and probably insignificant gap did show for $\epsilon$-lexicase selection in the final phase of the evolutionary search, in the grand scheme of things this approach also did not yield any clear evidence of differences in generalization. 
+
+A final attempt to explore possible differences between both GP systems has been to explore differences in growth behavior as an indicator for generalization. This idea was based on the wide spread hypothesis that increases in overall program size might be an indication of over fitting to the training data, the concept has been discussed in sub section 2.2. Again, based on my results I could not find statistically significant differences in the growth behavior between both selection operators.
+
+An interesting finding of my analysis is, that the overall performance of tournament selection has shown to be significantly better than that of $\epsilon$-lexicase selection for the selected symbolic regression problem. This finding was rather unexpected based on the research of @epsilon_lexicase_main and @https://doi.org/10.48550/arxiv.1709.05394 that primarily inspired this research project in the first place.
 
 
 # Limitations and open questions
@@ -442,15 +457,16 @@ All limitations and shortcomings described above are also connected to the secon
 
 \newpage  
 
-# I   References {.unnumbered #I}
+# I - References {.unnumbered #I}
 
 ::: {#refs}
 :::
 
 
-# II  Statutory Declaration {.unnumbered #II}
 
-![Statutory Declaration](./misc/erklärung.pdf)\
+# II - Statutory Declaration {.unnumbered #II}
+
+![Statutory Declaration](./private/erklaerung.pdf)\
 
 
 
