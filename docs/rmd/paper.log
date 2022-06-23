@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  23 JUN 2022 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  23 JUN 2022 19:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -657,7 +657,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `paper.toc'.
 
-[2] (./paper.lot)
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.149 \newpage
+               [1] (./paper.lot)
 \tf@lot=\write4
 \openout4 = `paper.lot'.
 
@@ -665,90 +671,90 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@lof=\write5
 \openout5 = `paper.lof'.
 
-[3] [4]
+[2] [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 236.
+(Font)              <5> on input line 238.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-69.
+71.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [5] [6]
-Overfull \hbox (5.72021pt too wide) in paragraph at lines 345--345
+) [4] [5]
+Overfull \hbox (5.72021pt too wide) in paragraph at lines 347--347
 []  \T1/lmtt/m/n/12 (a) Compute the mean fitness for each individual inside the
  tournament pool[] 
  []
 
 
-Overfull \hbox (55.12024pt too wide) in paragraph at lines 345--345
+Overfull \hbox (55.12024pt too wide) in paragraph at lines 347--347
 []  \T1/lmtt/m/n/12 (b) Select individual from the tournament pool with the hig
 hest mean fitness score.[] 
  []
 
-[7]
+[6]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8] [9]
+[7] [8]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
-91.
+93.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [10
+) [9
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3.1}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.612   \(
-          \tau\): the set of \(N\) fitness cases] [11] [12]
-<./plots/mean_error_boxplot_all.png, id=160, 1156.32pt x 722.7pt>
+l.614   \(
+          \tau\): the set of \(N\) fitness cases] [10] [11]
+<./plots/mean_error_boxplot_all.png, id=159, 1156.32pt x 722.7pt>
 File: ./plots/mean_error_boxplot_all.png Graphic file (type png)
 <use ./plots/mean_error_boxplot_all.png>
 Package pdftex.def Info: ./plots/mean_error_boxplot_all.png  used on input line
- 814.
+ 816.
 (pdftex.def)             Requested size: 469.75385pt x 293.59615pt.
-[13]
+[12]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14 <./plots/mean_error_boxplot_all.png>]
-<./plots/mean_error_combined.png, id=173, 1156.32pt x 722.7pt>
+[13 <./plots/mean_error_boxplot_all.png>]
+<./plots/mean_error_combined.png, id=172, 1156.32pt x 722.7pt>
 File: ./plots/mean_error_combined.png Graphic file (type png)
 <use ./plots/mean_error_combined.png>
 Package pdftex.def Info: ./plots/mean_error_combined.png  used on input line 91
-3.
+5.
 (pdftex.def)             Requested size: 469.75385pt x 293.59615pt.
-[15]
-<./plots/size_subplotted.png, id=179, 1156.32pt x 722.7pt>
+[14]
+<./plots/size_subplotted.png, id=178, 1156.32pt x 722.7pt>
 File: ./plots/size_subplotted.png Graphic file (type png)
 <use ./plots/size_subplotted.png>
-Package pdftex.def Info: ./plots/size_subplotted.png  used on input line 925.
+Package pdftex.def Info: ./plots/size_subplotted.png  used on input line 927.
 (pdftex.def)             Requested size: 469.75385pt x 293.59615pt.
-[16 <./plots/mean_error_combined.png>] [17 <./plots/size_subplotted.png>] [18] 
-[19]
-Overfull \hbox (0.76833pt too wide) in paragraph at lines 1146--1151
+[15 <./plots/mean_error_combined.png>] [16 <./plots/size_subplotted.png>] [17] 
+[18]
+Overfull \hbox (0.76833pt too wide) in paragraph at lines 1148--1153
 []\T1/lmr/m/n/12 (-20) Paris, G., Robilliard, D. and Fonlupt, C. (2004) ``Explo
 ring overfitting in genetic programming,''
  []
 
-[20]
-<./private/erklaerung.pdf, id=241, 597.432pt x 844.83629pt>
+[19]
+<./private/erklaerung.pdf, id=240, 597.432pt x 844.83629pt>
 File: ./private/erklaerung.pdf Graphic file (type pdf)
 <use ./private/erklaerung.pdf>
-Package pdftex.def Info: ./private/erklaerung.pdf  used on input line 1188.
+Package pdftex.def Info: ./private/erklaerung.pdf  used on input line 1190.
 (pdftex.def)             Requested size: 459.96025pt x 650.43571pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1188--1189
+Underfull \hbox (badness 10000) in paragraph at lines 1190--1191
 
  []
 
-[21]
+[20]
 Overfull \vbox (42.74904pt too high) has occurred while \output is active []
 
-[22 <./private/erklaerung.pdf, page is rotated 270 degrees>] (./paper.aux) ) 
+[21 <./private/erklaerung.pdf, page is rotated 270 degrees>] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 15701 strings out of 478268
- 248797 string characters out of 5846348
- 594418 words of memory out of 5000000
+ 15700 strings out of 478268
+ 248790 string characters out of 5846348
+ 594414 words of memory out of 5000000
  33327 multiletter control sequences out of 15000+600000
  548070 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -770,10 +776,10 @@ usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2022
 /texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dis
 t/fonts/type1/public/lm/lmtt12.pfb>
-Output written on paper.pdf (22 pages, 701563 bytes).
+Output written on paper.pdf (22 pages, 701559 bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
- 334 compressed objects within 4 object streams
- 106 named destinations out of 1000 (max. 500000)
+ 396 PDF objects out of 1000 (max. 8388607)
+ 333 compressed objects within 4 object streams
+ 105 named destinations out of 1000 (max. 500000)
  43165 words of extra memory for PDF output out of 51595 (max. 10000000)
 
