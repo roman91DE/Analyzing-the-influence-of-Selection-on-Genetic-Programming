@@ -202,7 +202,7 @@ All hypothesis will be tested using a level of significance of $\alpha=0.05$.
 
 To further examine the difference in generalization behavior, the mean testing and training errors over each generation will be visualized for both algorithms. The specific aim of this visualization is to explore the mechanism of over fitting and to examine if differences between both methods can be detected.
 
-All GP experiments will be implemented by using the python programming language in conjunction with DEAP, a framework for distributed evolutionary algorithms that implements various tools and algorithms for genetic programming [@DEAP_JMLR2012]. A github repository that contains the full source code, tables, plots and other materials represented in this thesis can be accessed at [https://github.com/roman91DE/intelligent_information_systems_research_project](#https://github.com/roman91DE/intelligent_information_systems_research_project).
+All GP experiments will be implemented by using the python programming language in conjunction with DEAP, a framework for distributed evolutionary algorithms that implements various tools and algorithms for genetic programming [@DEAP_JMLR2012]. A repository that contains the full source code, tables, plots and other materials represented in this thesis is available at github.com^[https://github.com/roman91DE/intelligent_information_systems_research_project]. 
 
 ## Gentetic Programming Configuration
 
@@ -399,7 +399,7 @@ In a final step I analyze the growth behavior for both GP systems to determine i
 \caption{Mean Size}
 \end{figure}
 
-<!-- ![Mean Size](./plots/size_subplotted.png)--->
+<!-- ![Mean Size](./plots/size_sub plotted.png)--->
 
 
 Both subplots display a very similar behavior that is common for GP, we observe a strong trend for solutions to grow in size with each additional generation that is concluded. Another observation  that can be made is that the best solutions of each generation almost always have a larger size than the population average. On first impression, the differences between both selection operators appears to be insignificant. Again, I conducted a MWU test to test for statistical differences in the underlying distribution of sizes measured during the experiment. 
@@ -446,7 +446,7 @@ I faced two major difficulties in the preparation and evaluation of this researc
   
 The combination of both issues might have resulted in a significant reduction in overall robustness of the results represented in sections 5 and 6. The performance of all evolutionary algorithms, including GP, can be highly dependent on a large number of parameters and implementation details. Although the series of experiments conducted in this project are comparably simple in nature, the results achieved might still be highly influenced by the GP configuration detailed in subsection 4.2. 
 
-To gain further insight into the differences in generalization behavior and to adress the research question with a higher level of certainty, the experiment I conducted should be repeated for different GP configurations. Some exemplary parameters that could drastically influence the results of this experiment include the population size, the total number of generations, the inclusion of elitism or the computation of $\epsilon$ in lexicase selection. Other factors whose influence on generalization behavior could be important include different methods to compute an individuals fitness (e.g. mean absolute error or root mean squared error), testing different variations of the genetic operators for mutation and crossover and experimenting with different variations of the training:testing split size.
+To gain further insight into the differences in generalization behavior and to address the research question with a higher level of certainty, the experiment I conducted should be repeated for different GP configurations. Some exemplary parameters that could drastically influence the results of this experiment include the population size, the total number of generations, the inclusion of elitism or the computation of $\epsilon$ in lexicase selection. Other factors whose influence on generalization behavior could be important include different methods to compute an individuals fitness (e.g. mean absolute error or root mean squared error), testing different variations of the genetic operators for mutation and crossover and experimenting with different variations of the training:testing split size.
 
 Another obvious weakness of my project is that the experiment is only based on a single symbolic regression application, the prediction of the heating load of buildings based on a relatively small data set. To gain further trust in the obtained results, the experiment should be repeated for other symbolic regression tasks and data sets. At the current state it remains unknown if the generalization behavior of both selection operators might be highly problem specific and dependent on the data set used for training and testing.
 
