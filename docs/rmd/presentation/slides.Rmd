@@ -1,0 +1,74 @@
+---
+title: "Analyzing the influence of Selection on Genetic Programming's Generalization ability in Symbolic Regression"
+subtitle: "A comparison of epsilon-lexicase Selection and Tournament Selection"
+author: "Roman Hoehn"
+affiliation: "Johannes Gutenberg University Mainz"
+date: "2022-06-29"
+output:
+  beamer_presentation:
+    #theme: "Darmstadt"
+    colortheme: "beaver"
+    fonttheme: "structurebold"
+    keep_tex: true
+    fig_caption: yes
+    number_sections: true
+    slide_level: 2
+toc: yes
+toc_depth: 1
+bibliography: ../bib/bib/ref.bib
+csl: ../bib/csl/harvard1.csl
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# Introduction
+
+...
+
+## Genetic Programming
+
+...
+
+## Parent Selection
+
+...
+
+## Symbolic Regression
+
+...
+
+## Generalization
+
+...
+
+# Experimental Study
+
+...
+
+## Research Design
+
+...
+
+## Genetic Programming Configuration
+
+...
+
+# Results
+
+...
+
+# Conclusions
+
+...
+
+# Limitations and open Questions
+
+...
+
+# References
+
+
