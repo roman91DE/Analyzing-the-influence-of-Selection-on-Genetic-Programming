@@ -43,10 +43,10 @@
 \AtBeginSubsection{
   \frame{\subsectionpage}
 }
-\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{iftex}
-\ifPDFTeX
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
@@ -74,29 +74,38 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Analyzing the influence of Selection on Genetic Programming's Generalization ability in Symbolic Regression},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \newif\ifbibliography
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
-\hypersetup{
-  pdftitle={Analyzing the influence of Selection on Genetic Programming's Generalization ability in Symbolic Regression},
-  pdfauthor={Roman Hoehn},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
 
 \title{Analyzing the influence of Selection on Genetic Programming's
 Generalization ability in Symbolic Regression}
 \subtitle{A comparison of epsilon-lexicase Selection and Tournament
 Selection}
-\author{Roman Hoehn}
-\date{2022-06-29}
+\author{}
+\date{\vspace{-2.5em}2022-06-29}
 
 \begin{document}
 \frame{\titlepage}
@@ -107,13 +116,48 @@ Selection}
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-\begin{frame}{Introduction}
-\ldots{}
+\begin{frame}{Research Question}
+\protect\hypertarget{research-question}{}
+\begin{itemize}
+\tightlist
+\item
+  Does the usage of \(\epsilon\)-lexicase parent selection influence the
+  generalization behaviour of genetic programming in symbolic regression
+  if compared to tournament selection?
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Genetic Programming}
 \protect\hypertarget{genetic-programming}{}
-\ldots{}
+\begin{itemize}
+\tightlist
+\item
+  A metaheuristic that searches for computer programs that solve a given
+  problem
+\item
+  Evolutionary algorithm that simulates the process of Darwinian
+  evolution:
+
+  \begin{enumerate}
+  \tightlist
+  \item
+    Fitnessfunction: Evaluates the quality of a solution
+  \item
+    Selection: Solutions are selected based on their individual fitness
+  \item
+    Variation: Mutation and recombination of solutions
+  \end{enumerate}
+\item
+  Unique Features:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Evolve solutions of variable length and structure
+  \item
+    Solutions are typically represented by recursive tree structures
+  \end{itemize}
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Parent Selection}
@@ -128,6 +172,24 @@ Selection}
 
 \begin{frame}{Generalization}
 \protect\hypertarget{generalization}{}
+\end{frame}
+
+\begin{frame}{Motivation}
+\protect\hypertarget{motivation}{}
+\begin{itemize}
+\tightlist
+\item
+  Generalization
+\end{itemize}
+\end{frame}
+
+\hypertarget{theoretical-foundations}{%
+\section{Theoretical Foundations}\label{theoretical-foundations}}
+
+\begin{frame}{Genetic Programming}
+\protect\hypertarget{genetic-programming-1}{}
+\ldots{}
+
 \ldots{}
 \end{frame}
 
@@ -151,7 +213,14 @@ Selection}
 \hypertarget{results}{%
 \section{Results}\label{results}}
 
-\begin{frame}{Results}
+\begin{frame}{Descriptive Statistics}
+\protect\hypertarget{descriptive-statistics}{}
+\begin{figure}
+\centering
+\includegraphics{../plots/mean_error_boxplot_all.png}
+\caption{Distribution of Errors}
+\end{figure}
+
 \ldots{}
 \end{frame}
 

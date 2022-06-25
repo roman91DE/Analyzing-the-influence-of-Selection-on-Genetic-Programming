@@ -1,12 +1,9 @@
 ---
 title: "Analyzing the influence of Selection on Genetic Programming's Generalization ability in Symbolic Regression"
 subtitle: "A comparison of epsilon-lexicase Selection and Tournament Selection"
-author: "Roman Hoehn"
-affiliation: "Johannes Gutenberg University Mainz"
 date: "2022-06-29"
 output:
   beamer_presentation:
-    #theme: "Darmstadt"
     colortheme: "beaver"
     fonttheme: "structurebold"
     keep_tex: true
@@ -20,18 +17,34 @@ csl: ../bib/csl/harvard1.csl
 ---
 
 
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+library(kableExtra)
+library(magrittr)
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.pos = "!H")
 ```
 
 
 # Introduction
 
-...
+
+## Research Question
+
+* Does the usage of $\epsilon$-lexicase parent selection influence the generalization behaviour of genetic programming in symbolic regression if compared to tournament selection?
+
 
 ## Genetic Programming
 
-...
+* A metaheuristic that searches for computer programs that solve a given problem
+* Evolutionary algorithm that simulates the process of Darwinian evolution:
+  1. Fitnessfunction: Evaluates the quality of a solution
+  1. Selection: Solutions are selected based on their individual fitness
+  2. Variation: Mutation and recombination of solutions
+* Unique Features:
+  * Evolve solutions of variable length and structure
+  * Solutions are typically represented by recursive tree structures
+
 
 ## Parent Selection
 
@@ -42,6 +55,20 @@ knitr::opts_chunk$set(echo = FALSE)
 ...
 
 ## Generalization
+
+## Motivation
+
+- Generalization 
+
+
+# Theoretical Foundations
+
+
+## Genetic Programming
+
+...
+
+
 
 ...
 
@@ -58,6 +85,11 @@ knitr::opts_chunk$set(echo = FALSE)
 ...
 
 # Results
+
+## Descriptive Statistics
+
+![Distribution of Errors](../plots/mean_error_boxplot_all.png)
+
 
 ...
 
