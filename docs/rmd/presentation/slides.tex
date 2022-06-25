@@ -43,10 +43,10 @@
 \AtBeginSubsection{
   \frame{\subsectionpage}
 }
-\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{iftex}
-\ifPDFTeX
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
@@ -99,9 +99,11 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{cslreferences}%
+  {}%
+  {\par}
 
 \title{Analyzing the influence of Selection on Genetic Programming's
 Generalization ability in Symbolic Regression}
@@ -119,14 +121,17 @@ Selection}
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
+\hypertarget{research-question}{%
+\section{Research Question}\label{research-question}}
+
 \begin{frame}{Research Question}
-\protect\hypertarget{research-question}{}
 \begin{itemize}
 \tightlist
 \item
   Does the usage of \(\epsilon\)-lexicase parent selection influence the
   generalization behaviour of genetic programming in symbolic regression
   if compared to tournament selection?
+\item
 \end{itemize}
 \end{frame}
 
@@ -138,13 +143,17 @@ Selection}
   A metaheuristic that searches for computer programs that solve a given
   problem
 \item
+  Inventor: John R. Koza\footnote<.->{Koza (1992)}
+\item
   Evolutionary algorithm that simulates the process of Darwinian
   evolution:
 
   \begin{enumerate}
   \tightlist
   \item
-    Fitnessfunction: Evaluates the quality of a solution
+    Population based
+  \item
+    The quality of solutions is evaluated by a fitness function
   \item
     Selection: Solutions are selected based on their individual fitness
   \item
@@ -165,11 +174,53 @@ Selection}
 
 \begin{frame}{Parent Selection}
 \protect\hypertarget{parent-selection}{}
-\ldots{}
+\begin{itemize}
+\tightlist
+\item
+  Operator that selects individual solutions from the population for
+  reproduction and mutation
+\item
+  Most commonly used selection operator in GP: Tournament
+  selection\footnote<.->{Fang and Li (2010), p.181}
+\item
+  Intuition: High chance for ``generalist'' solutions to be selected
+  since it is based on aggregated fitness scores
+\end{itemize}
+\end{frame}
+
+\begin{frame}{epsilon-Lexicase Selection}
+\protect\hypertarget{epsilon-lexicase-selection}{}
+\begin{itemize}
+\tightlist
+\item
+  Recent alternative: Lexicase Selection and it's variation
+  \(\epsilon\)-lexicase selection
+\item
+  Idea: Selection method for uncompromising, continous-valued symbolic
+  regression problems\footnote<.->{Helmuth, Spector and Matheson (2015),
+    p.12}
+\item
+  Increases genetic diversity inside the population\footnote<.->{Helmuth,
+    Spector and Matheson (2015), p.1}
+\item
+  Higher chance for ``specialist'' solutions to be selected since it is
+  decided on a per case basis
+\item
+  Performance increases have been demosntrated in many benchmarking
+  problems\footnote<.->{La Cava, Spector and Danai (2016), p.744-745}
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Symbolic Regression}
 \protect\hypertarget{symbolic-regression}{}
+\begin{itemize}
+\tightlist
+\item
+  Task: Find a mathematical model that fits a given set of datapoints
+\item
+  One of the first applications of Genetic Programming introduced
+\end{itemize}
+
 \ldots{}
 \end{frame}
 
@@ -185,9 +236,6 @@ Selection}
   Generalization
 \end{itemize}
 \end{frame}
-
-\hypertarget{theoretical-foundations}{%
-\section{Theoretical Foundations}\label{theoretical-foundations}}
 
 \begin{frame}{Genetic Programming}
 \protect\hypertarget{genetic-programming-1}{}
@@ -239,10 +287,34 @@ Selection}
 Questions}\label{limitations-and-open-questions}}
 
 \begin{frame}{Limitations and open Questions}
-\ldots{}
-\end{frame}
+\ldots{} \newpage  
 
-\hypertarget{references}{%
-\section{References}\label{references}}
+\hypertarget{refs}{}
+\begin{cslreferences}
+\leavevmode\hypertarget{ref-10.1007ux2f978-3-642-16493-4_19}{}%
+Fang, Y. and Li, J. (2010) `A review of tournament selection in genetic
+programming', in Cai, Z. et al. (eds) \emph{Advances in computation and
+intelligence}. Berlin, Heidelberg: Springer Berlin Heidelberg, pp.
+181--192.
+
+\leavevmode\hypertarget{ref-6920034}{}%
+Helmuth, T., Spector, L. and Matheson, J. (2015) `Solving uncompromising
+problems with lexicase selection', \emph{IEEE Transactions on
+Evolutionary Computation}, 19(5), pp. 630--643.
+doi:\href{https://doi.org/10.1109/TEVC.2014.2362729}{10.1109/TEVC.2014.2362729}.
+
+\leavevmode\hypertarget{ref-koza_main}{}%
+Koza, J.R. (1992) \emph{Genetic programming: On the programming of
+computers by means of natural selection}. Cambridge, MA, USA: MIT Press.
+Available at: \url{http://mitpress.mit.edu/books/genetic-programming}.
+
+\leavevmode\hypertarget{ref-epsilon_lexicase_main}{}%
+La Cava, W., Spector, L. and Danai, K. (2016) `Epsilon-lexicase
+selection for regression', in \emph{Proceedings of the genetic and
+evolutionary computation conference 2016}. New York, NY, USA:
+Association for Computing Machinery (GECCO '16), pp. 741--748.
+doi:\href{https://doi.org/10.1145/2908812.2908898}{10.1145/2908812.2908898}.
+\end{cslreferences}
+\end{frame}
 
 \end{document}
