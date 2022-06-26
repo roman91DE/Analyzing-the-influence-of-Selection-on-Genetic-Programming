@@ -113,6 +113,11 @@ knitr::kable(
 * Stochastic algorithm: Repeat the basic experiment for 50 total runs
 * Collect and aggregate results for training error, testing error and program length
 
+### Hypothesis testing
+
+1. ...
+2. ...
+3. ...
 
 
 ## Genetic Programming Configuration
