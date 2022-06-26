@@ -200,7 +200,6 @@ Model evolved by tournament selection after 100 generations:
 ## Statistical Test
 
 ```{r, echo=FALSE, warning=FALSE}
-
 df <- read.csv("../tables/csv/mwu_matrix_error.csv")
 
 knitr::kable(

@@ -505,23 +505,20 @@ Model evolved by tournament selection after 100 generations:
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Statistical Test}
+\begin{frame}[fragile]{Statistical Test}
 \protect\hypertarget{statistical-test}{}
-\begin{table}
-
-\caption{\label{tab:unnamed-chunk-5}Mean Error - P-Values (MWU)}
-\centering
-\begin{tabular}[t]{lrrrr}
-\toprule
-  & tournament\_training\_errors & tournament\_testing\_errors & elexicase\_training\_errors & elexicase\_testing\_errors\\
-\midrule
-tournament\_training\_errors & 1.000 & 0.309 & 0.000 & 0.000\\
-tournament\_testing\_errors & 0.309 & 1.000 & 0.002 & 0.000\\
-elexicase\_training\_errors & 0.000 & 0.002 & 1.000 & 0.257\\
-elexicase\_testing\_errors & 0.000 & 0.000 & 0.257 & 1.000\\
-\bottomrule
-\end{tabular}
-\end{table}
+\begin{verbatim}
+##                            tournament_training_errors tournament_testing_errors
+## tournament_training_errors               1.000000e+00              0.3092302963
+## tournament_testing_errors                3.092303e-01              1.0000000000
+## elexicase_training_errors                1.180222e-04              0.0024468832
+## elexicase_testing_errors                 4.192079e-06              0.0001213887
+##                            elexicase_training_errors elexicase_testing_errors
+## tournament_training_errors              0.0001180222             4.192079e-06
+## tournament_testing_errors               0.0024468832             1.213887e-04
+## elexicase_training_errors               1.0000000000             2.567806e-01
+## elexicase_testing_errors                0.2567805508             1.000000e+00
+\end{verbatim}
 \end{frame}
 
 \begin{frame}{Evolution of Size}

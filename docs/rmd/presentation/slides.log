@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  26 JUN 2022 23:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  26 JUN 2022 23:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -749,8 +749,7 @@ Package: xurl 2022/01/09 v 0.10 modify URL breaks
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count345
 \l__pdf_internal_box=\box77
-)
-No file slides.aux.
+) (./slides.aux)
 \openout1 = `slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
@@ -933,12 +932,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-No file slides.nav.
-[1
+(./slides.nav) [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-No file slides.toc.
-[2
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./slid
+es.toc) [2
 
 ] [3
 
@@ -1037,7 +1034,7 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
 ] [16
 
 ]
-<../plots/example_model.png, id=125, 350.30875pt x 247.92625pt>
+<../plots/example_model.png, id=133, 350.30875pt x 247.92625pt>
 File: ../plots/example_model.png Graphic file (type png)
 <use ../plots/example_model.png>
 Package pdftex.def Info: ../plots/example_model.png  used on input line 437.
@@ -1053,7 +1050,7 @@ Overfull \vbox (1.88672pt too high) detected at line 437
 ] [19
 
 ]
-<../plots/mean_error_boxplot_all.png, id=150, 1156.32pt x 722.7pt>
+<../plots/mean_error_boxplot_all.png, id=157, 1156.32pt x 722.7pt>
 File: ../plots/mean_error_boxplot_all.png Graphic file (type png)
 <use ../plots/mean_error_boxplot_all.png>
 Package pdftex.def Info: ../plots/mean_error_boxplot_all.png  used on input lin
@@ -1064,7 +1061,7 @@ e 469.
  <../plots/mean_error_boxplot_all.png>] [21
 
 ]
-<../plots/mean_error_combined.png, id=164, 1156.32pt x 722.7pt>
+<../plots/mean_error_combined.png, id=171, 1156.32pt x 722.7pt>
 File: ../plots/mean_error_combined.png Graphic file (type png)
 <use ../plots/mean_error_combined.png>
 Package pdftex.def Info: ../plots/mean_error_combined.png  used on input line 4
@@ -1075,18 +1072,131 @@ Package pdftex.def Info: ../plots/mean_error_combined.png  used on input line 4
  <../plots/mean_error_combined.png>] [23
 
 ]
-! Undefined control sequence.
-\beamer@doifinframe ...abular}[t]{lrrrr} \toprule 
-                                                  & tournament\_training\_er...
-l.525 \end{frame}
-                  
-Here is how much of TeX's memory you used:
- 24500 strings out of 478268
- 476919 string characters out of 5846348
- 753531 words of memory out of 5000000
- 41996 multiletter control sequences out of 15000+600000
- 558639 words of font info for 144 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 128i,11n,122p,1003b,532s stack positions out of 10000i,1000n,20000p,200000b,200000s
+\openout4 = `slides.vrb'.
 
-!  ==> Fatal error occurred, no output PDF file produced!
+(./slides.vrb
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Overfull \hbox (164.10628pt too wide) in paragraph at lines 14--14
+[]\T1/lmtt/m/n/10.95 ##                            tournament_training_errors t
+ournament_testing_errors[] 
+ []
+
+
+Overfull \hbox (164.10628pt too wide) in paragraph at lines 14--14
+[]\T1/lmtt/m/n/10.95 ## tournament_training_errors               1.000000e+00  
+            0.3092302963[] 
+ []
+
+
+Overfull \hbox (164.10628pt too wide) in paragraph at lines 14--14
+[]\T1/lmtt/m/n/10.95 ## tournament_testing_errors                3.092303e-01  
+            1.0000000000[] 
+ []
+
+
+Overfull \hbox (164.10628pt too wide) in paragraph at lines 14--14
+[]\T1/lmtt/m/n/10.95 ## elexicase_training_errors                1.180222e-04  
+            0.0024468832[] 
+ []
+
+
+Overfull \hbox (164.10628pt too wide) in paragraph at lines 14--14
+[]\T1/lmtt/m/n/10.95 ## elexicase_testing_errors                 4.192079e-06  
+            0.0001213887[] 
+ []
+
+
+Overfull \hbox (152.60881pt too wide) in paragraph at lines 14--14
+[]\T1/lmtt/m/n/10.95 ##                            elexicase_training_errors el
+exicase_testing_errors[] 
+ []
+
+
+Overfull \hbox (152.60881pt too wide) in paragraph at lines 14--14
+[]\T1/lmtt/m/n/10.95 ## tournament_training_errors              0.0001180222   
+          4.192079e-06[] 
+ []
+
+
+Overfull \hbox (152.60881pt too wide) in paragraph at lines 14--14
+[]\T1/lmtt/m/n/10.95 ## tournament_testing_errors               0.0024468832   
+          1.213887e-04[] 
+ []
+
+
+Overfull \hbox (152.60881pt too wide) in paragraph at lines 14--14
+[]\T1/lmtt/m/n/10.95 ## elexicase_training_errors               1.0000000000   
+          2.567806e-01[] 
+ []
+
+
+Overfull \hbox (152.60881pt too wide) in paragraph at lines 14--14
+[]\T1/lmtt/m/n/10.95 ## elexicase_testing_errors                0.2567805508   
+          1.000000e+00[] 
+ []
+
+) [24
+
+]
+<../plots/size_subplotted.png, id=192, 1156.32pt x 722.7pt>
+File: ../plots/size_subplotted.png Graphic file (type png)
+<use ../plots/size_subplotted.png>
+Package pdftex.def Info: ../plots/size_subplotted.png  used on input line 530.
+(pdftex.def)             Requested size: 307.2879pt x 192.05493pt.
+[25
+
+ <../plots/size_subplotted.png>] [26
+
+] [27
+
+] [28
+
+] [29
+
+]
+Overfull \vbox (212.40044pt too high) detected at line 606
+ []
+
+[30
+
+]
+\tf@nav=\write5
+\openout5 = `slides.nav'.
+
+\tf@toc=\write6
+\openout6 = `slides.toc'.
+
+\tf@snm=\write7
+\openout7 = `slides.snm'.
+
+(./slides.aux) ) 
+Here is how much of TeX's memory you used:
+ 24684 strings out of 478268
+ 479308 string characters out of 5846348
+ 756637 words of memory out of 5000000
+ 42133 multiletter control sequences out of 15000+600000
+ 558958 words of font info for 145 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 128i,11n,122p,1003b,533s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.en
+c}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
+texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-d
+ist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/
+type1/public/lm/lmss8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
+c/lm/lmss9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmssbx
+10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsso9.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on slides.pdf (30 pages, 332160 bytes).
+PDF statistics:
+ 330 PDF objects out of 1000 (max. 8388607)
+ 262 compressed objects within 3 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 55399 words of extra memory for PDF output out of 61914 (max. 10000000)
+
