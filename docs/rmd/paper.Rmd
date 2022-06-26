@@ -398,6 +398,7 @@ Figure 2 also shows a visual representation of the described overall performance
 ![Mean Errors](./plots/mean_error_combined.png)
 
 In a final step I analyze the growth behavior for both GP systems to determine if differences in program size can be observed based on selection operators. Figure 3 visualizes the average size of individuals inside the population as well as the average size of the best performing individual for each generation and both GP systems. 
+
 \begin{figure}
 \centering
 \includegraphics{./plots/size_subplotted.png}

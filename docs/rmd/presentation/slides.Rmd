@@ -14,11 +14,12 @@ output:
 toc: yes
 bibliography: ../bib/bib/ref.bib
 csl: ../bib/csl/harvard1.csl
+header-includes:
+   - \usepackage{float}
 ---
 
 
 ```{r setup, include=FALSE}
-library(kableExtra)
 library(magrittr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -118,30 +119,34 @@ fig.pos="H"
 
 knitr::kable(
   read.csv("../tables/csv/gp_parameters.csv"),
+  format="latex",
   digits=3,
   caption="Evolutionary Parameters"
 )
 ```
 
-## Function Set
+## Primitive Set {.allowframebreaks} 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 fig.pos="b"
 
 knitr::kable(
   read.csv("../tables/csv/primitives.csv"),
+  format="latex",
   digits=3,
+  caption="Function Set"
 ) 
 ```
-
-## Terminal Set
+\framebreak 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 fig.pos="t"
 
 knitr::kable(
   read.csv("../tables/csv/terminals.csv"),
+  format="latex",
   digits=3,
+  caption="Terminal Set"
 ) 
 ```
 
@@ -157,22 +162,13 @@ Model evolved by tournament selection after 100 generations:
 
 * Does the usage of $\epsilon$-lexicase parent selection influence the generalization behavior of genetic programming in symbolic regression if compared to tournament selection?
 
-### 3 Questions
+### Statistical Testing Strategy 
 
-1. Differences in average fitness for both algorithms?
+1. Differences in average fitness for both algorithms on both datasets?
 2. Differences in fitness for training and testing data?
-3. Differences in program size?
-
-
 
 
 # Results
-
-
-
-## Distribution of Fitness
-
-![](../plots/mean_error_boxplot_all.png)
 
 
 ## Finding 1
@@ -182,11 +178,9 @@ Model evolved by tournament selection after 100 generations:
 * Unexpected results based on the reviewed literature [@epsilon_lexicase_main], [@https://doi.org/10.48550/arxiv.1709.05394]
 
 
+## Distribution of Fitness
 
-
-## Evolution of Fitness
-
-![](../plots/mean_error_combined.png)
+![](../plots/mean_error_boxplot_all.png)
 
 
 
@@ -194,7 +188,12 @@ Model evolved by tournament selection after 100 generations:
 
 * The gap between training and testing error is not statistically significant for both selection algorithms
 * Both algorithms achieve a slightly better performance for the training data
-* No proof for overfitting
+* Good generalization: No evidence of overfitting
+
+
+## Evolution of Fitness
+
+![](../plots/mean_error_combined.png)
 
 
 ## Statistical Test
@@ -204,13 +203,20 @@ df <- read.csv("../tables/csv/mwu_matrix_error.csv")
 
 knitr::kable(
   df,
-  format = "latex",
-  booktabs = TRUE,
+  format="latex",
   digits=3,
   caption="Mean Error - P-Values (MWU)"
-) 
+) %>% kableExtra::kable_styling(font_size = 4) 
 
 ```
+
+## Program Growth
+
+* So far: No proof of differences in generalization
+* New approach: Program growth as a possible indicator for overfitting?
+* Theory: Minimum description length principle (MDLP) ^[@wang_wagner_rondinelli_2019, p. 268]
+* Downside: Growth/Bloat is no clear indicator of overfitting ^[@bloat_overfitting_gp, p. 8] 
+
 
 ## Evolution of Size
 
@@ -222,17 +228,28 @@ knitr::kable(
 
 ## Finding 3
 
-...
+* GP typical growth behaviour for both operators
+* Solutions grow at a similiar rate in each generation
+* No statistically significant differences in overall program size based on selection
+
 
 # Conclusions
 
+* Experiment did not yield evidence for differences in generalization behavior between tournament and $\epsilon$-lexicase selection
+* The performance of tournament selection is significantly higher than that of $\epsilon$-lexicase selection for the selected symbolic regression problem
+* No evidence for differences in growth behavior between both algorithms
 
-...
+
 
 # Limitations and open Questions
 
-...
-\newpage
+1. Configuration of evolutionary parameters
+2. Results are based on a single symbolic regression
+2. Limited by computational resources
+
+
+# References {.allowframebreaks} 
+
 
 
 

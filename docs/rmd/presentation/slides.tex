@@ -43,10 +43,10 @@
 \AtBeginSubsection{
   \frame{\subsectionpage}
 }
-\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{iftex}
-\ifPDFTeX
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
@@ -74,7 +74,21 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Analyzing the influence of Selection on Genetic Programming's Generalization ability in Symbolic Regression},
+  pdfauthor={Roman Hoehn, B.Sc. Wirtschaftspaedagogik},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \newif\ifbibliography
+\usepackage{longtable,booktabs}
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -92,40 +106,12 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
+\usepackage{float}
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
-\hypersetup{
-  pdftitle={Analyzing the influence of Selection on Genetic Programming's Generalization ability in Symbolic Regression},
-  pdfauthor={Roman Hoehn, B.Sc. Wirtschaftspaedagogik},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
+\newenvironment{cslreferences}%
+  {}%
+  {\par}
 
 \title{Analyzing the influence of Selection on Genetic Programming's
 Generalization ability in Symbolic Regression}
@@ -162,7 +148,7 @@ Selection}
   A metaheuristic that searches for computer programs that solve a given
   problem
 \item
-  Inventor: John R. Koza \footnote<.->{Koza (1992)}
+  Inventor: John R. Koza\footnote<.->{Koza (1992)}
 \item
   Evolutionary algorithm that simulates the process of Darwinian
   evolution:
@@ -216,8 +202,8 @@ Selection}
   \(\epsilon\)-lexicase selection
 \item
   Idea: Selection method for uncompromising, continous-valued symbolic
-  regression problems \footnote<.->{Helmuth, Spector and Matheson
-    (2015), p.12}
+  regression problems\footnote<.->{Helmuth, Spector and Matheson (2015),
+    p.12}
 \item
   Increases genetic diversity inside the population\footnote<.->{Helmuth,
     Spector and Matheson (2015), p.1}
@@ -226,7 +212,7 @@ Selection}
   decided on a per case basis
 \item
   Performance increases have been demonstrated in many benchmarking
-  problems \footnote<.->{La Cava, Spector and Danai (2016), p.744-745}
+  problems\footnote<.->{La Cava, Spector and Danai (2016), p.744-745}
 \end{itemize}
 \end{frame}
 
@@ -240,7 +226,7 @@ Selection}
   One of the first applications of GP described by Koza (1992)
 \item
   High relevance: GP can outperform state-of-the-art machine learning
-  algorithms like gradient boosting \footnote<.->{Orzechowski, Cava and
+  algorithms like gradient boosting\footnote<.->{Orzechowski, Cava and
     Moore (2018)}
 \end{itemize}
 \end{frame}
@@ -264,7 +250,7 @@ Selection}
 \begin{itemize}
 \tightlist
 \item
-  Little attention has been paid to generalization in GP \footnote<.->{O'Neill
+  Little attention has been paid to generalization in GP\footnote<.->{O'Neill
     \emph{et al.} (2010), Kushchu (2002)}
 \item
   High practical relevance of symbolic regression in many fields,
@@ -278,38 +264,30 @@ Selection}
 \begin{frame}{Benchmark problem}
 \protect\hypertarget{benchmark-problem}{}
 UC Irvine Machine Learning Repository: Prediction of energy efficiency
-in buildings \footnote<.->{Dua and Graff (2017)}
+in buildings\footnote<.->{Dua and Graff (2017)}
 
-\begin{table}
-
-\caption{\label{tab:unnamed-chunk-1}Overview - Energy Heating data set}
-\centering
-\begin{tabular}[t]{l|l}
-\hline
-Variable & Description\\
-\hline
-X1 & Relative Compactness\\
-\hline
-X2 & Surface Area\\
-\hline
-X3 & Wall Area\\
-\hline
-X4 & Roof Area\\
-\hline
-X5 & Overall Height\\
-\hline
-X6 & Orientation\\
-\hline
-X7 & Glazing Area\\
-\hline
-X8 & Glazing Area Distribution\\
-\hline
-y1 & Heating Load\\
-\hline
-y2 & Cooling Load\\
-\hline
-\end{tabular}
-\end{table}
+\begin{longtable}[]{@{}ll@{}}
+\caption{Overview - Energy Heating data set}\tabularnewline
+\toprule
+Variable & Description\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Variable & Description\tabularnewline
+\midrule
+\endhead
+X1 & Relative Compactness\tabularnewline
+X2 & Surface Area\tabularnewline
+X3 & Wall Area\tabularnewline
+X4 & Roof Area\tabularnewline
+X5 & Overall Height\tabularnewline
+X6 & Orientation\tabularnewline
+X7 & Glazing Area\tabularnewline
+X8 & Glazing Area Distribution\tabularnewline
+y1 & Heating Load\tabularnewline
+y2 & Cooling Load\tabularnewline
+\bottomrule
+\end{longtable}
 \end{frame}
 
 \begin{frame}{Experiment}
@@ -373,9 +351,13 @@ Elite Size & 0\\
 \end{table}
 \end{frame}
 
-\begin{frame}{Function Set}
-\protect\hypertarget{function-set}{}
-\begin{tabular}{l|r}
+\begin{frame}[allowframebreaks]{Primitive Set}
+\protect\hypertarget{primitive-set}{}
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-3}Functions}
+\centering
+\begin{tabular}[t]{l|r}
 \hline
 Function & Arity\\
 \hline
@@ -398,11 +380,14 @@ Protected Natural Logarithm & 1\\
 Protected Square Root & 1\\
 \hline
 \end{tabular}
-\end{frame}
+\end{table}
+\framebreak
 
-\begin{frame}{Terminal Set}
-\protect\hypertarget{terminal-set}{}
-\begin{tabular}{l|l}
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-4}Terminals}
+\centering
+\begin{tabular}[t]{l|l}
 \hline
 Terminal & Description\\
 \hline
@@ -427,6 +412,7 @@ random\_int & Ephemeral Constant (integer)\\
 random\_float & Ephemeral Constant(float)\\
 \hline
 \end{tabular}
+\end{table}
 \end{frame}
 
 \begin{frame}{Example}
@@ -446,27 +432,20 @@ Model evolved by tournament selection after 100 generations:
   if compared to tournament selection?
 \end{itemize}
 
-\begin{block}{3 Questions}
-\protect\hypertarget{questions}{}
+\begin{block}{Statistical Testing Strategy}
+\protect\hypertarget{statistical-testing-strategy}{}
 \begin{enumerate}
 \tightlist
 \item
-  Differences in average fitness for both algorithms?
+  Differences in average fitness for both algorithms on both datasets?
 \item
   Differences in fitness for training and testing data?
-\item
-  Differences in program size?
 \end{enumerate}
 \end{block}
 \end{frame}
 
 \hypertarget{results}{%
 \section{Results}\label{results}}
-
-\begin{frame}{Distribution of Fitness}
-\protect\hypertarget{distribution-of-fitness}{}
-\includegraphics{../plots/mean_error_boxplot_all.png}
-\end{frame}
 
 \begin{frame}{Finding 1}
 \protect\hypertarget{finding-1}{}
@@ -485,9 +464,9 @@ Model evolved by tournament selection after 100 generations:
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Evolution of Fitness}
-\protect\hypertarget{evolution-of-fitness}{}
-\includegraphics{../plots/mean_error_combined.png}
+\begin{frame}{Distribution of Fitness}
+\protect\hypertarget{distribution-of-fitness}{}
+\includegraphics{../plots/mean_error_boxplot_all.png}
 \end{frame}
 
 \begin{frame}{Finding 2}
@@ -501,24 +480,53 @@ Model evolved by tournament selection after 100 generations:
   Both algorithms achieve a slightly better performance for the training
   data
 \item
-  No proof for overfitting
+  Good generalization: No evidence of overfitting
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Statistical Test}
+\begin{frame}{Evolution of Fitness}
+\protect\hypertarget{evolution-of-fitness}{}
+\includegraphics{../plots/mean_error_combined.png}
+\end{frame}
+
+\begin{frame}{Statistical Test}
 \protect\hypertarget{statistical-test}{}
-\begin{verbatim}
-##                            tournament_training_errors tournament_testing_errors
-## tournament_training_errors               1.000000e+00              0.3092302963
-## tournament_testing_errors                3.092303e-01              1.0000000000
-## elexicase_training_errors                1.180222e-04              0.0024468832
-## elexicase_testing_errors                 4.192079e-06              0.0001213887
-##                            elexicase_training_errors elexicase_testing_errors
-## tournament_training_errors              0.0001180222             4.192079e-06
-## tournament_testing_errors               0.0024468832             1.213887e-04
-## elexicase_training_errors               1.0000000000             2.567806e-01
-## elexicase_testing_errors                0.2567805508             1.000000e+00
-\end{verbatim}
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-5}Mean Error - P-Values (MWU)}
+\centering
+\fontsize{4}{6}\selectfont
+\begin{tabular}[t]{l|r|r|r|r}
+\hline
+X & tournament\_training\_errors & tournament\_testing\_errors & elexicase\_training\_errors & elexicase\_testing\_errors\\
+\hline
+tournament\_training\_errors & 1.000 & 0.309 & 0.000 & 0.000\\
+\hline
+tournament\_testing\_errors & 0.309 & 1.000 & 0.002 & 0.000\\
+\hline
+elexicase\_training\_errors & 0.000 & 0.002 & 1.000 & 0.257\\
+\hline
+elexicase\_testing\_errors & 0.000 & 0.000 & 0.257 & 1.000\\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Program Growth}
+\protect\hypertarget{program-growth}{}
+\begin{itemize}
+\tightlist
+\item
+  So far: No proof of differences in generalization
+\item
+  New approach: Program growth as a possible indicator for overfitting?
+\item
+  Theory: Minimum description length principle (MDLP)\footnote<.->{Wang,
+    Wagner and Rondinelli (2019), p.~268}
+\item
+  Downside: Growth/Bloat is no clear indicator of
+  overfitting\footnote<.->{Silva and Vanneschi (2009), p.~8}
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Evolution of Size}
@@ -531,14 +539,34 @@ Model evolved by tournament selection after 100 generations:
 
 \begin{frame}{Finding 3}
 \protect\hypertarget{finding-3}{}
-\ldots{}
+\begin{itemize}
+\tightlist
+\item
+  GP typical growth behaviour for both operators
+\item
+  Solutions grow at a similiar rate in each generation
+\item
+  No statistically significant differences in overall program size based
+  on selection
+\end{itemize}
 \end{frame}
 
 \hypertarget{conclusions}{%
 \section{Conclusions}\label{conclusions}}
 
 \begin{frame}{Conclusions}
-\ldots{}
+\begin{itemize}
+\tightlist
+\item
+  Experiment did not yield evidence for differences in generalization
+  behavior between tournament and \(\epsilon\)-lexicase selection
+\item
+  The performance of tournament selection is significantly higher than
+  that of \(\epsilon\)-lexicase selection for the selected symbolic
+  regression problem
+\item
+  No evidence for differences in growth behavior between both algorithms
+\end{itemize}
 \end{frame}
 
 \hypertarget{limitations-and-open-questions}{%
@@ -546,63 +574,87 @@ Model evolved by tournament selection after 100 generations:
 Questions}\label{limitations-and-open-questions}}
 
 \begin{frame}{Limitations and open Questions}
-\ldots{} \newpage
+\begin{enumerate}
+\tightlist
+\item
+  Configuration of evolutionary parameters
+\item
+  Results are based on a single symbolic regression
+\item
+  Limited by computational resources
+\end{enumerate}
+\end{frame}
 
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\begin{frame}[allowframebreaks]{References}
 \hypertarget{refs}{}
-\begin{CSLReferences}{0}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-Dua:2019}{}}%
-Dua, D. and Graff, C. (2017) {``{UCI} machine learning repository.''}
+\begin{cslreferences}
+\leavevmode\hypertarget{ref-Dua:2019}{}%
+Dua, D. and Graff, C. (2017) `UCI machine learning repository'.
 University of California, Irvine, School of Information; Computer
 Sciences. Available at: \url{http://archive.ics.uci.edu/ml}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-10.1007ux2f978-3-642-16493-4_19}{}}%
-Fang, Y. and Li, J. (2010) {``A review of tournament selection in
-genetic programming,''} in Cai, Z. et al. (eds.) \emph{Advances in
-computation and intelligence}. Berlin, Heidelberg: Springer Berlin
-Heidelberg, pp. 181--192.
+\leavevmode\hypertarget{ref-10.1007ux2f978-3-642-16493-4_19}{}%
+Fang, Y. and Li, J. (2010) `A review of tournament selection in genetic
+programming', in Cai, Z. et al. (eds) \emph{Advances in computation and
+intelligence}. Berlin, Heidelberg: Springer Berlin Heidelberg, pp.
+181--192.
 
-\leavevmode\vadjust pre{\hypertarget{ref-6920034}{}}%
-Helmuth, T., Spector, L. and Matheson, J. (2015) {``Solving
-uncompromising problems with lexicase selection,''} \emph{IEEE
-Transactions on Evolutionary Computation}, 19(5), pp. 630--643.
+\leavevmode\hypertarget{ref-6920034}{}%
+Helmuth, T., Spector, L. and Matheson, J. (2015) `Solving uncompromising
+problems with lexicase selection', \emph{IEEE Transactions on
+Evolutionary Computation}, 19(5), pp. 630--643.
 doi:\href{https://doi.org/10.1109/TEVC.2014.2362729}{10.1109/TEVC.2014.2362729}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-koza_main}{}}%
+\leavevmode\hypertarget{ref-koza_main}{}%
 Koza, J.R. (1992) \emph{Genetic programming: On the programming of
 computers by means of natural selection}. Cambridge, MA, USA: MIT Press.
 Available at: \url{http://mitpress.mit.edu/books/genetic-programming}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-generalisation_in_gp}{}}%
-Kushchu, I. (2002) {``An evaluation of EvolutionaryGeneralisation in
-genetic programming,''} \emph{Artificial Intelligence Review - AIR}, 18,
+\leavevmode\hypertarget{ref-generalisation_in_gp}{}%
+Kushchu, I. (2002) `An evaluation of evolutionarygeneralisation in
+genetic programming', \emph{Artificial Intelligence Review - AIR}, 18,
 pp. 3--14.
 doi:\href{https://doi.org/10.1023/A:1016379201230}{10.1023/A:1016379201230}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-https:ux2fux2fdoi.orgux2f10.48550ux2farxiv.1709.05394}{}}%
-La Cava, W. \emph{et al.} (2017) {``A probabilistic and multi-objective
-analysis of lexicase selection and epsilon-lexicase selection.''} arXiv.
+\leavevmode\hypertarget{ref-https:ux2fux2fdoi.orgux2f10.48550ux2farxiv.1709.05394}{}%
+La Cava, W. \emph{et al.} (2017) `A probabilistic and multi-objective
+analysis of lexicase selection and epsilon-lexicase selection'. arXiv.
 doi:\href{https://doi.org/10.48550/ARXIV.1709.05394}{10.48550/ARXIV.1709.05394}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-epsilon_lexicase_main}{}}%
-La Cava, W., Spector, L. and Danai, K. (2016) {``Epsilon-lexicase
-selection for regression,''} in \emph{Proceedings of the genetic and
+\leavevmode\hypertarget{ref-epsilon_lexicase_main}{}%
+La Cava, W., Spector, L. and Danai, K. (2016) `Epsilon-lexicase
+selection for regression', in \emph{Proceedings of the genetic and
 evolutionary computation conference 2016}. New York, NY, USA:
 Association for Computing Machinery (GECCO '16), pp. 741--748.
 doi:\href{https://doi.org/10.1145/2908812.2908898}{10.1145/2908812.2908898}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-open_issues_gp}{}}%
-O'Neill, M. \emph{et al.} (2010) {``Open issues in genetic
-programming,''} \emph{Genetic Programming and Evolvable Machines}, 11,
-pp. 339--363.
+\leavevmode\hypertarget{ref-open_issues_gp}{}%
+O'Neill, M. \emph{et al.} (2010) `Open issues in genetic programming',
+\emph{Genetic Programming and Evolvable Machines}, 11, pp. 339--363.
 doi:\href{https://doi.org/10.1007/s10710-010-9113-2}{10.1007/s10710-010-9113-2}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-Orzechowski_2018}{}}%
-Orzechowski, P., Cava, W.L. and Moore, J.H. (2018) {``Where are we
-now?''} in \emph{Proceedings of the genetic and evolutionary computation
-conference}. {ACM}.
+\leavevmode\hypertarget{ref-Orzechowski_2018}{}%
+Orzechowski, P., Cava, W.L. and Moore, J.H. (2018) `Where are we now?',
+in \emph{Proceedings of the genetic and evolutionary computation
+conference}. ACM.
 doi:\href{https://doi.org/10.1145/3205455.3205539}{10.1145/3205455.3205539}.
 
-\end{CSLReferences}
+\leavevmode\hypertarget{ref-bloat_overfitting_gp}{}%
+Silva, S. and Vanneschi, L. (2009) `Operator equalisation, bloat and
+overfitting: A study on human oral bioavailability prediction', in
+\emph{Proceedings of the 11th Annual Genetic and Evolutionary
+Computation Conference, GECCO-2009}, pp. 1115--1122.
+doi:\href{https://doi.org/10.1145/1569901.1570051}{10.1145/1569901.1570051}.
+
+\leavevmode\hypertarget{ref-wang_wagner_rondinelli_2019}{}%
+Wang, Y., Wagner, N. and Rondinelli, J.M. (2019) `Symbolic regression in
+materials science', \emph{MRS Communications}, 9(3), pp. 793--805.
+doi:\href{https://doi.org/10.1557/mrc.2019.85}{10.1557/mrc.2019.85}.
+\end{cslreferences}
 \end{frame}
 
 \end{document}
