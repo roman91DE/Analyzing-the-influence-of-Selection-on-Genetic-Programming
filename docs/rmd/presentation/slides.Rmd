@@ -59,7 +59,7 @@ knitr::opts_chunk$set(fig.pos = "!H")
 * Idea: Selection method for uncompromising, continous-valued symbolic regression problems ^[@6920034, p.12]
 * Increases genetic diversity inside the population^[@6920034, p.1]
 * Higher chance for "specialist" solutions to be selected since it is decided on a per case basis
-* Performance increases have been demosntrated in many benchmarking problems ^[@epsilon_lexicase_main, p.744-745]
+* Performance increases have been demonstrated in many benchmarking problems ^[@epsilon_lexicase_main, p.744-745]
 
 
 ## Symbolic Regression
@@ -113,16 +113,25 @@ knitr::kable(
 * Stochastic algorithm: Repeat the basic experiment for 50 total runs
 * Collect and aggregate results for training error, testing error and program length
 
-### Hypothesis testing
-
-1. ...
-2. ...
-3. ...
-
-
 ## Genetic Programming Configuration
 
 ...
+
+
+## Research Question
+
+* Does the usage of $\epsilon$-lexicase parent selection influence the generalization behaviour of genetic programming in symbolic regression if compared to tournament selection?
+
+### Hypothesis testing
+
+
+#### TODO: reformulate hypothesis
+1. The usage of $\epsilon$-lexicase selection will result in models that perform significantly different than models that are evolved using tournament selection:
+2. Statistical significant differences between the mean errors of training and testing data exist for both selection operators
+3. No differences in program size exist between the distribution underlying the samples produced by $\epsilon$-lexicase and the distribution underlying samples of tournament selection
+
+
+
 
 # Results
 

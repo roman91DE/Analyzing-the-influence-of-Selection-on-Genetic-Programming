@@ -193,11 +193,11 @@ Since GP is a stochastic optimization algorithm, the basic experiment will be ru
 
 The statistical analysis of the collected data will first focus on examining the question if, on average, the usage of $\epsilon$-lexicase selection will result in models that perform significantly different than models that are evolved using tournament selection:
 
-> $H0_{1}$: The distribution underlying the samples of training/testing errors produced by torunament selection is the same as the distribution underlying samples of training/testing errors produced by $\epsilon$-lexicase selection
+> $H0_{1}$: The distribution underlying the samples of training/testing errors produced by tournament selection is the same as the distribution underlying samples of training/testing errors produced by $\epsilon$-lexicase selection
 
 The next question of interest is, to examine if statistical significant differences between the mean errors of training and testing data exist for both selection operators:
 
-> $H0_{2}$: The distribution underlying the samples of training errors produced by $\epsilon$-lexicase/torunament selection is the same as the distribution underlying samples of testing errors produced by $\epsilon$-lexicase/tournament selection
+> $H0_{2}$: The distribution underlying the samples of training errors produced by $\epsilon$-lexicase/tournament selection is the same as the distribution underlying samples of testing errors produced by $\epsilon$-lexicase/tournament selection
 
 To gather further insight into the differences between both GP systems, an additional test will be performed on the question if differences in the total size of the resulting programs exist:
 

@@ -1,7 +1,6 @@
 from copy import deepcopy
 from sys import argv
-
-from seminar.src.old_version.gp_symreg import *
+from gp_symreg import *
 
 
 def run(target_var: str, err_metric: str):
