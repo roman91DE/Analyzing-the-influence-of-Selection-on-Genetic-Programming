@@ -1,6 +1,7 @@
 ---
 title: "Analyzing the influence of Selection on Genetic Programming's Generalization ability in Symbolic Regression"
 subtitle: "A comparison of epsilon-lexicase Selection and Tournament Selection"
+author: "Roman Hoehn, B.Sc. Wirtschaftspaedagogik"
 date: "2022-06-29"
 output:
   beamer_presentation:
@@ -11,11 +12,10 @@ output:
     number_sections: true
     slide_level: 2
 toc: yes
-toc_depth: 2
+# toc_depth: 3
 bibliography: ../bib/bib/ref.bib
 csl: ../bib/csl/harvard1.csl
 ---
-
 
 
 ```{r setup, include=FALSE}
@@ -26,10 +26,10 @@ knitr::opts_chunk$set(fig.pos = "!H")
 ```
 
 
+
 # Introduction
 
-
-# Research Question
+## Research Question
 
 * Does the usage of $\epsilon$-lexicase parent selection influence the generalization behaviour of genetic programming in symbolic regression if compared to tournament selection?
 
@@ -50,7 +50,7 @@ knitr::opts_chunk$set(fig.pos = "!H")
 ## Parent Selection
 
 * Operator that selects individual solutions from the population for reproduction and mutation
-* Most commonly used selection operator in GP: Tournament selection^[@10.1007/978-3-642-16493-4_19, p.181]
+* Most commonly used selection operator in Genetic Programming (GP): Tournament selection^[@10.1007/978-3-642-16493-4_19, p.181]
 * Intuition: High chance for "generalist" solutions to be selected since it is based on aggregated fitness scores
 
 ## epsilon-Lexicase Selection
@@ -65,38 +65,55 @@ knitr::opts_chunk$set(fig.pos = "!H")
 ## Symbolic Regression
 
 * Task: Find a mathematical model that fits a given set of datapoints
-* One of the first applications of Genetic Programming introduced by @koza_main
-* GP, even though more time consuming, can 
-
-
-
-
-...
+* One of the first applications of GP described by @koza_main
+* High relevance: GP can outperform state-of-the-art machine learning algorithms like gradient boosting ^[@Orzechowski_2018]
 
 ## Generalization
 
+* The ability of a model to perform well on previously unseen fitness cases
+* Main objective in most supervised machine learning problems
+* Challenge: Avoid overfitting to training data
+
 ## Motivation
 
-- Generalization 
+* Little attention has been paid to generalization in GP ^[@open_issues_gp, @generalisation_in_gp]
+* High practical relevance of symbolic regression in many fields, e.g. financial forecasting
 
-
-
-
-## Genetic Programming
-
-...
-
-
-
-...
 
 # Experimental Study
 
-...
 
-## Research Design
+## Benchmark problem
 
-...
+UC Irvine Machine Learning Repository: Prediction of energy efficiency in buildings ^[@Dua:2019]
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+fig.pos="H"
+
+knitr::kable(
+  read.csv("../tables/csv/variables_energy_heating.csv"),
+  digits=3,
+  caption="Overview - Energy Heating data set"
+)    %>% row_spec(0,bold=TRUE ) %>% kableExtra::kable_styling(latex_options = "hold_position")
+```
+
+
+
+
+## Experiment
+
+### Single run
+
+* Total dataset ($N=768$) is randomly split into a training and testing dataset (50:50)
+* Train two models using GP with the training dataset only, one using tournament selection and the other $\epsilon$-lexicase selection
+* For each generation: Select elite model and compute its fitness for the testing dataset
+
+### Full experiment
+
+* Stochastic algorithm: Repeat the basic experiment for 50 total runs
+* Collect and aggregate results for training error, testing error and program length
+
+
 
 ## Genetic Programming Configuration
 
