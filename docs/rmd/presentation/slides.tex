@@ -43,10 +43,10 @@
 \AtBeginSubsection{
   \frame{\subsectionpage}
 }
-\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{iftex}
-\ifPDFTeX
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
@@ -74,29 +74,43 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Analyzing the influence of Selection on Genetic Programming's Generalization ability in Symbolic Regression},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \newif\ifbibliography
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
-\hypersetup{
-  pdftitle={Analyzing the influence of Selection on Genetic Programming's Generalization ability in Symbolic Regression},
-  pdfauthor={Roman Hoehn},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{cslreferences}%
+  {}%
+  {\par}
 
 \title{Analyzing the influence of Selection on Genetic Programming's
 Generalization ability in Symbolic Regression}
 \subtitle{A comparison of epsilon-lexicase Selection and Tournament
 Selection}
-\author{Roman Hoehn}
-\date{2022-06-29}
+\author{}
+\date{\vspace{-2.5em}2022-06-29}
 
 \begin{document}
 \frame{\titlepage}
@@ -107,27 +121,126 @@ Selection}
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-\begin{frame}{Introduction}
-\ldots{}
+\hypertarget{research-question}{%
+\section{Research Question}\label{research-question}}
+
+\begin{frame}{Research Question}
+\begin{itemize}
+\tightlist
+\item
+  Does the usage of \(\epsilon\)-lexicase parent selection influence the
+  generalization behaviour of genetic programming in symbolic regression
+  if compared to tournament selection?
+\item
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Genetic Programming}
 \protect\hypertarget{genetic-programming}{}
-\ldots{}
+\begin{itemize}
+\tightlist
+\item
+  A metaheuristic that searches for computer programs that solve a given
+  problem
+\item
+  Inventor: John R. Koza\footnote<.->{Koza (1992)}
+\item
+  Evolutionary algorithm that simulates the process of Darwinian
+  evolution:
+
+  \begin{enumerate}
+  \tightlist
+  \item
+    Population based
+  \item
+    The quality of solutions is evaluated by a fitness function
+  \item
+    Selection: Solutions are selected based on their individual fitness
+  \item
+    Variation: Mutation and recombination of solutions
+  \end{enumerate}
+\item
+  Unique Features:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Evolve solutions of variable length and structure
+  \item
+    Solutions are typically represented by recursive tree structures
+  \end{itemize}
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Parent Selection}
 \protect\hypertarget{parent-selection}{}
-\ldots{}
+\begin{itemize}
+\tightlist
+\item
+  Operator that selects individual solutions from the population for
+  reproduction and mutation
+\item
+  Most commonly used selection operator in GP: Tournament
+  selection\footnote<.->{Fang and Li (2010), p.181}
+\item
+  Intuition: High chance for ``generalist'' solutions to be selected
+  since it is based on aggregated fitness scores
+\end{itemize}
+\end{frame}
+
+\begin{frame}{epsilon-Lexicase Selection}
+\protect\hypertarget{epsilon-lexicase-selection}{}
+\begin{itemize}
+\tightlist
+\item
+  Recent alternative: Lexicase Selection and it's variation
+  \(\epsilon\)-lexicase selection
+\item
+  Idea: Selection method for uncompromising, continous-valued symbolic
+  regression problems\footnote<.->{Helmuth, Spector and Matheson (2015),
+    p.12}
+\item
+  Increases genetic diversity inside the population\footnote<.->{Helmuth,
+    Spector and Matheson (2015), p.1}
+\item
+  Higher chance for ``specialist'' solutions to be selected since it is
+  decided on a per case basis
+\item
+  Performance increases have been demosntrated in many benchmarking
+  problems\footnote<.->{La Cava, Spector and Danai (2016), p.744-745}
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Symbolic Regression}
 \protect\hypertarget{symbolic-regression}{}
+\begin{itemize}
+\tightlist
+\item
+  Task: Find a mathematical model that fits a given set of datapoints
+\item
+  One of the first applications of Genetic Programming introduced
+\end{itemize}
+
 \ldots{}
 \end{frame}
 
 \begin{frame}{Generalization}
 \protect\hypertarget{generalization}{}
+\end{frame}
+
+\begin{frame}{Motivation}
+\protect\hypertarget{motivation}{}
+\begin{itemize}
+\tightlist
+\item
+  Generalization
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Genetic Programming}
+\protect\hypertarget{genetic-programming-1}{}
+\ldots{}
+
 \ldots{}
 \end{frame}
 
@@ -151,7 +264,14 @@ Selection}
 \hypertarget{results}{%
 \section{Results}\label{results}}
 
-\begin{frame}{Results}
+\begin{frame}{Descriptive Statistics}
+\protect\hypertarget{descriptive-statistics}{}
+\begin{figure}
+\centering
+\includegraphics{../plots/mean_error_boxplot_all.png}
+\caption{Distribution of Errors}
+\end{figure}
+
 \ldots{}
 \end{frame}
 
@@ -167,10 +287,34 @@ Selection}
 Questions}\label{limitations-and-open-questions}}
 
 \begin{frame}{Limitations and open Questions}
-\ldots{}
-\end{frame}
+\ldots{} \newpage  
 
-\hypertarget{references}{%
-\section{References}\label{references}}
+\hypertarget{refs}{}
+\begin{cslreferences}
+\leavevmode\hypertarget{ref-10.1007ux2f978-3-642-16493-4_19}{}%
+Fang, Y. and Li, J. (2010) `A review of tournament selection in genetic
+programming', in Cai, Z. et al. (eds) \emph{Advances in computation and
+intelligence}. Berlin, Heidelberg: Springer Berlin Heidelberg, pp.
+181--192.
+
+\leavevmode\hypertarget{ref-6920034}{}%
+Helmuth, T., Spector, L. and Matheson, J. (2015) `Solving uncompromising
+problems with lexicase selection', \emph{IEEE Transactions on
+Evolutionary Computation}, 19(5), pp. 630--643.
+doi:\href{https://doi.org/10.1109/TEVC.2014.2362729}{10.1109/TEVC.2014.2362729}.
+
+\leavevmode\hypertarget{ref-koza_main}{}%
+Koza, J.R. (1992) \emph{Genetic programming: On the programming of
+computers by means of natural selection}. Cambridge, MA, USA: MIT Press.
+Available at: \url{http://mitpress.mit.edu/books/genetic-programming}.
+
+\leavevmode\hypertarget{ref-epsilon_lexicase_main}{}%
+La Cava, W., Spector, L. and Danai, K. (2016) `Epsilon-lexicase
+selection for regression', in \emph{Proceedings of the genetic and
+evolutionary computation conference 2016}. New York, NY, USA:
+Association for Computing Machinery (GECCO '16), pp. 741--748.
+doi:\href{https://doi.org/10.1145/2908812.2908898}{10.1145/2908812.2908898}.
+\end{cslreferences}
+\end{frame}
 
 \end{document}
