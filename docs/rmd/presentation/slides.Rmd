@@ -7,15 +7,11 @@ output:
   beamer_presentation:
     colortheme: "beaver"
     fonttheme: "structurebold"
-    #extra_dependencies: ["float"]
     keep_tex: true
     fig_caption: yes
     number_sections: true
     slide_level: 2
-    #includes:
-      #in_header: ./settings.tex
 toc: yes
-# toc_depth: 3
 bibliography: ../bib/bib/ref.bib
 csl: ../bib/csl/harvard1.csl
 ---
@@ -25,7 +21,6 @@ csl: ../bib/csl/harvard1.csl
 library(kableExtra)
 library(magrittr)
 knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_chunk$set(fig.pos = "!H")
 ```
 
 
@@ -97,7 +92,7 @@ knitr::kable(
   read.csv("../tables/csv/variables_energy_heating.csv"),
   digits=3,
   caption="Overview - Energy Heating data set"
-)    %>% row_spec(0,bold=TRUE ) %>% kableExtra::kable_styling(latex_options = "hold_position")
+) 
 ```
 
 
@@ -125,7 +120,7 @@ knitr::kable(
   read.csv("../tables/csv/gp_parameters.csv"),
   digits=3,
   caption="Evolutionary Parameters"
-) %>% row_spec(0,bold=TRUE ) %>% kableExtra::kable_styling(latex_options = "hold_position")
+)
 ```
 
 ## Function Set
@@ -150,7 +145,7 @@ knitr::kable(
 ) 
 ```
 
-## Examples 
+## Example
 
 Model evolved by tournament selection after 100 generations:
 
@@ -160,25 +155,73 @@ Model evolved by tournament selection after 100 generations:
 
 ## Research Question
 
-* Does the usage of $\epsilon$-lexicase parent selection influence the generalization behaviour of genetic programming in symbolic regression if compared to tournament selection?
+* Does the usage of $\epsilon$-lexicase parent selection influence the generalization behavior of genetic programming in symbolic regression if compared to tournament selection?
 
-### Hypothesis testing
+### 3 Questions
 
-
-#### TODO: reformulate hypothesis
-1. The usage of $\epsilon$-lexicase selection will result in models that perform significantly different than models that are evolved using tournament selection:
-2. Statistical significant differences between the mean errors of training and testing data exist for both selection operators
-3. No differences in program size exist between the distribution underlying the samples produced by $\epsilon$-lexicase and the distribution underlying samples of tournament selection
+1. Differences in average fitness for both algorithms?
+2. Differences in fitness for training and testing data?
+3. Differences in program size?
 
 
 
 
 # Results
 
-## Descriptive Statistics
 
-![Distribution of Errors](../plots/mean_error_boxplot_all.png)
 
+## Distribution of Fitness
+
+![](../plots/mean_error_boxplot_all.png)
+
+
+## Finding 1
+
+* The differences in average fitness of the final solutions between tournament selection and $\epsilon$-lexicase selection are highly statistical significant ($\alpha=0.01$)
+* Tournament selection-based GP achieves a higher fitness for both training and testing data
+* Unexpected results based on the reviewed literature [@epsilon_lexicase_main], [@https://doi.org/10.48550/arxiv.1709.05394]
+
+
+
+
+## Evolution of Fitness
+
+![](../plots/mean_error_combined.png)
+
+
+
+## Finding 2
+
+* The gap between training and testing error is not statistically significant for both selection algorithms
+* Both algorithms achieve a slightly better performance for the training data
+* No proof for overfitting
+
+
+## Statistical Test
+
+```{r, echo=FALSE, warning=FALSE}
+
+df <- read.csv("../tables/csv/mwu_matrix_error.csv")
+
+knitr::kable(
+  df,
+  format = "latex",
+  booktabs = TRUE,
+  digits=3,
+  caption="Mean Error - P-Values (MWU)"
+) 
+
+```
+
+## Evolution of Size
+
+\begin{figure}
+\centering
+\includegraphics{../plots/size_subplotted.png}
+\end{figure}
+
+
+## Finding 3
 
 ...
 
@@ -190,7 +233,8 @@ Model evolved by tournament selection after 100 generations:
 # Limitations and open Questions
 
 ...
-\newpage  
+\newpage
+
 
 
 
