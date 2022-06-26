@@ -6,8 +6,8 @@ affiliation: "Johannes Gutenberg University Mainz"
 date: "2022-06-29"
 output:
   beamer_presentation:
-    #theme: "Darmstadt"
-    colortheme: "beaver"
+    theme: "Frankfurt"
+    #colortheme: "beaver"
     fonttheme: "structurebold"
     keep_tex: true
     fig_caption: yes
