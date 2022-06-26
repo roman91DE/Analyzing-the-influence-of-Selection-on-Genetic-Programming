@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.6.25)  26 JUN 2022 20:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.6.25)  26 JUN 2022 21:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -997,29 +997,45 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
 ] [16
 
 ]
-<../plots/mean_error_boxplot_all.png, id=134, 1156.32pt x 722.7pt>
-File: ../plots/mean_error_boxplot_all.png Graphic file (type png)
-<use ../plots/mean_error_boxplot_all.png>
-Package pdftex.def Info: ../plots/mean_error_boxplot_all.png  used on input lin
-e 374.
-(pdftex.def)             Requested size: 307.2879pt x 192.05493pt.
+<../plots/example_model.png, id=134, 350.30875pt x 247.92625pt>
+File: ../plots/example_model.png Graphic file (type png)
+<use ../plots/example_model.png>
+Package pdftex.def Info: ../plots/example_model.png  used on input line 421.
+(pdftex.def)             Requested size: 307.3105pt x 217.49483pt.
 
-Overfull \vbox (1.9177pt too high) detected at line 374
+Overfull \vbox (1.88672pt too high) detected at line 421
  []
 
 [17
 
- <../plots/mean_error_boxplot_all.png>] [18
+ <../plots/example_model.png>] [18
 
 ] [19
 
-] [20
-
 ]
-Overfull \vbox (226.00044pt too high) detected at line 438
+<../plots/mean_error_boxplot_all.png, id=159, 1156.32pt x 722.7pt>
+File: ../plots/mean_error_boxplot_all.png Graphic file (type png)
+<use ../plots/mean_error_boxplot_all.png>
+Package pdftex.def Info: ../plots/mean_error_boxplot_all.png  used on input lin
+e 467.
+(pdftex.def)             Requested size: 307.2879pt x 192.05493pt.
+
+Overfull \vbox (1.9177pt too high) detected at line 467
  []
 
-[21
+[20
+
+ <../plots/mean_error_boxplot_all.png>] [21
+
+] [22
+
+] [23
+
+]
+Overfull \vbox (226.00044pt too high) detected at line 531
+ []
+
+[24
 
 ]
 \tf@nav=\write5
@@ -1033,10 +1049,10 @@ Overfull \vbox (226.00044pt too high) detected at line 438
 
 (./slides.aux) ) 
 Here is how much of TeX's memory you used:
- 24571 strings out of 480247
- 475484 string characters out of 5896151
- 749612 words of memory out of 5000000
- 41795 multiletter control sequences out of 15000+600000
+ 24597 strings out of 480247
+ 475895 string characters out of 5896151
+ 750696 words of memory out of 5000000
+ 41809 multiletter control sequences out of 15000+600000
  558639 words of font info for 144 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,11n,122p,1003b,738s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1048,10 +1064,10 @@ sr/share/texmf/fonts/type1/public/lm/lmss9.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/
 share/texmf/fonts/type1/public/lm/lmsso9.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on slides.pdf (21 pages, 184566 bytes).
+Output written on slides.pdf (24 pages, 199716 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
- 74 named destinations out of 1000 (max. 500000)
- 55384 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 282 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 55389 words of extra memory for PDF output out of 61914 (max. 10000000)
 

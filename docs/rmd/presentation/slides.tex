@@ -204,7 +204,7 @@ Selection}
   Higher chance for ``specialist'' solutions to be selected since it is
   decided on a per case basis
 \item
-  Performance increases have been demosntrated in many benchmarking
+  Performance increases have been demonstrated in many benchmarking
   problems\footnote<.->{La Cava, Spector and Danai (2016), p.744-745}
 \end{itemize}
 \end{frame}
@@ -301,6 +301,8 @@ y2 & Cooling Load\\
   Total dataset (\(N=768\)) is randomly split into a training and
   testing dataset (50:50)
 \item
+  Fitness metric: Mean squared Error (MSE)
+\item
   Train two models using GP with the training dataset only, one using
   tournament selection and the other \(\epsilon\)-lexicase selection
 \item
@@ -322,9 +324,100 @@ y2 & Cooling Load\\
 \end{block}
 \end{frame}
 
-\begin{frame}{Genetic Programming Configuration}
-\protect\hypertarget{genetic-programming-configuration}{}
-\ldots{}
+\begin{frame}{Evolutionary Parameters}
+\protect\hypertarget{evolutionary-parameters}{}
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-2}Evolutionary Parameters}
+\centering
+\begin{tabular}[t]{l|l}
+\hline
+\textbf{Parameter} & \textbf{Value}\\
+\hline
+Population Size & 500\\
+\hline
+Number of Generations & 100\\
+\hline
+Mutation Rate & 20\%\\
+\hline
+Crossover Rate & 80\%\\
+\hline
+Tournament Size & 3\\
+\hline
+Epsilon selection & automatic\\
+\hline
+Elite Size & 0\\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Terminal Set}
+\protect\hypertarget{terminal-set}{}
+\begin{tabular}{l|l}
+\hline
+Terminal & Description\\
+\hline
+X1 & Relative Compactness\\
+\hline
+X2 & Surface Area\\
+\hline
+X3 & Wall Area\\
+\hline
+X4 & Roof Area\\
+\hline
+X5 & Overall Height\\
+\hline
+X6 & Orientation\\
+\hline
+X7 & Glazing Area\\
+\hline
+X8 & Glazing Area Distribution\\
+\hline
+random\_int & Ephemeral Constant (integer)\\
+\hline
+random\_float & Ephemeral Constant(float)\\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}{Function Set}
+\protect\hypertarget{function-set}{}
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-4}Functions}
+\centering
+\begin{tabular}[t]{l|r}
+\hline
+Function & Arity\\
+\hline
+Addition & 2\\
+\hline
+Subtraction & 2\\
+\hline
+Multiplication & 2\\
+\hline
+Negation & 1\\
+\hline
+Sine & 1\\
+\hline
+Cosine & 1\\
+\hline
+Protected Division & 2\\
+\hline
+Protected Natural Logarithm & 1\\
+\hline
+Protected Square Root & 1\\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Examples}
+\protect\hypertarget{examples}{}
+Model evolved by tournament selection after 100 generations:
+
+\includegraphics{../plots/example_model.png}
 \end{frame}
 
 \begin{frame}{Research Question}

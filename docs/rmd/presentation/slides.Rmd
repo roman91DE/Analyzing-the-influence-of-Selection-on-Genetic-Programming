@@ -7,10 +7,13 @@ output:
   beamer_presentation:
     colortheme: "beaver"
     fonttheme: "structurebold"
+    #extra_dependencies: ["float"]
     keep_tex: true
     fig_caption: yes
     number_sections: true
     slide_level: 2
+    #includes:
+      #in_header: ./settings.tex
 toc: yes
 # toc_depth: 3
 bibliography: ../bib/bib/ref.bib
@@ -98,13 +101,12 @@ knitr::kable(
 ```
 
 
-
-
 ## Experiment
 
 ### Single run
 
 * Total dataset ($N=768$) is randomly split into a training and testing dataset (50:50)
+* Fitness metric: Mean squared Error (MSE)
 * Train two models using GP with the training dataset only, one using tournament selection and the other $\epsilon$-lexicase selection
 * For each generation: Select elite model and compute its fitness for the testing dataset
 
@@ -113,9 +115,47 @@ knitr::kable(
 * Stochastic algorithm: Repeat the basic experiment for 50 total runs
 * Collect and aggregate results for training error, testing error and program length
 
-## Genetic Programming Configuration
 
-...
+## Evolutionary Parameters
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+fig.pos="H"
+
+knitr::kable(
+  read.csv("../tables/csv/gp_parameters.csv"),
+  digits=3,
+  caption="Evolutionary Parameters"
+) %>% row_spec(0,bold=TRUE ) %>% kableExtra::kable_styling(latex_options = "hold_position")
+```
+
+## Function Set
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+fig.pos="b"
+
+knitr::kable(
+  read.csv("../tables/csv/primitives.csv"),
+  digits=3,
+) 
+```
+
+## Terminal Set
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+fig.pos="t"
+
+knitr::kable(
+  read.csv("../tables/csv/terminals.csv"),
+  digits=3,
+) 
+```
+
+## Examples 
+
+Model evolved by tournament selection after 100 generations:
+
+![](../plots/example_model.png)
+
 
 
 ## Research Question
