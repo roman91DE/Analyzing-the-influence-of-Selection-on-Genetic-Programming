@@ -35,6 +35,8 @@ def run(target_var: str, err_metric: str):
         toolbox=deepcopy(TOOLBOX),
         ea_config=EA_CONFIG,
         training_dataset=TRAINING_DATASET,
+        pset=PRIMITIVE_SET,
+        testing_dataset=TESTING_DATASET
     )
 
     # test model on unknown dataset
