@@ -5,6 +5,7 @@ author: "Roman Hoehn, B.Sc. Wirtschaftspaedagogik"
 date: "2022-06-29"
 output:
   beamer_presentation:
+    theme: "Warsaw"
     fonttheme: "structurebold"
     keep_tex: true
     fig_caption: yes
@@ -13,8 +14,8 @@ output:
 toc: yes
 bibliography: ../bib/bib/ref.bib
 csl: ../bib/csl/harvard1.csl
-header-includes:
-   - \usepackage{float}
+includes:
+      in_header: header.tex
 ---
 
 
@@ -23,17 +24,17 @@ library(magrittr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
+\setbeamertemplate{footline}[frame number]
 
 # Introduction
 
 ## Research Question
 
-* Does the usage of $\epsilon$-lexicase parent selection influence the generalization behaviour of genetic programming in symbolic regression if compared to tournament selection?
+* Does the usage of $\epsilon$-lexicase parent selection influence the generalization behavior of genetic programming in symbolic regression if compared to tournament selection?
 
 ## Genetic Programming 
 
-* A metaheuristic that searches for computer programs that solve a given problem^[@koza_main]
+* A meta-heuristic that searches for computer programs that solve a given problem^[@koza_main]
 * Evolutionary Algorithm: Simulates the process of Darwinian evolution
 * Unique Features:
   * Evolve solutions of variable length and structure
@@ -42,14 +43,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Parent Selection
 
-### Torunament Selection
+### Tournament Selection
 
 * Most commonly used selection operator in Genetic Programming (GP)^[@10.1007/978-3-642-16493-4_19, p.181]
 * Intuition: High chance for "generalist" solutions to be selected since it is based on aggregated fitness scores
 
 ### $\epsilon$-Lexicase Selection
 
-* Objective: Create Selection method for uncompromising, continous-valued symbolic regression problems ^[@6920034, p.12]
+* Objective: Create Selection method for uncompromising, continuous-valued symbolic regression problems ^[@6920034, p.12]
 * Performance increases have been demonstrated in many benchmarking problems ^[@epsilon_lexicase_main, p.744-745]
 * Intuition: Higher chance for "specialist" solutions to be selected since it is decided on a per case basis
 
@@ -60,12 +61,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * Task: Find a mathematical model that fits a given set of datapoints
 * One of the first applications of GP described by @koza_main
-* High relevance: GP can outperform state-of-the-art machine learning algorithms like gradient boosting ^[@Orzechowski_2018]
+* High relevance: GP can outperform state-of-the-art machine learning algorithms, e.g. gradient boosting ^[@Orzechowski_2018]
 
 ### Generalization
 
 * Main objective in most supervised machine learning problems: Achieve good performance for unseen data
-* Challenge: Avoid overfitting to training data
+* Challenge: Avoid overfitting to training dataset
 * Little attention has been paid to generalization in GP ^[@open_issues_gp, @generalisation_in_gp]
 
 
@@ -92,7 +93,7 @@ knitr::kable(
 
 ### Single run
 
-* Total dataset ($N=768$) is randomly split into a training and testing dataset (50:50)
+* Total dataset ($N=768$) is randomly split into a training/testing dataset (50/50)
 * Fitness metric: Mean squared Error (MSE)
 * Train two models using GP with the training dataset only, one using tournament selection and the other $\epsilon$-lexicase selection
 * For each generation: Select elite model and compute its fitness for the testing dataset
@@ -126,13 +127,6 @@ knitr::kable(
 ![](../plots/mean_error_boxplot_all.png)
 
 
-## Example
-
-Model evolved by tournament selection after 100 generations:
-
-![](../plots/example_model.png)
-
-
 ## Finding 2
 
 * The gap between training and testing error is not statistically significant for both selection algorithms
@@ -147,7 +141,7 @@ Model evolved by tournament selection after 100 generations:
 
 ## Statistical Test
 
-```{r pvals_fitness, echo=FALSE, warning=FALSE}
+```{r pvals_fitness_table, echo=FALSE, warning=FALSE}
 df <- read.csv("../tables/csv/mwu_matrix_error.csv")
 
 knitr::kable(
@@ -177,8 +171,8 @@ knitr::kable(
 
 ## Finding 3
 
-* GP typical growth behaviour for both operators
-* Solutions grow at a similiar rate in each generation
+* GP typical growth behavior for both operators
+* Solutions grow at a similar rate in each generation
 * No statistically significant differences in overall program size based on selection
 
 
@@ -202,7 +196,7 @@ knitr::kable(
 
 ## Evolutionary Parameters
 
-```{r ea_config, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+```{r ea_config_table, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 fig.pos="H"
 
 knitr::kable(

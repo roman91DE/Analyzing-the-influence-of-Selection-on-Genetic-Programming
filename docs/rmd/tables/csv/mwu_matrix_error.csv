@@ -1,4 +1,4 @@
-,tournament_training_errors,tournament_testing_errors,elexicase_training_errors,elexicase_testing_errors
+tournament_training_errors,tournament_testing_errors,elexicase_training_errors,elexicase_testing_errors
 tournament_training_errors,1.0,0.3092302962615101,0.00011802218213049289,4.192079216634898e-06
 tournament_testing_errors,0.3092302962615101,1.0,0.0024468831891312623,0.00012138866342650596
 elexicase_training_errors,0.00011802218213049289,0.0024468831891312623,1.0,0.2567805508481191

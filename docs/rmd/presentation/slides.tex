@@ -121,7 +121,6 @@
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
-\usepackage{float}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -147,6 +146,10 @@ Selection}
 \begin{frame}[allowframebreaks]
   \tableofcontents[hideallsubsections]
 \end{frame}
+\begin{frame}
+\setbeamertemplate{footline}{[}frame number{]}
+\end{frame}
+
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
@@ -156,7 +159,7 @@ Selection}
 \tightlist
 \item
   Does the usage of \(\epsilon\)-lexicase parent selection influence the
-  generalization behaviour of genetic programming in symbolic regression
+  generalization behavior of genetic programming in symbolic regression
   if compared to tournament selection?
 \end{itemize}
 \end{frame}
@@ -166,8 +169,8 @@ Selection}
 \begin{itemize}
 \tightlist
 \item
-  A metaheuristic that searches for computer programs that solve a given
-  problem\footnote<.->{Koza (1992)}
+  A meta-heuristic that searches for computer programs that solve a
+  given problem\footnote<.->{Koza (1992)}
 \item
   Evolutionary Algorithm: Simulates the process of Darwinian evolution
 \item
@@ -185,8 +188,8 @@ Selection}
 
 \begin{frame}{Parent Selection}
 \protect\hypertarget{parent-selection}{}
-\begin{block}{Torunament Selection}
-\protect\hypertarget{torunament-selection}{}
+\begin{block}{Tournament Selection}
+\protect\hypertarget{tournament-selection}{}
 \begin{itemize}
 \tightlist
 \item
@@ -204,7 +207,7 @@ Selection}
 \tightlist
 \item
   Objective: Create Selection method for uncompromising,
-  continous-valued symbolic regression problems \footnote<.->{Helmuth,
+  continuous-valued symbolic regression problems \footnote<.->{Helmuth,
     Spector and Matheson (2015), p.12}
 \item
   Performance increases have been demonstrated in many benchmarking
@@ -355,13 +358,6 @@ regression if compared to tournament selection?}
 \includegraphics{../plots/mean_error_boxplot_all.png}
 \end{frame}
 
-\begin{frame}{Example}
-\protect\hypertarget{example}{}
-Model evolved by tournament selection after 100 generations:
-
-\includegraphics{../plots/example_model.png}
-\end{frame}
-
 \begin{frame}{Finding 2}
 \protect\hypertarget{finding-2}{}
 \begin{itemize}
@@ -386,12 +382,12 @@ Model evolved by tournament selection after 100 generations:
 \protect\hypertarget{statistical-test}{}
 \begin{table}
 
-\caption{\label{tab:pvals_fitness}Mean Error - P-Values (MWU)}
+\caption{\label{tab:pvals_fitness_table}Mean Error - P-Values (MWU)}
 \centering
 \fontsize{4}{6}\selectfont
 \begin{tabular}[t]{l|r|r|r|r}
 \hline
-X & tournament\_training\_errors & tournament\_testing\_errors & elexicase\_training\_errors & elexicase\_testing\_errors\\
+  & tournament\_training\_errors & tournament\_testing\_errors & elexicase\_training\_errors & elexicase\_testing\_errors\\
 \hline
 tournament\_training\_errors & 1.000 & 0.309 & 0.000 & 0.000\\
 \hline
@@ -435,9 +431,9 @@ elexicase\_testing\_errors & 0.000 & 0.000 & 0.257 & 1.000\\
 \begin{itemize}
 \tightlist
 \item
-  GP typical growth behaviour for both operators
+  GP typical growth behavior for both operators
 \item
-  Solutions grow at a similiar rate in each generation
+  Solutions grow at a similar rate in each generation
 \item
   No statistically significant differences in overall program size based
   on selection
@@ -485,7 +481,7 @@ Questions}\label{limitations-and-open-questions}}
 \protect\hypertarget{evolutionary-parameters}{}
 \begin{table}
 
-\caption{\label{tab:ea_config}Evolutionary Parameters}
+\caption{\label{tab:ea_config_table}Evolutionary Parameters}
 \centering
 \begin{tabular}[t]{l|l}
 \hline
