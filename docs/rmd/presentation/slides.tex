@@ -55,6 +55,7 @@
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
+\usetheme[]{Madrid}
 \usefonttheme{structurebold}
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -129,7 +130,7 @@
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={Analyzing the influence of Selection on Genetic Programming's Generalization ability in Symbolic Regression},
-  pdfauthor={Roman Hoehn, B.Sc. Wirtschaftspaedagogik},
+  pdfauthor={Roman Hoehn},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
@@ -137,8 +138,9 @@
 Generalization ability in Symbolic Regression}
 \subtitle{A comparison of epsilon-lexicase Selection and Tournament
 Selection}
-\author{Roman Hoehn, B.Sc. Wirtschaftspaedagogik}
+\author{Roman Hoehn}
 \date{2022-06-29}
+\institute{JGU Mainz}
 
 \begin{document}
 \frame{\titlepage}
@@ -146,10 +148,6 @@ Selection}
 \begin{frame}[allowframebreaks]
   \tableofcontents[hideallsubsections]
 \end{frame}
-\begin{frame}
-\setbeamertemplate{footline}{[}frame number{]}
-\end{frame}
-
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
@@ -231,7 +229,7 @@ Selection}
   One of the first applications of GP described by Koza (1992)
 \item
   High relevance: GP can outperform state-of-the-art machine learning
-  algorithms like gradient boosting \footnote<.->{Orzechowski, Cava and
+  algorithms, e.g.~gradient boosting \footnote<.->{Orzechowski, Cava and
     Moore (2018)}
 \end{itemize}
 \end{block}
@@ -244,7 +242,7 @@ Selection}
   Main objective in most supervised machine learning problems: Achieve
   good performance for unseen data
 \item
-  Challenge: Avoid overfitting to training data
+  Challenge: Avoid overfitting to training dataset
 \item
   Little attention has been paid to generalization in GP \footnote<.->{O'Neill
     \emph{et al.} (2010), Kushchu (2002)}
@@ -291,8 +289,8 @@ y2 & Cooling Load \\
 \begin{itemize}
 \tightlist
 \item
-  Total dataset (\(N=768\)) is randomly split into a training and
-  testing dataset (50:50)
+  Total dataset (\(N=768\)) is randomly split into a training/testing
+  dataset (50/50)
 \item
   Fitness metric: Mean squared Error (MSE)
 \item

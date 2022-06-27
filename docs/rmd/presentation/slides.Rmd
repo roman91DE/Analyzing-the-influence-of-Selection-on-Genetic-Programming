@@ -1,12 +1,15 @@
 ---
 title: "Analyzing the influence of Selection on Genetic Programming's Generalization ability in Symbolic Regression"
 subtitle: "A comparison of epsilon-lexicase Selection and Tournament Selection"
-author: "Roman Hoehn, B.Sc. Wirtschaftspaedagogik"
+author: "Roman Hoehn"
+institute: "JGU Mainz "
 date: "2022-06-29"
 output:
   beamer_presentation:
-    theme: "Warsaw"
+    theme: "Madrid"
     fonttheme: "structurebold"
+    fig_width: 12
+    fig_height: 10
     keep_tex: true
     fig_caption: yes
     number_sections: true
@@ -24,7 +27,6 @@ library(magrittr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-\setbeamertemplate{footline}[frame number]
 
 # Introduction
 

@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Experimental Study}{8}{0}{2}
+\beamer@sectionintoc {3}{Results}{12}{0}{3}
+\beamer@sectionintoc {4}{Conclusions}{21}{0}{4}
+\beamer@sectionintoc {5}{Limitations and open Questions}{23}{0}{5}
+\beamer@sectionintoc {6}{Appendix}{25}{0}{6}
