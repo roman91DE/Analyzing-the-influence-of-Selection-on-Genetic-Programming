@@ -77,7 +77,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 UC Irvine Machine Learning Repository: Prediction of energy efficiency in buildings ^[@Dua:2019]
 
-```{r vars_dataset echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+```{r vars_dataset, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 fig.pos="H"
 
 knitr::kable(

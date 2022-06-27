@@ -314,26 +314,20 @@ y2 & Cooling Load \\
 \end{block}
 \end{frame}
 
-\begin{frame}{Research Question}
-\protect\hypertarget{research-question-1}{}
-\begin{itemize}
-\tightlist
-\item
-  Does the usage of \(\epsilon\)-lexicase parent selection influence the
-  generalization behavior of genetic programming in symbolic regression
-  if compared to tournament selection?
-\end{itemize}
+\begin{frame}{Hypothesis Testing}
+\protect\hypertarget{hypothesis-testing}{}
+\textbf{Does the usage of \(\epsilon\)-lexicase parent selection
+influence the generalization behavior of genetic programming in symbolic
+regression if compared to tournament selection?}
 
-\begin{block}{Statistical Testing Strategy}
-\protect\hypertarget{statistical-testing-strategy}{}
 \begin{enumerate}
 \tightlist
 \item
-  Differences in average fitness for both algorithms on both datasets?
+  Test for differences in average fitness between both algorithms
 \item
-  Differences in fitness for training and testing data?
+  Test for differences in average fitness between training and testing
+  data
 \end{enumerate}
-\end{block}
 \end{frame}
 
 \hypertarget{results}{%
@@ -361,6 +355,13 @@ y2 & Cooling Load \\
 \includegraphics{../plots/mean_error_boxplot_all.png}
 \end{frame}
 
+\begin{frame}{Example}
+\protect\hypertarget{example}{}
+Model evolved by tournament selection after 100 generations:
+
+\includegraphics{../plots/example_model.png}
+\end{frame}
+
 \begin{frame}{Finding 2}
 \protect\hypertarget{finding-2}{}
 \begin{itemize}
@@ -385,7 +386,7 @@ y2 & Cooling Load \\
 \protect\hypertarget{statistical-test}{}
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-2}Mean Error - P-Values (MWU)}
+\caption{\label{tab:pvals_fitness}Mean Error - P-Values (MWU)}
 \centering
 \fontsize{4}{6}\selectfont
 \begin{tabular}[t]{l|r|r|r|r}
@@ -484,7 +485,7 @@ Questions}\label{limitations-and-open-questions}}
 \protect\hypertarget{evolutionary-parameters}{}
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-3}Evolutionary Parameters}
+\caption{\label{tab:ea_config}Evolutionary Parameters}
 \centering
 \begin{tabular}[t]{l|l}
 \hline
@@ -512,7 +513,7 @@ Elite Size & 0\\
 \protect\hypertarget{primitive-set}{}
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-4}Function Set}
+\caption{\label{tab:primitive_table}Function Set}
 \centering
 \begin{tabular}[t]{l|r}
 \hline
@@ -542,7 +543,7 @@ Protected Square Root & 1\\
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-5}Terminal Set}
+\caption{\label{tab:function_table}Terminal Set}
 \centering
 \begin{tabular}[t]{l|l}
 \hline
@@ -570,13 +571,6 @@ random\_float & Ephemeral Constant(float)\\
 \hline
 \end{tabular}
 \end{table}
-\end{frame}
-
-\begin{frame}{Example}
-\protect\hypertarget{example}{}
-Model evolved by tournament selection after 100 generations:
-
-\includegraphics{../plots/example_model.png}
 \end{frame}
 
 \hypertarget{references}{%

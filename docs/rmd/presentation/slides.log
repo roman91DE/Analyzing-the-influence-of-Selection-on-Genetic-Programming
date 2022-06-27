@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  27 JUN 2022 14:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  27 JUN 2022 14:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1107,54 +1107,60 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
 ] [13
 
 ]
-<../plots/mean_error_boxplot_all.png, id=120, 1156.32pt x 722.7pt>
+<../plots/mean_error_boxplot_all.png, id=119, 1156.32pt x 722.7pt>
 File: ../plots/mean_error_boxplot_all.png Graphic file (type png)
 <use ../plots/mean_error_boxplot_all.png>
 Package pdftex.def Info: ../plots/mean_error_boxplot_all.png  used on input lin
-e 362.
+e 356.
 (pdftex.def)             Requested size: 307.2879pt x 192.05493pt.
 [14
 
- <../plots/mean_error_boxplot_all.png>] [15
+ <../plots/mean_error_boxplot_all.png>]
+<../plots/example_model.png, id=128, 350.30875pt x 247.92625pt>
+File: ../plots/example_model.png Graphic file (type png)
+<use ../plots/example_model.png>
+Package pdftex.def Info: ../plots/example_model.png  used on input line 363.
+(pdftex.def)             Requested size: 307.3105pt x 217.49483pt.
+[15
+
+ <../plots/example_model.png>] [16
 
 ]
-<../plots/mean_error_combined.png, id=135, 1156.32pt x 722.7pt>
+<../plots/mean_error_combined.png, id=142, 1156.32pt x 722.7pt>
 File: ../plots/mean_error_combined.png Graphic file (type png)
 <use ../plots/mean_error_combined.png>
 Package pdftex.def Info: ../plots/mean_error_combined.png  used on input line 3
-82.
+83.
 (pdftex.def)             Requested size: 307.2879pt x 192.05493pt.
-[16
-
- <../plots/mean_error_combined.png>]
-LaTeX Font Info:    Calculating math sizes for size <4> on input line 405.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <4> on input line 405.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <2.79999> on input line 405.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <2> on input line 405.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 405.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <2.79999> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 405.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <2> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 405.
 [17
 
-] [18
+ <../plots/mean_error_combined.png>]
+LaTeX Font Info:    Calculating math sizes for size <4> on input line 406.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <4> on input line 406.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <2.79999> on input line 406.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <2> on input line 406.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <4> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 406.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <2.79999> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 406.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <2> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 406.
+[18
+
+] [19
 
 ]
-<../plots/size_subplotted.png, id=157, 1156.32pt x 722.7pt>
+<../plots/size_subplotted.png, id=165, 1156.32pt x 722.7pt>
 File: ../plots/size_subplotted.png Graphic file (type png)
 <use ../plots/size_subplotted.png>
-Package pdftex.def Info: ../plots/size_subplotted.png  used on input line 430.
+Package pdftex.def Info: ../plots/size_subplotted.png  used on input line 431.
 (pdftex.def)             Requested size: 307.2879pt x 192.05493pt.
-[19
+[20
 
- <../plots/size_subplotted.png>] [20
-
-] [21
+ <../plots/size_subplotted.png>] [21
 
 ] [22
 
@@ -1170,16 +1176,10 @@ Package pdftex.def Info: ../plots/size_subplotted.png  used on input line 430.
 
 ] [28
 
+] [29
 
-]
-<../plots/example_model.png, id=221, 350.30875pt x 247.92625pt>
-File: ../plots/example_model.png Graphic file (type png)
-<use ../plots/example_model.png>
-Package pdftex.def Info: ../plots/example_model.png  used on input line 580.
-(pdftex.def)             Requested size: 307.3105pt x 217.49483pt.
-[29
 
- <../plots/example_model.png>] [30
+] [30
 
 ] [31
 
@@ -1201,8 +1201,8 @@ Package pdftex.def Info: ../plots/example_model.png  used on input line 580.
 
 (./slides.aux) ) 
 Here is how much of TeX's memory you used:
- 26384 strings out of 478268
- 510911 string characters out of 5846348
+ 26383 strings out of 478268
+ 510864 string characters out of 5846348
  782319 words of memory out of 5000000
  43773 multiletter control sequences out of 15000+600000
  585775 words of font info for 180 fonts, out of 8000000 for 9000
@@ -1218,10 +1218,10 @@ c/lm/lmss9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmssbx
 10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></
 usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsso9.pfb></usr/local/
 texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on slides.pdf (33 pages, 314214 bytes).
+Output written on slides.pdf (33 pages, 314372 bytes).
 PDF statistics:
- 363 PDF objects out of 1000 (max. 8388607)
- 294 compressed objects within 3 object streams
- 115 named destinations out of 1000 (max. 500000)
+ 361 PDF objects out of 1000 (max. 8388607)
+ 292 compressed objects within 3 object streams
+ 114 named destinations out of 1000 (max. 500000)
  71799 words of extra memory for PDF output out of 74296 (max. 10000000)
 
