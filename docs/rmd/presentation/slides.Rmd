@@ -77,7 +77,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 UC Irvine Machine Learning Repository: Prediction of energy efficiency in buildings ^[@Dua:2019]
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+```{r vars_dataset echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 fig.pos="H"
 
 knitr::kable(
@@ -103,15 +103,12 @@ knitr::kable(
 * Collect and aggregate results for training error, testing error and program length
 
 
+## Hypothesis Testing
 
-## Research Question
+**Does the usage of $\epsilon$-lexicase parent selection influence the generalization behavior of genetic programming in symbolic regression if compared to tournament selection?**
 
-* Does the usage of $\epsilon$-lexicase parent selection influence the generalization behavior of genetic programming in symbolic regression if compared to tournament selection?
-
-### Statistical Testing Strategy 
-
-1. Differences in average fitness for both algorithms on both datasets?
-2. Differences in fitness for training and testing data?
+1. Test for differences in average fitness between both algorithms
+2. Test for differences in average fitness between training and testing data
 
 
 # Results
@@ -129,6 +126,12 @@ knitr::kable(
 ![](../plots/mean_error_boxplot_all.png)
 
 
+## Example
+
+Model evolved by tournament selection after 100 generations:
+
+![](../plots/example_model.png)
+
 
 ## Finding 2
 
@@ -144,7 +147,7 @@ knitr::kable(
 
 ## Statistical Test
 
-```{r, echo=FALSE, warning=FALSE}
+```{r pvals_fitness, echo=FALSE, warning=FALSE}
 df <- read.csv("../tables/csv/mwu_matrix_error.csv")
 
 knitr::kable(
@@ -199,7 +202,7 @@ knitr::kable(
 
 ## Evolutionary Parameters
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+```{r ea_config, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 fig.pos="H"
 
 knitr::kable(
@@ -212,7 +215,7 @@ knitr::kable(
 
 ## Primitive Set {.allowframebreaks} 
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+```{r primitive_table, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 fig.pos="b"
 
 knitr::kable(
@@ -224,7 +227,7 @@ knitr::kable(
 ```
 \framebreak 
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+```{r function_table, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
 fig.pos="t"
 
 knitr::kable(
@@ -235,11 +238,7 @@ knitr::kable(
 ) 
 ```
 
-## Example
 
-Model evolved by tournament selection after 100 generations:
-
-![](../plots/example_model.png)
 
 
 # References {.allowframebreaks} 
