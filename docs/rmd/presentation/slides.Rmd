@@ -234,7 +234,11 @@ knitr::kable(
 ) 
 ```
 
+## Github Repository
 
+Full paper, source code, results, plots and tables available at:
+
+**https://github.com/roman91DE/intelligent_information_systems_research_project/**
 
 
 # References {.allowframebreaks} 

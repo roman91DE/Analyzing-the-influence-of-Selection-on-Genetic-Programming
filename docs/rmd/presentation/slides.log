@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  27 JUN 2022 16:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  27 JUN 2022 19:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1332,13 +1332,20 @@ Overfull \hbox (177.7491pt too wide) has occurred while \output is active
 
 [31
 
-
 ]
 Overfull \hbox (177.7491pt too wide) has occurred while \output is active
  [][][][]  
  []
 
 [32
+
+
+]
+Overfull \hbox (177.7491pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[33
 
 
 ]
@@ -1353,10 +1360,10 @@ Overfull \hbox (177.7491pt too wide) has occurred while \output is active
 
 (./slides.aux) ) 
 Here is how much of TeX's memory you used:
- 26699 strings out of 478268
- 524035 string characters out of 5846348
- 788377 words of memory out of 5000000
- 44079 multiletter control sequences out of 15000+600000
+ 26704 strings out of 478268
+ 524087 string characters out of 5846348
+ 793377 words of memory out of 5000000
+ 44081 multiletter control sequences out of 15000+600000
  575531 words of font info for 171 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,1003b,751s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1371,10 +1378,10 @@ ic/lm/lmss8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss9
 sr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></usr/local/
 texlive/2022/texmf-dist/fonts/type1/public/lm/lmsso8.pfb></usr/local/texlive/20
 22/texmf-dist/fonts/type1/public/lm/lmsso9.pfb>
-Output written on slides.pdf (32 pages, 2239826 bytes).
+Output written on slides.pdf (33 pages, 2241224 bytes).
 PDF statistics:
- 556 PDF objects out of 1000 (max. 8388607)
- 401 compressed objects within 5 object streams
- 111 named destinations out of 1000 (max. 500000)
+ 565 PDF objects out of 1000 (max. 8388607)
+ 409 compressed objects within 5 object streams
+ 114 named destinations out of 1000 (max. 500000)
  66154 words of extra memory for PDF output out of 74296 (max. 10000000)
 
